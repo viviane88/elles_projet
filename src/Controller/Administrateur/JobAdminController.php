@@ -85,7 +85,7 @@ class JobAdminController extends AbstractController
     /**
      * @Route("/admin/job/delete-{id}", name="job_delete")
      */
-    public function deletejob(JobsRepository $jobsRepository, $id)
+    public function deleteJob(JobsRepository $jobsRepository, $id)
     {
         $jobs = $jobsRepository->find($id);
 

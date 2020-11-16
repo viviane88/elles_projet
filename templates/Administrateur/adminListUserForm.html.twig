@@ -1,0 +1,23 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Admin-Annonce-Formulaire
+{% endblock %}
+
+{% block body %}
+
+    	{{ parent() }}
+
+<div class="container mt-5 col-6">
+		<h1>Merci de créer votre compte</h1>
+
+        {{ form_start(formulaireUser) }}
+       
+
+        <button  id="search_button" type="submit" class="mt-2">Ok</button>
+
+
+    {{ form_end(formulaireUser) }}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Administrateur- Création Formulaire Articles
+{% endblock %}
+
+{% block body %}
+
+    	{{ parent() }}
+
+	<div class="col-6 p-5">
+		<h2>Création d'un nouvel article</h2>
+        <p>Merci de remplir le formulaire</p>	
+
+        {{ form_start(formulaireArticles)}}
+		{{ form_end(formulaireArticles)}}
+
+    </div>
+
+{% endblock %}
