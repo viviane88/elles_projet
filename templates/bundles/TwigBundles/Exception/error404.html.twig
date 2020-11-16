@@ -1,0 +1,22 @@
+{% extends "baseAdmin.html.twig" %}
+
+{% block title %}Erreur
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+
+		<div class="row p-5 bg-light">
+			<div class="col-12 text-center">
+				<h1>Une erreur s'est produite</h1>
+			</div>
+		</div>
+		<div class="row p-5">
+			<div class="col-12 text-center">
+				<h2>Erreur 400</h2>
+				<p>Une erreur est survenue lors du chargement de la page. Si le problème persiste, merci de contacter
+                l'administrateur du site</p>
+                <a href="{{path('home')}}"> <p>Retour au site</p></a>
+		</div>
+	</div>
+</div>{% endblock %}
