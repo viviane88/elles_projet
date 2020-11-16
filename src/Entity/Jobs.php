@@ -57,6 +57,11 @@ class Jobs
      */
     private $uploads;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=user::class, inversedBy="jobs")
+     */
+    private $user;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -154,6 +159,18 @@ class Jobs
     public function setUploads(string $uploads): self
     {
         $this->uploads = $uploads;
+
+        return $this;
+    }
+
+    public function getUser(): ?user
+    {
+        return $this->user;
+    }
+
+    public function setUser(?user $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }

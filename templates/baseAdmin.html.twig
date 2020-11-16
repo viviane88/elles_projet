@@ -19,7 +19,7 @@
         
 		<header id="animation_admin">
 
-				{% for label, messages in app.flashes(['success', 'danger']) %}
+				{% for label, messages in app.flashes(['info', 'danger']) %}
 					{% for message in messages %}
 						<div class="flash-{{ label }} p-3 fixed-top bg-{{ label }} text-white text-center">
 							{{ message }}

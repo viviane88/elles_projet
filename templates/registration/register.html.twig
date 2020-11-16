@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}elles- Se connecter{% endblock %}
+
+{% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+<div class="container mt-5 col-6">
+		<h1>Merci de créer votre compte</h1>
+
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button  id="search_button" type="submit" class="mt-2">Ok</button>
+
+
+    {{ form_end(registrationForm) }}
+</div>
+{% endblock %}

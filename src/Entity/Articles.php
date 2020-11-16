@@ -42,6 +42,11 @@ class Articles
      */
     private $uploads;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=user::class, inversedBy="articles")
+     */
+    private $user;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Articles
     public function setUploads(?string $uploads): self
     {
         $this->uploads = $uploads;
+
+        return $this;
+    }
+
+    public function getUser(): ?user
+    {
+        return $this->user;
+    }
+
+    public function setUser(?user $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
