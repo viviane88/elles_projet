@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+	<header class="animation">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="main-logo animate__animated animate__fadeInDown"><img src="{{ asset('./image/logo.svg') }}" alt="animated-logo"></div>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="main-logo animate__animated animate__fadeInLeft"><img src="{{ asset('./image/logo_phrase.svg') }}" alt="animated-logo"></div>
+			</div>
+		</div>
+	</header>
+
+	<div class="col-12 text-center py-5">
+		<h1 id="bkg_title">Rechercher</h1>
+	</div>
+
+	<div class="row justify-content-center mt-5">
+
+		<div class="input-group mb-3 col-4">
+			<input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Le job de vos rêves">
+
+		</div>
+		<div class="input-group mb-3 col-4">
+			<input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Où">
+
+		</div>
+
+	</div>
+
+    <div class="row py-5 ">
+		<div class="col-12 text-center">
+			<button id="search_button">OK</button>
+		</div>
+	</div>
+
+	<div class="container py-5">
+		<hr style="height: 1px;  background-color: #707070; width: 100%; border: none;">
+		<div class="col-12 text-center py-3">
+			<h1>Nos dernières offres d'emploi</h1>
+		</div>
+
+	</div>
+
+	<div class="row mt-2 justify-content-center mx-auto">
+{# 
+    {% for publications in publications %}
+
+			<div class="col-3  p-4 ">
+				<div class="card ">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">{{ publications.title }}</h5>
+						<p class="card-text">{{ publications.description}}</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">{{ publications.company }}</li>
+						<li class="list-group-item">{{ publications.location }}</li>
+						<li class="list-group-item">{{ publications.url }}</li>
+						<li class="list-group-item">{{ publications.logo}}</li>
+					</ul>
+					<div class="card-body">
+						<a href="#" class="card-link">Aller voir l'annonce</a>
+					</div>
+				</div>
+
+			</div>
+
+		{% endfor %} #}
+
+		<div class="container py-5">
+			<hr style="height: 1px;  background-color: #707070; width: 100%; border: none;">
+			<div class="col-12 text-center py-3">
+				<h1>CAROUSSEL</h1>
+
+				<h1>Pour vous</h1>
+
+				<p class="h4">Nos articles les plus consultés</p>
+			</div>
+			{# <div class="row mt-5 justify-content-center ">
+
+				{% for publications in publications %}
+					<div class="col-3 mr-5 p-4 ">
+
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top" src="..." alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title">{{ publications.title }}</h5>
+								<p class="card-text">{{ publications.description}}</p>
+							</div>
+						</div>
+
+					</div>
+
+				{% endfor %}
+
+			</div> #}
+
+		</div>
+		
+
+		<div class="container py-5">
+			<hr style="height: 1px;  background-color: #707070; width: 100%; border: none;">
+
+			<div class="col-12 text-center py-3">
+				<h1>Nos services</h1>
+			</div>
+			<div class="row justify-content-center py-5  ">
+				<div class="col-2 text-center">
+					<img class="mb-3" src="{{ asset('./image/icone.svg') }}" alt="logo" width="60%">
+					<h4>Newsletter</h4>
+					<p>Ne ratez plus rien, inscrivez vous à notre newsletters</p>
+					<button id="button_outset">Inscrivez-vous</button>
+				</div>
+				<div class="col-2 text-center">
+					<img class="mb-3" src="{{ asset('./image/icone.svg') }}" alt="logo" width="60%">
+					<h4>Newsletter</h4>
+					<p>Ne ratez plus rien, inscrivez vous à notre newsletters</p>
+					<button id="button_outset">Inscrivez-vous</button>
+				</div>
+				<div class="col-2 text-center">
+					<img class="mb-3" src="{{ asset('./image/icone.svg') }}" alt="logo" width="60%">
+					<h4>Newsletter</h4>
+					<p>Ne ratez plus rien, inscrivez vous à notre newsletters</p>
+					<button id="button_outset">Inscrivez-vous</button>
+				</div>
+				<div class="col-2 text-center">
+					<img class="mb-3" src="{{ asset('./image/icone.svg') }}" alt="logo" width="60%">
+					<h4>Newsletter</h4>
+					<p>Ne ratez plus rien, inscrivez vous à notre newsletters</p>
+					<button id="button_outset">Inscrivez-vous</button>
+				</div>
+				<div class="col-2 text-center">
+					<img class="mb-3" src="{{ asset('./image/icone.svg') }}" alt="logo" width="60%">
+					<h4>Newsletter</h4>
+					<p>Ne ratez plus rien, inscrivez vous à notre newsletters</p>
+					<button id="button_outset">Inscrivez-vous</button>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+{% endblock %}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="site elles">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Viviane Janer">
+
+		<title>
+			elles -{% block title %}Bienvenue sur Elles{% endblock %}
+		</title>
+
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="{{ asset('css/style.css') }}"> {% block stylesheets %}{% endblock %}
+		</head>
+    <body>
+        
+
+    <header>
+        <img class="main_logo" src="./image/Groupe 3.png" alt="logo">
+    </header>
+
+    <nav>
+      <div class="conteneur-nav">
+      <label for="mobile">Afficher / Cacher le menu</label>
+      <input type="checkbox" id="mobile" role="button">
+        <ul>
+          <li class="deroulant"><a href="#">A la Une </a>
+            <ul class="sous">
+              <li><a href="#">Les nouveautés</a></li>
+              
+            </ul>
+          </li>
+          <li class="deroulant"><a href="#"> Nos Articles</a>
+            <ul class="sous">
+              <li><a href="#">Les lois</a></li>
+              <li><a href="#">Les plus populaires</a></li>
+              <li><a href="#">Nos solutions</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Rechercher</a></li>
+          <li><a href="#">Nous Contacter</a></li>
+          <li><a href="#">Qui sommes-nous?</a></li>
+
+        </ul>
+      </div>
+    </nav>
+
+     {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+
+			<footer>
+				<div class="container-fluid mt-5">
+					<div class="row  justify-content-start mb-3 pr-3">
+						<img class="" src="{{ asset('./image/logo.svg') }}" alt="logo" width="12%">
+					</div>
+
+					<div class="row  justify-content-end mb-3 pr-3">
+						<div class="row  justify-content-end  ">
+
+							<p class="h3 ">Suivez-nous</p>
+							<a class="mr-1" href="#">Facebbok</a>
+							<a class="mr-1" href="#">Twitter</a>
+							<a class="mr-1" href="#">Instagram</a>
+							<a class="mr-1" href="#">Youtube</a>
+						</div>
+
+					</div>
+					<div class="row  justify-content-end pr-3 ">
+						<input class="col-md-3 p-2  " type="Newletters" placeholder="Votre Email">
+						<button id="btn_news" class=" col-1">
+							Newsletter</button>
+					</div>
+					<div class="row justify-content-end mb3 pt-2 pr-3 ">
+						<p>Recevez des articles, des conseils et des astuces deux fois par semaine</p>
+					</div> 
+					
+					<div class="row w-50 mt-2 mx-auto">
+
+
+						<div class="col-md-4 font-weight-light ">
+							<p class="font-weight-bold">FAQ</p>
+							<p class="font-weight-bold">Recruteurs</p>
+						</div>
+
+						<div class="col-md-4 font-weight-light ">
+							<p class="font-weight-bold">Recruteurs</p>
+							<p class="font-weight-bold">Presse</p>
+							<p class="font-weight-bold">Entreprises</p>
+							<p class="font-weight-bold">Partenariats</p>
+						</div>
+						<div class="col-md-4 font-weight-light ">
+							<p class="font-weight-bold">Mentions légales</p>
+							<p class="font-weight-bold">CGU</p>
+							<p class="font-weight-bold">Politique de Confidentialité</p>
+						</div>
+
+					</div>
+
+					{# <div class="row mt-5 text-center mx-auto">
+						<div class="col-12 text-center">
+							<p>{{ copyright|raw }}</p>
+						</div>
+
+					</div> #}
+				</div>
+			</footer>
+    
+    
+      
+			<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+       
+</html>
