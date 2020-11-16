@@ -51,21 +51,21 @@
 	</div>
 
 	<div class="row mt-2 justify-content-center mx-auto">
-{# 
-    {% for publications in publications %}
+
+    {% for jobs in jobs %}
 
 			<div class="col-3  p-4 ">
 				<div class="card ">
 					<img class="card-img-top" src="..." alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">{{ publications.title }}</h5>
-						<p class="card-text">{{ publications.description}}</p>
+						<h5 class="card-title">{{ jobs.title }}</h5>
+						<p class="card-text">{{ jobs.description}}</p>
 					</div>
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item">{{ publications.company }}</li>
-						<li class="list-group-item">{{ publications.location }}</li>
-						<li class="list-group-item">{{ publications.url }}</li>
-						<li class="list-group-item">{{ publications.logo}}</li>
+						<li class="list-group-item">{{ jobs.company }}</li>
+						<li class="list-group-item">{{ jobs.location }}</li>
+						<li class="list-group-item">{{ jobs.url }}</li>
+						<li class="list-group-item">{{ jobs.uploads}}</li>
 					</ul>
 					<div class="card-body">
 						<a href="#" class="card-link">Aller voir l'annonce</a>
@@ -73,8 +73,7 @@
 				</div>
 
 			</div>
-
-		{% endfor %} #}
+		{% endfor %} 
 
 		<div class="container py-5">
 			<hr style="height: 1px;  background-color: #707070; width: 100%; border: none;">
