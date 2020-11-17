@@ -9,6 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ArticleType extends AbstractType
 {
@@ -17,21 +18,21 @@ class ArticleType extends AbstractType
         $builder
         ->add('Title', TextType::class,[
             'required'=> true,
-            'label' => 'Titre de l\'annonce',
+            'label' => 'Titre de l\'article',
             'attr' => [
-                'placeholder' =>'Poste proposé'
+                'placeholder' =>'Votre article'
             ]
         ])       
-        ->add('description', TextType::class, [
+        ->add('description', TextareaType::class, [
             'required'=> true,
-            'label' => 'Description de l\'annonce',
+            'label' => 'Description de l\'article',
             'attr' => [
-                'placeholder' => 'décrire le poste proposé'
+                'placeholder' => 'contenu de l\'article'
             ]
 
         ])
         ->add('createdAt', DateType::class, [
-            'label' => 'Création de l\'annonce',
+            'label' => 'Création de l\'article',
             'required'=> true,
             'attr' => [
                 'placeholder' => 'date de publication'
@@ -39,7 +40,7 @@ class ArticleType extends AbstractType
 
         ])
     ->add('updated_at', DateType::class, [
-            'label' => 'Ecpiration de l\'annonce',
+            'label' => 'Ecpiration de l\'article',
             'attr' => [
                 'placeholder' => 'date d\'expiration'
             ]

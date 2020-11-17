@@ -23,7 +23,7 @@ class JobsRepository extends ServiceEntityRepository
     //  * @return Jobs[] Returns an array of Jobs objects
     //  */
     
-    public function findThreeJobs()
+    public function findThree()
     {
         return $this->createQueryBuilder('t')
             ->andWhere('t.id > :val')

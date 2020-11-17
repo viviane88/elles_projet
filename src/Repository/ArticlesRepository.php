@@ -19,6 +19,19 @@ class ArticlesRepository extends ServiceEntityRepository
         parent::__construct($registry, Articles::class);
     }
 
+
+
+    public function findThree()
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.id > :val')
+            ->setParameter('val', '0')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
     // /**
     //  * @return Articles[] Returns an array of Articles objects
     //  */

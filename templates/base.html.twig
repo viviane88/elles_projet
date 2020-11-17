@@ -15,32 +15,40 @@
 
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}"> {% block stylesheets %}{% endblock %}
 		</head>
+
     <body>
         
-
-    <header>
-		<img class="" src="{{ asset('./image/logo.svg') }}" alt="logo" width="12%">
-    </header>
+	<div class="container-fluid">
+		<div class="row">
+			<img id="main_logo" class="m-3" src="{{ asset('./image/logo.svg') }}" alt="logo" width="12%">
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row justify-content-end mr-5 ">
+			<a href="{{ path('admin') }}">Me connecter</a>		
+		</div>
+	</div>
 
     <nav>
       <div class="conteneur-nav">
-      <label for="mobile">Afficher / Cacher le menu</label>
+
       <input type="checkbox" id="mobile" role="button">
         <ul>
           <li class="deroulant"><a href="#">A la Une </a>
-            <ul class="sous">
+            {# <ul class="sous">
               <li><a href="#">Les nouveautés</a></li>
               
-            </ul>
+            </ul> #}
           </li>
-          <li class="deroulant"><a href="#"> Nos Articles</a>
-            <ul class="sous">
+          <li class="deroulant"><a href="{{path('article')}}"> Nos Articles</a>
+           {#  <ul class="sous">
               <li><a href="#">Les lois</a></li>
               <li><a href="#">Les plus populaires</a></li>
               <li><a href="#">Nos solutions</a></li>
-            </ul>
+            </ul> #}
           </li>
-          <li><a href="#">Rechercher</a></li>
+          <li><a href="{{path('job')}}">Rechercher</a></li> 
           <li><a href="#">Nous Contacter</a></li>
           <li><a href="#">Qui sommes-nous?</a></li>
 

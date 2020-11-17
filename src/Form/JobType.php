@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class JobType extends AbstractType
 {
@@ -40,7 +41,7 @@ class JobType extends AbstractType
             ]
 
         ])            
-        ->add('description', TextType::class, [
+        ->add('description', TextareaType::class, [
             'required'=> true,
             'label' => 'Description de l\'annonce',
             'attr' => [
