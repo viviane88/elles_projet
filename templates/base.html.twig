@@ -23,7 +23,8 @@
 			<img id="main_logo" class="m-3" src="{{ asset('./image/logo.svg') }}" alt="logo" width="12%">
 		</div>
 	</div>
-	
+	<a id="top"></a>
+
 	<div class="container-fluid">
 		<div class="row justify-content-end mr-5 ">
 			<a href="{{ path('admin') }}">Me connecter</a>		
@@ -36,7 +37,7 @@
 
       <input type="checkbox" id="mobile" role="button">
         <ul>
-          <li class="deroulant"><a href="#">A la Une </a>
+          <li class="deroulant"><a href="{{path('home')}}">Accueil </a>
             {# <ul class="sous">
               <li><a href="#">Les nouveautés</a></li>
               
@@ -50,7 +51,7 @@
             </ul> #}
           </li>
           <li><a href="{{path('job')}}">Rechercher</a></li> 
-          <li><a href="#">Nous Contacter</a></li>
+          <li><a href="{{path('contact')}}">Nous Contacter</a></li>
           <li><a href="#">Qui sommes-nous?</a></li>
 
         </ul>
@@ -59,6 +60,12 @@
 
      {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
+		<div class="container-fluid mt-5">
+			<div class="row justify-content-center mb3 pt-2 pr-3 ">
+				<a href="#top"><img src="{{ asset('./image/arrowTop.png') }}" alt=""></a>
+			</div>
+		</div>
 
 			<footer>
 				<div class="container-fluid mt-5">
