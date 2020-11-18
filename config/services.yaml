@@ -6,6 +6,8 @@
 parameters:
         app.copyright: 'Copyright &copy; 2020 | elles'
         dossier_photos_articles: '%kernel.project_dir%/public/image/articles'
+        dossier_photos_jobs: '%kernel.project_dir%/public/image/jobs'
+
 
 services:
     # default configuration for services in *this* file

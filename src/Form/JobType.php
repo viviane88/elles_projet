@@ -71,14 +71,13 @@ class JobType extends AbstractType
                 ]
 
             ])
-         ->add('uploads', FileType::class, [
+            ->add('uploads', FileType::class, [
                 'mapped'=> false,
-                'required' => false,
-                'label' => 'logo (JPG file)',
+                'label' => 'logo 1',
                 'attr' => [
                     'placeholder' => 'ex: logo.jpg'
                 ]
-            ])            
+            ])             
         ->add('Sauvegarder', SubmitType::class, [
                 'label' => 'Valider'
             ])

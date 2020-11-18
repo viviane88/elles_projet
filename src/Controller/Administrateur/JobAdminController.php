@@ -34,8 +34,30 @@ class JobAdminController extends AbstractController
         $form = $this->createForm(JobType::class, $jobs);
         $form->handleRequest($request);
 
+        $img1 = $form['uploads']->getData();
+
 
         if($form->isSubmitted() && $form->isValid()){
+
+            $nomImg1 = md5(uniqid()); // nom unique
+            $extensionImg1 = $img1->guessExtension(); // récupérer l'extension de l'img
+            $newNomImg1 = $nomImg1.'.'.$extensionImg1; // recomposer un nom d'img
+
+            try{ // on tente d'importer l'image
+               
+                $img1->move(
+                    $this->getParameter('dossier_photos_jobs'),
+                    $newNomImg1
+                );
+           }
+           catch(FileException $e){
+            $this->addFlash(
+                'danger',
+                'Une erreur est survenue lors de l\'importation de l\'image'
+            );
+        }
+
+        $jobs->setUploads($newNomImg1); // nom pour la base de données
 
 
             $manager = $this->getDoctrine()->getManager();
@@ -64,8 +86,30 @@ class JobAdminController extends AbstractController
         $form = $this->createForm(jobType::class, $jobs);
         $form->handleRequest($request);
 
+        $img1 = $form['uploads']->getData();
+
 
         if($form->isSubmitted() && $form->isValid()){
+
+            $nomImg1 = md5(uniqid()); // nom unique
+            $extensionImg1 = $img1->guessExtension(); // récupérer l'extension de l'img
+            $newNomImg1 = $nomImg1.'.'.$extensionImg1; // recomposer un nom d'img
+
+            try{ // on tente d'importer l'image
+               
+                $img1->move(
+                    $this->getParameter('dossier_photos_jobs'),
+                    $newNomImg1
+                );
+           }
+           catch(FileException $e){
+            $this->addFlash(
+                'danger',
+                'Une erreur est survenue lors de l\'importation de l\'image'
+            );
+        }
+
+        $jobs->setUploads($newNomImg1); // nom pour la base de données
             
            
             $manager = $this->getDoctrine()->getManager();
