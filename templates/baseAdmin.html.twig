@@ -7,12 +7,12 @@
 		<meta name="author" content="Viviane Janer">
 
 		<title>
-			elles -{% block title %}Bienvenue sur Elles{% endblock %}
+			elles -
+			{% block title %}Accueil - administrateur{% endblock %}
 		</title>
 
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}"> {% block stylesheets %}{% endblock %}
 		</head>
     <body>
@@ -46,6 +46,7 @@
 
 				</div>
 		</header>
+			
 
 		<div class="row m-0 p-0 mt-5">
 				{% block body %}

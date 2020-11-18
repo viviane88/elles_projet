@@ -46,13 +46,13 @@ class ArticleType extends AbstractType
             ]
 
         ])
-      /* ->add('uploads', FileType::class, [
+       ->add('uploads', FileType::class, [
                 'mapped'=> false,
                 'label' => 'logo 1',
                 'attr' => [
                     'placeholder' => 'ex: logo.jpg'
                 ]
-            ])  */           
+            ])          
             ->add('Sauvegarder', SubmitType::class, [
                 'label' => 'Valider'
             ])

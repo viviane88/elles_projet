@@ -32,7 +32,8 @@
 						<td>{{ jobs.description }}</td>
 						<td>{{ jobs.location }}</td>
 						<td>{{ jobs.url }}</td>
-                        <td>{{ jobs.uploads }}</td>
+
+						<td><img src="{{ asset('image/jobs/') ~ jobs.uploads }} " alt=""</td>
 
 						<td>
 							<a href="{{ path('job_update', {'id':jobs.id}) }}">

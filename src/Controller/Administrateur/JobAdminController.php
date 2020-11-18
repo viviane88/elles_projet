@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class JobAdminController extends AbstractController
 {
@@ -33,7 +34,27 @@ class JobAdminController extends AbstractController
         $form = $this->createForm(JobType::class, $jobs);
         $form->handleRequest($request);
 
+        // $img1 = $form['uploads']->getdata();
+
         if($form->isSubmitted() && $form->isValid()){
+ 
+           /*  $nomImg1 = md5(uniqid());
+            $extensionImg1 = $img1->guessExtension();
+            $newNomImg1 = $nomImg1.'.'.$extensionImg1;
+
+            try{
+                $chemin = $this->getParameter('dossier_photos_jobs').'/'.$newNomImg1;
+                $img1->move(
+                    $chemin
+                );
+            }
+            catch(FileException $e){
+                $this->addFlash(
+                    'danger',
+                    'erreur'
+                );
+            } */
+
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($jobs);
             $manager->flush();
