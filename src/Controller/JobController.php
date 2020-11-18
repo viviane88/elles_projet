@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+
 class JobController extends AbstractController
 {
     /**
@@ -27,4 +28,17 @@ class JobController extends AbstractController
             'jobs' => $jobs,
         ]);
     }
+    /**
+     * @Route("/job/-{id}", name="job_show", requirements={"slug": "[a-z0-9\-]*"})
+     */
+    public function show($id, JobsRepository $jobsRepository)
+    {
+        $jobs = $jobsRepository->find($id);
+
+        return $this->render('job/show.html.twig', [
+            'jobs' => $jobs,
+        ]);
+    }
+
+
 }

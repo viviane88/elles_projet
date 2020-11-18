@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\JobsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+
+
 /**
  * @ORM\Entity(repositoryClass=JobsRepository::class)
  */
@@ -78,6 +80,11 @@ class Jobs
 
         return $this;
     }
+    
+    /* public function getSlug(): ?string
+    {
+        return (new Slugify())->slugify($this->title);  
+    } */
 
     public function getcompany(): ?string
     {

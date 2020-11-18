@@ -4,13 +4,7 @@
 
 {% block body %}
 
-    <div class="col-12 text-center py-3 p-0 m-0">
-		<h1 id="bkg_title">Nos emplois</h1>
-	</div>
-
-	{% for jobs in jobs %}
-
-		<div class="col-12 jumbotron ">
+<div class="col-12 jumbotron ">
 
 			<div class="container">
 				<div class="row ">
@@ -18,7 +12,8 @@
 					</div>
 
 					<div class="col-9 bg-info">
-					<a href="{{ path('job_show', {'id':jobs.id}) }}"> {{ jobs.title }}</a>
+					 {{ jobs.title }}
+
 
 						<div class="row">
 							<div class=" bg-danger">{{ jobs.company }}</div>
@@ -39,10 +34,4 @@
 
 		</div>
 
-	{% endfor %}
-
-	<div class="container col-3">
-   		 {{ knp_pagination_render(jobs) }}
-	</div>
-	
 {% endblock %}
