@@ -65,7 +65,7 @@ class JobType extends AbstractType
 
             ])
         ->add('updated_at', DateType::class, [
-                'label' => 'Ecpiration de l\'annonce',
+                'label' => 'Expiration de l\'annonce',
                 'attr' => [
                     'placeholder' => 'date d\'expiration'
                 ]
@@ -73,7 +73,8 @@ class JobType extends AbstractType
             ])
          ->add('uploads', FileType::class, [
                 'mapped'=> false,
-                'label' => 'logo',
+                'required' => false,
+                'label' => 'logo (JPG file)',
                 'attr' => [
                     'placeholder' => 'ex: logo.jpg'
                 ]

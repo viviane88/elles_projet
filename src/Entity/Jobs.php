@@ -60,7 +60,7 @@ class Jobs
     private $uploads;
 
     /**
-     * @ORM\ManyToOne(targetEntity=user::class, inversedBy="jobs")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="jobs")
      */
     private $user;
 

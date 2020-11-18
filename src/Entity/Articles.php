@@ -43,7 +43,7 @@ class Articles
     private $uploads;
 
     /**
-     * @ORM\ManyToOne(targetEntity=user::class, inversedBy="articles")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="articles")
      */
     private $user;
 
