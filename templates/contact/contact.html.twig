@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire de contact{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+		<div class="row p-5">
+			<div class="col-12 text-center">
+				<h1>Formulaire de Contact</h1>
+			</div>
+		</div>
+</div>
+<div class="row ">
+		<div class="col-4 offset-4">
+				{{ form_start(formulaireContact) }}
+
+				{{ form_end(formulaireContact) }}
+		</div>
+</div>
+{# <div class="row ">
+		<div class=" mx-auto ">
+        <button  id="search_button" type="submit" class="mt-2">Ok</button>
+</div> #}
+
+	</div>
+
+{% endblock %}
