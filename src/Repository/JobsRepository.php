@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Jobs;
+use App\Entity\SearchJob;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -20,9 +21,34 @@ class JobsRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return Jobs[] Returns an array of Jobs objects
+    //  * @return Query
     //  */
-    
+    public function findAllVisibleQuery (SearchJob $search)
+    {
+        return $this->createQueryBuilder('s')
+        
+        ->andwhere('s.location = :location')
+        ->setParameter('location', $search->getLocation() )
+        ->andwhere('s.company = :company')
+        ->setParameter('company', $search->getCompany() );
+    }
+
+ 
+/* $query =  $this->findAllVisibleQuery();
+
+if($search->getLocation()){
+     $query = $query
+    ->andwhere('s.location = :location')
+    ->setParameter('location', $search->getLocation() );
+}
+if($search->getcompany()){
+    $query = $query
+    ->andwhere('s.company = :company')
+    ->setParameter('company', $search->getCompany() );
+}
+return $query->getQuery();
+
+ */
     public function findThree()
     {
         return $this->createQueryBuilder('t')
@@ -33,6 +59,8 @@ class JobsRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
+
+    
     
 
     /*

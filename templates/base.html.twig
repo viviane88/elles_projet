@@ -10,17 +10,15 @@
 			elles -{% block title %}Bienvenue sur Elles{% endblock %}
 		</title>
 
-
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-		<link rel="stylesheet" href="{{ asset('css/style.css') }}"> {% block stylesheets %}{% endblock %}
+		<link rel="stylesheet" href="{{ asset('css/base.css') }}"> {% block stylesheets %}{% endblock %}
 		</head>
 
-    <body>
-        
-	<div class="container-fluid">
+<body>
+	
+   <div class="container-fluid">
 		<div class="row">
-			<img id="main_logo" class="m-3" src="{{ asset('./image/logo.svg') }}" alt="logo" width="12%">
+			<a href="{{ path('home') }}"><img id="main_logo" class="m-3" src="{{ asset('./image/logo.svg') }}" alt="logo" width="75%"></a>
 		</div>
 	</div>
 	<a id="top"></a>
@@ -31,100 +29,81 @@
 		</div>
 	</div>
 
+	<nav class="fill">
+		<ul>
+		  <li><a href="{{ path('home') }}">Accueil</a></li>
+		  <li><a href="{{ path('article') }}">Nos Articles</a></li>
+		  <li><a href="{{ path('job') }}">Nos Jobs</a></li>
+		  <li><a href="{{ path('contact') }}">Nous contactez</a></li>
+		  <li><a href="#">Qui sommes nous</a></li>
+		</ul>
+  </nav>
 
-    <nav>
-      <div class="conteneur-nav">
-
-      <input type="checkbox" id="mobile" role="button">
-        <ul>
-          <li class="deroulant"><a href="{{path('home')}}">Accueil </a>
-            {# <ul class="sous">
-              <li><a href="#">Les nouveautés</a></li>
-              
-            </ul> #}
-          </li>
-          <li class="deroulant"><a href="{{path('article')}}"> Nos Articles</a>
-           {#  <ul class="sous">
-              <li><a href="#">Les lois</a></li>
-              <li><a href="#">Les plus populaires</a></li>
-              <li><a href="#">Nos solutions</a></li>
-            </ul> #}
-          </li>
-          <li><a href="{{path('job')}}">Rechercher</a></li> 
-          <li><a href="{{path('contact')}}">Nous Contacter</a></li>
-          <li><a href="#">Qui sommes-nous?</a></li>
-
-        </ul>
-      </div>
-    </nav>
-
-     {% block body %}{% endblock %}
+		{% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
 
-		<div class="container-fluid mt-5">
-			<div class="row justify-content-center mb3 pt-2 pr-3 ">
-				<a href="#top"><img src="{{ asset('./image/arrowTop.png') }}" alt=""></a>
-			</div>
+	<div class="container-fluid mt-5">
+		<div class="row justify-content-center mb3 pt-2 pr-3 ">
+	<a href="#top"><img src="{{ asset('./image/arrowTop.png') }}" alt=""></a>
 		</div>
+	</div>
 
-			<footer>
-				<div class="container-fluid mt-5">
-					<div class="row  justify-content-start mb-3 pr-3">
-						<img class="" src="{{ asset('./image/logo.svg') }}" alt="logo" width="12%">
-					</div>
+<footer>
+	<div class="container-fluid mt-5">
 
-					<div class="row  justify-content-end mb-3 pr-3">
-						<div class="row  justify-content-end  ">
-
-							<p class="h3 ">Suivez-nous</p>
-							<a class="mr-1" href="#">Facebbok</a>
-							<a class="mr-1" href="#">Twitter</a>
-							<a class="mr-1" href="#">Instagram</a>
-							<a class="mr-1" href="#">Youtube</a>
+		<div class="row  justify-content-start mb-3 pr-3">
+			<img class="" src="{{ asset('./image/logo.svg') }}" alt="logo" width="12%">
 						</div>
 
-					</div>
-					<div class="row  justify-content-end pr-3 ">
-						<input class="col-md-3 p-2  " type="Newletters" placeholder="Votre Email">
-						<button id="btn_news" class=" col-1">
-							Newsletter</button>
-					</div>
-					<div class="row justify-content-end mb3 pt-2 pr-3 ">
-						<p>Recevez des articles, des conseils et des astuces deux fois par semaine</p>
-					</div> 
-					
-					<div class="row w-50 mt-2 mx-auto">
-
-
-						<div class="col-md-4 font-weight-light ">
-							<p class="font-weight-bold">FAQ</p>
-							<p class="font-weight-bold">Recruteurs</p>
-						</div>
-
-						<div class="col-md-4 font-weight-light ">
-							<p class="font-weight-bold">Recruteurs</p>
-							<p class="font-weight-bold">Presse</p>
-							<p class="font-weight-bold">Entreprises</p>
-							<p class="font-weight-bold">Partenariats</p>
-						</div>
-						<div class="col-md-4 font-weight-light ">
-							<p class="font-weight-bold">Mentions légales</p>
-							<p class="font-weight-bold">CGU</p>
-							<p class="font-weight-bold">Politique de Confidentialité</p>
-						</div>
-
-					</div>
-
-					 <div class="row mt-5 text-center mx-auto">
-						<div class="col-12 text-center">
-							<p>{{ copyright|raw }}</p>
-						</div>
-
-					</div> 
+			<div class="row  justify-content-end mb-3 pr-3">
+				<div class="row  justify-content-end  ">
+					<p class="h3 mr-5 ">Suivez-nous</p>
+					<a class="mr-2" href=""><img src="{{ asset('./image/facebook.png') }}" alt="logo facebook"></a>
+					<a class="mr-2" href="#"><img src="{{ asset('./image/instagram.png') }}" alt="logo instagram"></a>
+					<a class="mr-2" href="#"><img src="{{ asset('./image/linkedin.png') }}" alt="logo linkedin"></a>
+					<a class="mr-2" href="#"><img src="{{ asset('./image/twitter.png') }}" alt="logo twitter"></a>
 				</div>
-			</footer>
 
-			<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+			</div>
+				<div class="row  justify-content-end pr-3 ">
+					<input class="col-md-3 p-2  " type="Newletters" placeholder="Votre Email">
+					<button id="btn_news" class=" col-1">Newsletter</button>
+				</div>
+
+			<div class="row justify-content-end mb3 pt-2 pr-3 ">
+				<p>Recevez des articles, des conseils et des astuces deux fois par semaine</p>
+			</div> 
+
+			<div class="row w-50 mt-2 mx-auto">
+
+			<div class="col-md-4 font-weight-light ">
+				<p class="font-weight-bold">FAQ</p>
+				<p class="font-weight-bold">Recruteurs</p>
+			</div>
+
+			<div class="col-md-4 font-weight-light ">
+				<p class="font-weight-bold">Recruteurs</p>
+				<p class="font-weight-bold">Presse</p>
+				<p class="font-weight-bold">Entreprises</p>
+				<p class="font-weight-bold">Partenariats</p>
+			</div>
+			<div class="col-md-4 font-weight-light ">
+				<p class="font-weight-bold">Mentions légales</p>
+				<p class="font-weight-bold">CGU</p>
+				<p class="font-weight-bold">Politique de Confidentialité</p>
+			</div>
+
+			</div>
+
+			<div class="row mt-5 text-center mx-auto">
+						<div class="col-12 text-center">
+						<p>{{ copyright|raw }}</p>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+					<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>

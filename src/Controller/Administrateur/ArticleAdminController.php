@@ -64,7 +64,7 @@ class ArticleAdminController extends AbstractController
 
             $this->addFlash(
                 'success',
-                'Le nouvel article a bien été ajoutée'
+                'Le nouvel article a bien été ajouté'
             );
             return $this->redirectToRoute('article_admin');
 
@@ -134,13 +134,22 @@ class ArticleAdminController extends AbstractController
     {
         $articles = $articlesRepository->find($id);
 
+        // récupérer le nom et le chemin de l'image à supprimer
+        $nomImg1 = $articles->getUploads();
+        $cheminImg1 = $this->getParameter('dossier_photos_articles').'/'.$nomImg1;
+
+        // supprimer img1
+        if($nomImg1 != null){
+            unlink($cheminImg1);
+        }
+
         $manager = $this->getDoctrine()->getManager();
         $manager->remove($articles);
         $manager->flush();
 
         $this->addFlash(
             'danger',
-            'Le nouvel article a bien été supprimée'
+            'Le nouvel article a bien été supprimé'
         );
         
 

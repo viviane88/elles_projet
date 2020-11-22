@@ -20,8 +20,11 @@ class JobAdminController extends AbstractController
     {
         $jobs = $jobsRepository->findAll();
 
+
+
         return $this->render('Administrateur/jobAdmin.html.twig', [
             'jobs' => $jobs,
+
         ]);
     }
     /**
@@ -34,20 +37,20 @@ class JobAdminController extends AbstractController
         $form = $this->createForm(JobType::class, $jobs);
         $form->handleRequest($request);
 
-        $img1 = $form['uploads']->getData();
+        $logo = $form['uploads']->getData();
 
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $nomImg1 = md5(uniqid()); // nom unique
-            $extensionImg1 = $img1->guessExtension(); // récupérer l'extension de l'img
-            $newNomImg1 = $nomImg1.'.'.$extensionImg1; // recomposer un nom d'img
+            $nomlogo = md5(uniqid()); 
+            $extensionlogo = $logo->guessExtension(); //  l'extension de l'img
+            $newNomlogo = $nomlogo.'.'.$extensionlogo; // recomposer du nom
 
             try{ // on tente d'importer l'image
                
-                $img1->move(
+                $logo->move(
                     $this->getParameter('dossier_photos_jobs'),
-                    $newNomImg1
+                    $newNomlogo
                 );
            }
            catch(FileException $e){
@@ -57,7 +60,7 @@ class JobAdminController extends AbstractController
             );
         }
 
-        $jobs->setUploads($newNomImg1); // nom pour la base de données
+        $jobs->setUploads($newNomlogo); // nom pour la base de données
 
 
             $manager = $this->getDoctrine()->getManager();
@@ -66,7 +69,7 @@ class JobAdminController extends AbstractController
 
             $this->addFlash(
                 'success',
-                'Le nouvel emploi a bien été ajoutée'
+                'Le nouvel emploi a bien été ajouté'
             );
             return $this->redirectToRoute('job_admin');
 
@@ -86,20 +89,20 @@ class JobAdminController extends AbstractController
         $form = $this->createForm(jobType::class, $jobs);
         $form->handleRequest($request);
 
-        $img1 = $form['uploads']->getData();
+        $logo = $form['uploads']->getData();
 
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $nomImg1 = md5(uniqid()); // nom unique
-            $extensionImg1 = $img1->guessExtension(); // récupérer l'extension de l'img
-            $newNomImg1 = $nomImg1.'.'.$extensionImg1; // recomposer un nom d'img
+            $nomlogo = md5(uniqid()); 
+            $extensionlogo = $logo->guessExtension(); //  l'extension de l'img
+            $newNomlogo = $nomlogo.'.'.$extensionlogo; // recomposer du nom
 
             try{ // on tente d'importer l'image
                
-                $img1->move(
+                $logo->move(
                     $this->getParameter('dossier_photos_jobs'),
-                    $newNomImg1
+                    $newNomlogo
                 );
            }
            catch(FileException $e){
@@ -109,7 +112,7 @@ class JobAdminController extends AbstractController
             );
         }
 
-        $jobs->setUploads($newNomImg1); // nom pour la base de données
+        $jobs->setUploads($newNomlogo); // nom pour la base de données
             
            
             $manager = $this->getDoctrine()->getManager();
@@ -137,13 +140,22 @@ class JobAdminController extends AbstractController
     {
         $jobs = $jobsRepository->find($id);
 
+        // récupérer le nom et le chemin de l'image à supprimer
+        $nomlogo = $jobs->getUploads();
+        $cheminLogo = $this->getParameter('dossier_photos_jobs').'/'.$nomlogo;
+
+        // supprimer img1
+        if($nomlogo != null){
+            unlink($cheminLogo);
+        }
+
         $manager = $this->getDoctrine()->getManager();
         $manager->remove($jobs);
         $manager->flush();
 
         $this->addFlash(
             'danger',
-            'Le nouvel emploi a bien été supprimée'
+            'Le nouvel emploi a bien été supprimé'
         );
         
 

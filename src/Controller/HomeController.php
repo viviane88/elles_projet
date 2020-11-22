@@ -2,11 +2,11 @@
 
 namespace App\Controller;
 
-use App\Repository\ArticlesRepository;
 use App\Repository\JobsRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\ArticlesRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
@@ -17,13 +17,15 @@ class HomeController extends AbstractController
     {
         $jobs = $jobsRepository->findThree();
         $articles = $articlesRepository->findThree();
-
-
+      
+    
+        
         return $this->render('home/index.html.twig', [
             'jobs' => $jobs,
             'articles' => $articles,
-
         ]);
     }
+    
+    
     
 }
