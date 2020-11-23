@@ -3,25 +3,29 @@
 {% block title %}Formulaire de contact{% endblock %}
 
 {% block body %}
-<div class="container-fluid">
-		<div class="row p-5">
-			<div class="col-12 text-center">
-				<h1>Formulaire de Contact</h1>
+<div>
+	<div class="container-fluid">
+		<div class="row ">
+			<div class="col-12 text-center m-0 p-0 ">
+
+				<img class="contact_img" src="{{ asset('./image/contact.jpg') }}" alt="photo background" width="100%" >
+				<h1 class="title_contact">Formulaire de contact</h1>
+
 			</div>
 		</div>
-</div>
-<div class="row ">
+	</div>
+	<div class="row mt-5">
 		<div class="col-4 offset-4">
 				{{ form_start(formulaireContact) }}
 
 				{{ form_end(formulaireContact) }}
 		</div>
-</div>
+	</div>
 {# <div class="row ">
 		<div class=" mx-auto ">
         <button  id="search_button" type="submit" class="mt-2">Ok</button>
 </div> #}
 
-	</div>
+</div>
 
 {% endblock %}

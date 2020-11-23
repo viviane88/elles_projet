@@ -138,7 +138,7 @@ opacity: 1;
 }
 
 /* Keyframes */
-  @-webkit-keyframes fill {
+  @keyframes fill {
 0% {
   width: 0%;
   height: 1px;
@@ -150,23 +150,221 @@ opacity: 1;
 100% {
   width: 100%;
   height: 100%;
-  background:#FFE815;
+  background:white;
+  border: solid 2px  #FFE815
   ;
 }
   }
 
 /* **************************************** BASE - FOOTER **************************************** */
-footer{
-background-color: #39485E;
+/*  Général  */
+
+
+#txt3
+{
+  color: white;
+  font-size: 24px
 }
-footer p{
-color: white;
+
+#link {
+  display: flex;
+  width: 90px;
+  height: 40px;
+  color: #aaa7a7;
+  background-color: transparent;
+  border-top: 2px solid white;
+  position: relative;
+  top: -10px
 }
-footer a{
-text-decoration: none;
+#link:hover,
+#link1:hover {
+  color: #FFE815;
+  text-decoration: none;
 }
+#link1 {
+  display: flex;
+  width: 150px;
+  height: 40px;
+  color: white;
+  background-color: transparent;
+  position: relative;
+  top: -10px;
+  margin-top: 7px;
+  margin:auto
+}
+/*  Logo  */
+
+#part1 {
+  width: 100%;
+  height: 280px;
+  background-color: #3A485E
+}
+#companyinfo {
+  width: 14%;
+  height: 280px;
+  position: relative;
+  left: 8%;
+  top: 30px
+}
+
+#title {
+  color: white;
+  position: relative;
+  top: 0px;
+  font-size: 18px
+}
+
+/*  Explore PART  */
+
+#explore {
+  width: 14%;
+  height: 280px;
+  position: relative;
+  top: -235px;
+  left: 29%
+}
+/*  Extern PART  */
+
+#extern {
+  width: 14%;
+  height: 280px;
+  position: relative;
+  top: -515px;
+  left: 42%
+}
+/*  Legal PART  */
+
+#legal {
+  width: 14%;
+  height: 280px;
+  position: relative;
+  top: -795px;
+  left: 56%
+}
+/*  Newsletter PART  */
+
+#subscribe {
+  position: relative;
+  top: -1080px;
+  left: 78%;
+  width: 14%;
+  height: 280px
+}
+
+#email {
+  color: white;
+  width:350px;
+  height: 35px;
+  position: relative;
+  top: -20px
+}
+
 #btn_news{
 background-color:#FFE815;
+height: 30px;
+text-decoration: none;
+color: black;
+border-radius: 3px;
+width: 120px;
+cursor: pointer;
+font-size: 18px; 
+margin-left: 240px;
+padding: 2px 15px;
+}
+
+
+@media only screen and (max-width:1000px) {
+  #companyinfo {
+      width: 20%
+  }
+
+  #sitelink {
+      font-size: 30px
+  }
+
+  #txt5,
+  .social {
+      position: relative;
+      top: -5px
+  }
+}
+
+/*  Copyright  */
+
+#part2 {
+  width: 100%;
+  height: 50px;
+  background-color: #39485E;
+  top: -15px;
+  color: white;
+}
+#part2 p {
+ 
+  color: white;
+}
+/*  Media Queries  */
+
+@media only screen and (max-width:850px) {
+  #companyinfo {
+      position: relative;
+      left: 3%
+  }
+ #txt3
+ {
+      font-size: 15px
+  }
+
+  #explore {
+      position: relative;
+      top: -240px;
+      left: 26%
+  }
+
+  #sitelink {
+      font-size: 25px
+  }
+
+ 
+   .link {
+      width: 60px
+  }
+
+  #extern {
+      position: relative;
+      top: -520px;
+      left: 37%
+  }
+
+
+  #legal {
+      position: relative;
+      top: -800px;
+      left: 54%
+  }
+
+  #subscribe {
+      position: relative;
+      top: -1080px;
+      left: 76%;
+      width: 20%
+  }
+
+
+  .social {
+      position: relative;
+      left: -110%;
+      top: px
+  }
+
+  #email,
+  .btn {
+      position: relative;
+      top: 0px
+  }
+
+  #part1 {
+      height: 250px
+  }
 }
 /* **************************************** ESPACE ADMIN **************************************** */
 
@@ -179,7 +377,5 @@ background-position:center top;
 color:#fff; 
 padding-top:100px; 
 }
-#footer-admnin{
-margin: 150px;
-width: 100%;
-}
+
+/* **************************************** ESPACE CONTACT **************************************** */

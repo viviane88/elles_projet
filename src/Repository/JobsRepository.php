@@ -27,28 +27,12 @@ class JobsRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('s')
         
-        ->andwhere('s.location = :location')
+        ->orwhere('s.location = :location')
         ->setParameter('location', $search->getLocation() )
-        ->andwhere('s.company = :company')
+        ->orwhere('s.company = :company')
         ->setParameter('company', $search->getCompany() );
     }
 
- 
-/* $query =  $this->findAllVisibleQuery();
-
-if($search->getLocation()){
-     $query = $query
-    ->andwhere('s.location = :location')
-    ->setParameter('location', $search->getLocation() );
-}
-if($search->getcompany()){
-    $query = $query
-    ->andwhere('s.company = :company')
-    ->setParameter('company', $search->getCompany() );
-}
-return $query->getQuery();
-
- */
     public function findThree()
     {
         return $this->createQueryBuilder('t')
@@ -60,8 +44,6 @@ return $query->getQuery();
         ;
     }
 
-    
-    
 
     /*
     public function findOneBySomeField($value): ?Jobs

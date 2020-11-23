@@ -4,12 +4,14 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Rollerworks\Component\PasswordStrength\Validator\Constraints\PasswordStrength;
@@ -30,7 +32,19 @@ class RegistrationFormType extends AbstractType
             'attr' =>[
                 'placeholder' => 'Votre Email'
             ]     
-        ])            
+        ])
+        ->add('Roles', ChoiceType::class, [
+            'multiple' => false,
+            'expanded' => false,
+            'label' => false,
+            'choices'  => [
+                'Utilisateur' => 'ROLE_USER',
+                'Annonceur' => 'ROLE_ADMIN',
+                'Administrateur' => 'ROLE_SUPER_ADMIN',
+
+            ],
+        ])
+     
         ->add('agreeTerms', CheckboxType::class, [
             'mapped' => false,
             'constraints' => [
@@ -64,7 +78,22 @@ class RegistrationFormType extends AbstractType
             ],
             'label' => 'Mot de passe'
         ])
-        ;
+        
+    ;
+    // Data transformer
+    $builder->get('Roles')
+    ->addModelTransformer(new CallbackTransformer(
+        function ($rolesArray) {
+                // transform the array to a string
+                return count($rolesArray)? $rolesArray[0]: null;
+        },
+        function ($rolesString) {
+                // transform the string back to an array
+                return [$rolesString];
+        }
+    ));
+
+        
     }
 
     public function configureOptions(OptionsResolver $resolver)

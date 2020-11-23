@@ -6,15 +6,12 @@
 {% block body %}
 
 
-	<div class="container py-5">
-		<hr style="height: 1px;  background-color: #707070; width: 100%; border: none;">
-		<div class="col-12 text-center py-3">
-			<h1>Nos dernières offres d'emploi</h1>
-		</div>
-
+	<div class="col-12 text-center m-0 p-0 ">			
+		<h1 id="bkg_title">Nos dernières offres d'emploi</h1>
 	</div>
 
-	<div class="row mt-2 justify-content-center mx-auto">
+
+	<div class="row mt-5 justify-content-center mx-auto">
  
     {% for jobs in jobs %}
 
@@ -127,6 +124,14 @@
  		</div>
 		</div>
 </div>
+
+
+	{# fleche retour top #}
+	<div class="container-fluid mt-5">
+		<div class="row justify-content-center mb3 pt-2 pr-3 ">
+			<a href="#top"><img src="{{ asset('./image/arrowTop.png') }}" alt="icone arrow Top" width="85%" id="arrowTop"></a>
+		</div>
+	</div>
 
 </div>
 
