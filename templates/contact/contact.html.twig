@@ -3,14 +3,21 @@
 {% block title %}Formulaire de contact{% endblock %}
 
 {% block body %}
+
+               
+<!-- navBar -->
+  
+    {{ include ('nav.html.twig') }}
+
 <div>
 	<div class="container-fluid">
 		<div class="row ">
 			<div class="col-12 text-center m-0 p-0 ">
 
 				<img class="contact_img" src="{{ asset('./image/contact.jpg') }}" alt="photo background" width="100%" >
-				<h1 class="title_contact">Formulaire de contact</h1>
-
+					<div class="col-12 text-center m-0 p-0 " style=" background-color: #39485E">
+						<h1 class="text-white" >Contactez nous</h1>
+					</div>
 			</div>
 		</div>
 	</div>
@@ -21,10 +28,10 @@
 				{{ form_end(formulaireContact) }}
 		</div>
 	</div>
-{# <div class="row ">
+{#  <div class="row ">
 		<div class=" mx-auto ">
-        <button  id="search_button" type="submit" class="mt-2">Ok</button>
-</div> #}
+		 <button  id="search_button" type="submit" class="mt-2">Ok</button>
+</div>  #}
 
 </div>
 

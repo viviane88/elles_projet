@@ -1,0 +1,30 @@
+{% block body %}
+
+{# logo #}
+
+   <div class="container-fluid" id="top" >
+		<div class="row">
+			<a href="{{ path('home') }}"><img id="main_logo" class="m-3" src="{{ asset('./image/logo.svg') }}" alt="logo" width="75%"></a>
+		</div>
+	</div>
+
+	   
+
+{# navigation #}
+
+	<nav class="fill" >
+		<ul>
+		  <li><a href="{{ path('home') }}">Accueil</a></li>
+		  <li><a href="{{ path('article') }}">Nos Articles</a></li>
+		  <li><a href="{{ path('job') }}">Nos Jobs</a></li>
+		  <li><a href="{{ path('contact') }}">Nous contactez</a></li>
+		  <li><a href="{{ path('about') }}">Qui sommes nous</a></li>
+      {% if app.user %}
+        <li><a href="{{ path('space') }}"><b>Mon espace</b></a></li>
+      {% else %}
+      <li><a href="{{ path('app_login') }}">Se connecter/S'inscrire</a></li>
+      {% endif %} 
+		</ul>
+  	</nav>
+
+      {% endblock %}

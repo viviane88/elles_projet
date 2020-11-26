@@ -5,366 +5,147 @@ text-decoration: none;
 list-style-type: none;
 font-family: Georgia, 'Times New Roman', Times, serif;
 }
-h1, p {
-color: #3E3D3D;
+
+h1, p, a {
+color: black;
 }
 
-
-/* **************************************** HOME - Section Rechercher **************************************** */
-#bkg_title{
-margin-top: 50px;
-color: white;
-background-color: #39485E;
-}
 #search_button{
 background-color: #E8D525;
 border: 0;
-padding: 10px 15px;
+padding: auto;
 border-radius: 3px;
 width: 100px;
+height: 50px;
 cursor: pointer;
-font-size: 18px;   
+font-size: 18px; 
 }
+
 #search_button:hover{
 background-color: rgb(255, 231, 22, 0.5);
 }
 
+
+/* **************************************** HOME Service **************************************** */
+.msg{
+background:url(../image/iconeMsg.png);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.msg:hover{
+transform: rotate(22deg);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.compt{
+background:url(../image/iconeCompt.png);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+background-size: 65%;
+margin-left: 30px;
+}
+
+.compt:hover{
+background:url(../image/iconeCompt2.png);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+background-size: 65%;
+margin-left: 30px;
+}
+
+.phone{
+background:url(../image/iconePhone.png);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+}
+.phone:hover{
+transform: rotate(30deg);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+
+}
+
+.concept{
+background:url(../image/iconeConcept.png);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+background-size: 65%;
+margin-left: 30px;
+}
+
+.concept:hover{
+background:url(../image/iconeConcept2.png);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+background-size: 65%;
+margin-left: 30px;
+}
+
+.job{
+background:url(../image/iconeWen.png);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+background-size: 75%;
+}
+
+.job:hover{
+transform: rotate(80deg);
+width:100%;
+height: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+background-size: 70%;
+}
+
 #button_outset a{
-  text-decoration: none;
-  
-  }
-  #button_outset{
-  background-color:white;
-  width: 160px;
-  border: 2px solid;
-  box-shadow: -7px 7px  #E8D525;
-  padding: 10px 15px;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 18px;
-  }
-  #button_outset:hover{
-  background-color:#3E3D3D;
-  text-decoration: none;
-  color:white;
-  }
-  #button_outset p:hover{
-    background-color:#3E3D3D;
-    text-decoration: none;
-    color:white;
-    }
- 
-
-
-/* **************************************** NAVIGATION **************************************** */
-
-nav {
-width: 100%;
-margin: 0 auto;
-padding: 40px 0;
-margin-right: 40px;
-
-}
-
-nav ul {
-list-style: none;
-text-align: center;
-font-size: 20px;
-}
-
-nav ul li {
-display: inline-block;
-
-}
-
-nav ul li a {
-display: block;
-padding: 15px;
-text-decoration: none;
-color: rgb(68, 68, 68);
-margin: 0 50px;
-}
-
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
-transition: all .3s;
-
-
-}
-
-nav.fill ul li a {
-position: relative;
-text-decoration: none;
-
-}
-
-nav.fill ul li a:after {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-width: 0%;
-content: '.';
-color: transparent;
-background: #3A485E;
-height: 2px;
-
-}
- 
-nav.fill ul li a {
-transition: all 2s;
-}
-
-nav.fill ul li a:after {
-text-align: left;
-content: '.';
-margin: 0;
-opacity: 0;
-}
-
-nav.fill ul li a:hover {
-color: #3A485E;
-z-index: 1;
-}
-
-nav.fill ul li a:hover:after {
-z-index: -10;
-animation: fill 1s forwards;
--webkit-animation: fill 1s forwards;
--moz-animation: fill 1s forwards;
-opacity: 1;
-}
-
-/* Keyframes */
-  @keyframes fill {
-0% {
-  width: 0%;
-  height: 1px;
-}
-50% {
-  width: 100%;
-  height: 1px;
-}
-100% {
-  width: 100%;
-  height: 100%;
-  background:white;
-  border: solid 2px  #FFE815
-  ;
-}
-  }
-
-/* **************************************** BASE - FOOTER **************************************** */
-/*  Général  */
-
-
-#txt3
-{
-  color: white;
-  font-size: 24px
-}
-
-#link {
-  display: flex;
-  width: 90px;
-  height: 40px;
-  color: #aaa7a7;
-  background-color: transparent;
-  border-top: 2px solid white;
-  position: relative;
-  top: -10px
-}
-#link:hover,
-#link1:hover {
-  color: #FFE815;
-  text-decoration: none;
-}
-#link1 {
-  display: flex;
-  width: 150px;
-  height: 40px;
-  color: white;
-  background-color: transparent;
-  position: relative;
-  top: -10px;
-  margin-top: 7px;
-  margin:auto
-}
-/*  Logo  */
-
-#part1 {
-  width: 100%;
-  height: 280px;
-  background-color: #3A485E
-}
-#companyinfo {
-  width: 14%;
-  height: 280px;
-  position: relative;
-  left: 8%;
-  top: 30px
-}
-
-#title {
-  color: white;
-  position: relative;
-  top: 0px;
-  font-size: 18px
-}
-
-/*  Explore PART  */
-
-#explore {
-  width: 14%;
-  height: 280px;
-  position: relative;
-  top: -235px;
-  left: 29%
-}
-/*  Extern PART  */
-
-#extern {
-  width: 14%;
-  height: 280px;
-  position: relative;
-  top: -515px;
-  left: 42%
-}
-/*  Legal PART  */
-
-#legal {
-  width: 14%;
-  height: 280px;
-  position: relative;
-  top: -795px;
-  left: 56%
-}
-/*  Newsletter PART  */
-
-#subscribe {
-  position: relative;
-  top: -1080px;
-  left: 78%;
-  width: 14%;
-  height: 280px
-}
-
-#email {
-  color: white;
-  width:350px;
-  height: 35px;
-  position: relative;
-  top: -20px
-}
-
-#btn_news{
-background-color:#FFE815;
-height: 30px;
 text-decoration: none;
 color: black;
+}
+
+#button_outset a:hover{
+color: white;
+}
+
+#button_outset{
+background-color:white;
+width: 160px;
+border: 2px solid;
+box-shadow: -7px 7px#E8D525;
+padding: 10px 15px;
 border-radius: 3px;
-width: 120px;
 cursor: pointer;
-font-size: 18px; 
-margin-left: 240px;
-padding: 2px 15px;
+font-size: 18px;
 }
 
-
-@media only screen and (max-width:1000px) {
-  #companyinfo {
-      width: 20%
-  }
-
-  #sitelink {
-      font-size: 30px
-  }
-
-  #txt5,
-  .social {
-      position: relative;
-      top: -5px
-  }
+#button_outset:hover{
+background-color:#3E3D3D;
+text-decoration: none;
+color:white;
 }
 
-/*  Copyright  */
-
-#part2 {
-  width: 100%;
-  height: 50px;
-  background-color: #39485E;
-  top: -15px;
-  color: white;
-}
-#part2 p {
- 
-  color: white;
-}
-/*  Media Queries  */
-
-@media only screen and (max-width:850px) {
-  #companyinfo {
-      position: relative;
-      left: 3%
-  }
- #txt3
- {
-      font-size: 15px
-  }
-
-  #explore {
-      position: relative;
-      top: -240px;
-      left: 26%
-  }
-
-  #sitelink {
-      font-size: 25px
-  }
-
- 
-   .link {
-      width: 60px
-  }
-
-  #extern {
-      position: relative;
-      top: -520px;
-      left: 37%
-  }
-
-
-  #legal {
-      position: relative;
-      top: -800px;
-      left: 54%
-  }
-
-  #subscribe {
-      position: relative;
-      top: -1080px;
-      left: 76%;
-      width: 20%
-  }
-
-
-  .social {
-      position: relative;
-      left: -110%;
-      top: px
-  }
-
-  #email,
-  .btn {
-      position: relative;
-      top: 0px
-  }
-
-  #part1 {
-      height: 250px
-  }
+#card_service{
+box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+margin-right: 8px;
 }
 /* **************************************** ESPACE ADMIN **************************************** */
 
@@ -378,4 +159,98 @@ color:#fff;
 padding-top:100px; 
 }
 
-/* **************************************** ESPACE CONTACT **************************************** */
+
+/* **************************************** ABOUT **************************************** */
+
+#about_card{
+box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+padding: 20px;
+margin-bottom: 200px;
+margin-top: 100px;
+}
+
+.about_image{
+margin-left: 30px;
+margin-top: 50px;
+box-shadow: -20px 30px #E8D525;
+}
+
+/* **************************************** Carroussel Home **************************************** */
+
+#carroussel{
+background-color:#39485E;
+width: 100%;
+}
+.carousel-inner{
+border-left: solid 2px #E8D525;
+}
+#carroussel_box{
+box-shadow: 0 20px 40px 20px rgba(0, 0, 0, .2);
+padding: 20px;
+}
+
+/* **************************************** CardJob Home **************************************** */
+
+.card{
+box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+position: relative;
+margin: 10px auto;
+cursor: pointer;
+}
+
+.card-img-top {
+transition: all 0.25s linear;
+}
+
+#hoveRotate {
+height: 100%;
+top: -10px;
+left: 0px;
+right: 0px;
+background-color: #FFF;
+z-index: 0;
+transform: skewY(3deg);
+}
+
+#hoveRotate:hover{
+transform: rotate(4deg) scale(1.1, 1.1);
+filter: brightness(110%);
+}
+
+/* **************************************** CardArticle Show **************************************** */
+
+#text_article{
+	box-shadow: 8px 20px 25px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	position: relative;
+	margin: 10px auto;
+	cursor: pointer;
+}
+#about_card{
+	box-shadow: -20px -10px 30px  rgba(0, 0, 0, 0.2);
+	margin:  60px 10px;
+	cursor: pointer;
+}
+
+
+#arrow_left {
+top: 50%;
+width: 20px;
+height: 20px;
+border-top: 5px solid black;
+border-right: 5px solid black;
+border-radius: 3px;
+transition: all 200ms ease;
+}
+
+#arrow_left {
+left: 0;
+transform: translate3d(0,-50%,0) rotate(-135deg);
+}
+
+#arrow_left:hover {
+border-color: #E8D525;
+box-shadow: 0.5vmin -0.5vmin 0 black;
+}
+   

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Articles;
 use App\Repository\ArticlesRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,6 +23,16 @@ class ArticleController extends AbstractController
             5
         );
         return $this->render('article/article.html.twig', [
+            'articles' => $articles,
+        ]);
+    }
+    
+    /**
+     * @Route("/article-{id}", name="article_show", methods={"GET"})
+     */
+    public function show(Articles $articles): Response
+    {
+        return $this->render('article/show.html.twig', [
             'articles' => $articles,
         ]);
     }

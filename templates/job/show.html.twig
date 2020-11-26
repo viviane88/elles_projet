@@ -3,35 +3,21 @@
 {% block title %} Jobs{% endblock %}
 
 {% block body %}
-
-<div class="col-12 jumbotron ">
-
-			<div class="container">
-				<div class="row ">
-					<div class="col-3 bg-warning">
-					</div>
-
-					<div class="col-9 bg-info">
-					 {{ jobs.title }}
+               
+<!-- navBar -->
+  
+    {{ include ('nav.html.twig') }}
 
 
-						<div class="row">
-							<div class=" bg-danger">{{ jobs.company }}</div>
-						</div>
+	<div class="col-12 text-center m-0 p-0 " style=" background-color: #39485E">
+		<h1 class="text-white">Job</h1>
+	</div>
+	
+	<div class="container">
 
-						<div class="container">
-
-							<div class="row mt-5">
-								<div class="col  bg-warning">{{ jobs.url }}</div>
-								<div class="col bg-success">{{ jobs.location }}</div>
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
-
+ 	<div class="row mt-5 mx-auto ">
+    	
+	</div> 
+</div> 
+</div> 
 {% endblock %}

@@ -1,0 +1,32 @@
+{% block body %}
+
+ {# animation #}
+     
+<section>
+    <img src="{{ asset('./image/bg.jpg') }}" id="bg">
+    <img src="{{ asset('./image/notebook.png') }}" id="notebook">
+    <img src="{{ asset('./image/bottom.png') }}" id="bottom">
+    <h5 id="text"> Envolez-vous vers votre avenir!</h5>
+    <img src="{{ asset('./image/logo.png') }}" id="logo">
+    </section>
+
+    <script>
+    let bg = document.getElementById("bg");
+    let notebook = document.getElementById("notebook");
+    let bottom = document.getElementById("bottom");
+    let text = document.getElementById("text");
+    let logo = document.getElementById("logo");
+
+    window.addEventListener("scroll", function(){
+
+    var value = window.scrollY;
+
+    bg.style.top = value * .5 + "px";
+    notebook.style.left = -value * 0.5 + "px";
+    bottom.style.top = -value * 0.5 + "px";
+    text.style.top = value * 0.15 + "px";
+    logo.style.top = value * 1 + "px";
+
+    });
+</script>
+{% endblock %}

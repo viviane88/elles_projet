@@ -3,10 +3,16 @@
 {% block title %} Jobs{% endblock %}
 
 {% block body %}
+               
+<!-- navBar -->
+  
+    {{ include ('nav.html.twig') }}
 
-    <div class="col-12 text-center py-3 p-0 m-0">
-		<h1 id="bkg_title">Nos emplois</h1>
+
+    <div class="col-12 text-center m-0 p-0 " style=" background-color: #39485E">
+		<h1 class="text-white" >Nos Emplois</h1>
 	</div>
+<!-- SearchBar -->
 
 	<div class="jumbotron">
 
@@ -24,42 +30,60 @@
 					<div class="form-group  mt-3 text-center">
 	       				 <button  id="search_button" type="submit" class="">Ok</button>
 					</div>
-				</div>
+		</div>
 			{{ form_end(form) }}
 		</div>
 	</div>
 		
  	
-	{% for jobs in jobs %}
+	{% for job in jobs %}
+<!-- Card Start -->
 
-		<div class="col-12 jumbotron ">
-
-			<div class="container">
-				<div class="row ">
-					<div class="col-3 bg-warning">
-					</div>
-
-					<div class="col-9 bg-info">
-					<a href="{{ path('job_show', {'id':jobs.id}) }}"> {{ jobs.title }}</a>
-
-						<div class="row">
-							<div class=" bg-danger">{{ jobs.company }}</div>
-						</div>
-
-						<div class="container">
-
-							<div class="row mt-5">
-								<div class="col  bg-warning">{{ jobs.url }}</div>
-								<div class="col bg-success">{{ jobs.location }}</div>
+	<div class="col-12 jumbotron ">
+		<div class="container py-3">
+        	<div class="card">
+          		<div class="row ">
+            		<div class="col-md-5">
+              			<div id="CarouselTest" class="carousel slide" data-ride="carousel">
+                
+                			<div class="carousel-inner">
+								<div class="p-2">
+									<img class="d-block" width="95%" src="{{ asset('image/jobs/' ~ job.uploads) }}" alt="photo principale {{ job.uploads }} ">
+                  				</div> 
 							</div>
+              			</div>
+            		</div>
+      
+            	<div class="col-md-7 px-3">
+              		<div class="card-block px-6 mt-5">
+                		<h4 class="card-title">{{ job.company }}</h4>
+                		<h5 class="card-title">{{ job.title }}</h5>
 
+                	<div class="row align-items-center mt-3"> 
+                  		<div class="col-4 ">
+                    		{{ job.url }}
+                  		</div>
+						<div class="col-2">
+                    		{{ job.location }}
+                  		</div>
+                  		<div class="col-3">
+                   			centre 3
 						</div>
-
-					</div>
+                	</div> 
+                <br>
+				<div >
+					<a href="{{ path('job_show', {id: job.id}) }}"
+                           id="button_detail" class="rounded h4"  
+                        style="text-decoration:none; background-color: #E8D525">+</a>                
 				</div>
 			</div>
+        </div>
+            
+    </div>
+</div>
+</div>
 
-		</div>
+</div>
 
 	{% endfor %}
 

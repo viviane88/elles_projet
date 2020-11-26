@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Jobs;
 use App\Entity\SearchJob;
 use App\Form\SearchJobType;
 use App\Repository\JobsRepository;
@@ -37,12 +38,10 @@ class JobController extends AbstractController
         ]);
     }
     /**
-     * @Route("/job/-{id}", name="job_show", requirements={"slug": "[a-z0-9\-]*"})
+     * @Route("/job-{id}", name="job_show", methods={"GET"})
      */
-    public function show($id, JobsRepository $jobsRepository)
+    public function show(Jobs $jobs): Response
     {
-        $jobs = $jobsRepository->find($id);
-
         return $this->render('job/show.html.twig', [
             'jobs' => $jobs,
         ]);

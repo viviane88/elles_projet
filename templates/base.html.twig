@@ -3,110 +3,43 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description" content="site elles">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="author" content="Viviane Janer">
+  		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">		
+  		<meta name="author" content="Viviane Janer">
 
 		<title>
 			elles -{% block title %}Bienvenue sur Elles{% endblock %}
 		</title>
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		<link rel="stylesheet" href="{{ asset('css/base.css') }}"> {% block stylesheets %}{% endblock %}
+		<link rel="stylesheet" href="{{ asset('css/base.css') }}"> 
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/nav.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('css/animation.css') }}"> 
+
+
+    {% block stylesheets %}{% endblock %}
 		</head>
 
 <body>
-{# ancre #}
+{# smooth scroll #}
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
 
-	<a id="top"></a>
 
-{# logo #}
 
-   <div class="container-fluid">
-		<div class="row">
-			<a href="{{ path('home') }}"><img id="main_logo" class="m-3" src="{{ asset('./image/logo.svg') }}" alt="logo" width="75%"></a>
-		</div>
-	</div>
 
-	
-{# navigation #}
-
-	<nav class="fill">
-		<ul>
-		  <li><a href="{{ path('home') }}">Accueil</a></li>
-		  <li><a href="{{ path('article') }}">Nos Articles</a></li>
-		  <li><a href="{{ path('job') }}">Nos Jobs</a></li>
-		  <li><a href="{{ path('contact') }}">Nous contactez</a></li>
-		  <li><a href="#">Qui sommes nous</a></li>
-		<li><a href="{{ path('app_login') }}">Se connecter/S'inscrire</a></li>
-
-		</ul>
-  	</nav>
-
-		{% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        {% block body %}{% endblock %}
 
+ {{ include ('footer.html.twig') }}
 
-{# footer #}
-
-	<footer id="container" class="mt-5" height="400px">
-        <div id="part1">
-            <div id="companyinfo"> 
-                <img class="" src="{{ asset('./image/logo white.svg') }}" alt="logo" width="95%">
-                <p id="title">Envolez-vous vers votre avenir</p>
-            </div>
-
-            <div id="content" class="text-center mx-auto ">
-
-                <div id="explore" class="">
-                    <p  id="txt3" >Explorer</p> 
-                    <a id="link1"class="justify-content-center mt-4" href="#">FAQ</a> 
-                    <a id="link1"class="justify-content-center" href="#">Carrières</a>
-
-                </div>
-                <div id="extern" class="">
-                    <p id="txt3">Avec Nous</p> 
-                    <a id="link1" class="justify-content-center mt-4" href="#">Recruteurs</a> 
-                    <a id="link1" class="justify-content-center" href="#">Entreprises</a>
-                    <a id="link1" class="justify-content-center" href="#">Partenariats</a>
-                    <a id="link1" class="justify-content-center" href="#">Presse</a>
-
-                </div>
-                <div id="legal" class="">
-                    <p id="txt3">Plan du site</p> 
-                    <a id="link1" class="justify-content-center mt-4" href="#">Mentions Légales</a> 
-                    <a id="link1" class="justify-content-center" href="#">CGU</a>
-                    <a id="link1" class="justify-content-center" href="#">Politique de confidantialité</a>
-
-                </div>
-            </div>
-
-            <div id="subscribe">
-				<div class="row">
-				    <p id="txt3">Newsletter</p>
-					<form> <input id="email" type="email" class="mt-3" placeholder="Votre Email"> </form> 
-					<a id="btn_news" class="">Subscribe</a>
-				</div>
-                
-
-                <p id="txt3" class="mt-3">Suivez nous</p> 
-					<a class="mr-2" href=""><img src="{{ asset('./image/facebook.png') }}" alt="logo facebook"></a>
-                	<a class="mr-2" href="#"><img src="{{ asset('./image/instagram.png') }}" alt="logo instagram"></a>
-					<a class="mr-2" href="#"><img src="{{ asset('./image/linkedin.png') }}" alt="logo linkedin"></a>
-					<a class="mr-2" href="#"><img src="{{ asset('./image/twitter.png') }}" alt="logo twitter"></a>
-			</div>
-
-        </div>
-
-         <div id="part2" class="row text-center mx-auto">
-            <div class="col-12 mt-2 text-center">
-            <p>{{ copyright|raw }}</p>
-        </div> 
-
-    </footer>
-
+		
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script src="{{ asset('js/script.js') }}" ></script>
+	<script src="{{ asset('js/app.js') }}"></script>
 </body>
        
 </html>
