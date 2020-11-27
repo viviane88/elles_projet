@@ -20,7 +20,7 @@ class ArticleController extends AbstractController
         $articles = $paginator -> paginate(
             $articlesRepository->findAll(),
             $request->query->getInt('page',1),
-            5
+            6
         );
         return $this->render('article/article.html.twig', [
             'articles' => $articles,

@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseHome.html.twig' %}
 
 
 {% block title %}Accueil{% endblock %}
@@ -21,22 +21,21 @@
 		<h1  class="text-white" >Nos dernières offres d'emploi</h1>
 	</div>
 
-    <div class="row mt-5 justify-content-center mx-auto p-5 ">
+    <div class="row justify-content-center mx-auto p-5" >
  
         {% for job in jobs %}
 
-			<div class=" col-md-8 col-lg-4  p-5 ">
+			<div class="col-md-8 col-lg-3 p-5 " >
 				<div class="card" >
-					<img class="card-img-top"<img id="hoveRotate" src="{{ asset('image/jobs/' ~ job.uploads) }}"  alt="photo card top {{ job.uploads }} ">
-					<div class="card-body">
+					<img class="card-img-top" <img id="hoveRotate" src="{{ asset('image/jobs/' ~ job.uploads) }}"  alt="photo card top {{ job.uploads }} ">
+					<div class="card-body ">
 						<h4 class="card-title">{{ job.title }}</h4>
                         <h5 class="card-title">{{ job.company}}</h5>
                         <p class="">{{ job.url }}</p>
 					</div>
 					<div class="card-body">
                     <a href="{{ path('job_show', {id: job.id}) }}"
-                           id="button_detail" class="mt-3 mb-3 float-right p-2 rounded h4"  
-                        style="text-decoration:none; background-color: #E8D525">+</a>
+                           id="button_detail"  ></a>
                     </div>
 				</div>
 			</div>

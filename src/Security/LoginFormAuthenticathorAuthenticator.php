@@ -71,7 +71,7 @@ class LoginFormAuthenticathorAuthenticator extends AbstractFormLoginAuthenticato
 
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Email could not be found.');
+            throw new CustomUserMessageAuthenticationException('Ce compte n\'existe pas');
         }
 
         return $user;

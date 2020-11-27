@@ -46,7 +46,7 @@
             		<div class="col-md-5">
               			<div id="CarouselTest" class="carousel slide" data-ride="carousel">
                 
-                			<div class="carousel-inner">
+                			<div class="">
 								<div class="p-2">
 									<img class="d-block" width="95%" src="{{ asset('image/jobs/' ~ job.uploads) }}" alt="photo principale {{ job.uploads }} ">
                   				</div> 
@@ -71,11 +71,11 @@
 						</div>
                 	</div> 
                 <br>
-				<div >
-					<a href="{{ path('job_show', {id: job.id}) }}"
-                           id="button_detail" class="rounded h4"  
-                        style="text-decoration:none; background-color: #E8D525">+</a>                
-				</div>
+				
+						<div class="pb-5 float-right mr-5">
+                     <a href="{{ path('job_show', {id: job.id}) }}"
+                           class="mt-3 mb-3 p-3 rounded" style="text-decoration:none; background-color: #E8D525" >Découvrir</a>
+                        </div>  
 			</div>
         </div>
             
@@ -86,9 +86,9 @@
 </div>
 
 	{% endfor %}
-
-	<div class="container col-2">
-   		 {{ knp_pagination_render(jobs) }}
-	</div>
 	
+<!-- pagination -->
+
+	<div class="text-center">{{ knp_pagination_render(jobs) }}</div>
+
 {% endblock %}

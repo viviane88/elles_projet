@@ -1,23 +1,38 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block title %}Se connecter{% endblock %}
 
 {% block body %}
-    {% for flashError in app.flashes('verify_email_error') %}
+    {% for flashError in app.flashes('merci de vérifier vos mails') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
 <div class="container mt-5 col-6">
 		<h1>Merci de créer votre compte</h1>
 
-        {{ form_start(registrationForm) }}
+    {{ form_start(registrationForm) }}
 
-        {{ form_row(registrationForm.email) }}
+        <div class="bg-danger">
+            {{ form_row(registrationForm.name) }}
+       </div>
 
+       <div class="bg-danger">
+            {{ form_row(registrationForm.lastname) }}
+       </div> 
+
+       <div class="bg-danger">
+            {{ form_row(registrationForm.email) }}
+       </div> 
+
+       <div class="bg-success">
         {{ form_row(registrationForm.plainPassword, {
             label: 'Mot de passe'
         }) }}
+        </div> 
+
+       <div class="bg-warning">
         {{ form_row(registrationForm.agreeTerms) }}
+        </div> 
 
         <button  id="search_button" type="submit" class="mt-2">Ok</button>
 

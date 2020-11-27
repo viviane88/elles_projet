@@ -7,39 +7,31 @@
 		<meta name="author" content="Viviane Janer">
 
 		<title>
-			elles -
-			{% block title %}{% endblock %}
+			elles -{% block title %}{% endblock %}
 		</title>
 
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{{ asset('css/base.css') }}"> {% block stylesheets %}{% endblock %}
 		</head>
+
     <body>
-        
-
-
-		
+        	
      {% block body %}{% endblock %}
 
 	<footer>
-
 		<div class="container col-12">
-
-			 <div class="row mt-5 text-center mx-auto">
+			<div class="row mt-5 text-center mx-auto">
 				<div class="col-12 text-center">
-						<p>{{ copyright|raw }}</p>
+					<p>{{ copyright|raw }}</p>
 				</div>
 			</div> 
-		</div
-		>
-	</footer>
-    
+		</div>
+	</footer>    
     
       
-			<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
-       
 </html>

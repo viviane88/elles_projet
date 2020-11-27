@@ -12,38 +12,34 @@
 <div class="col-12 text-center m-0 p-0 " style=" background-color: #39485E">
 		<h1 class="text-white" >Nos Articles</h1>
 </div>
+<div class="container">
+    <div class="row mt-5 justify-content-center mx-auto">
 
- <div class="row mt-5 mx-auto ">
+        {% for article in articles %}
 
-    {% for article in articles %}
+            <div class="col-md-8 col-lg-6  p-5  ">
 
-        <div class="row mt-3 justify-content-center ">
+                <div class="card" >
+                    <img class="d-block img-fluid w-100 " src="{{ asset('image/articles/' ~ article.uploads) }}" />
+                    <h2 class="card-title text-center mt-2">{{ article.title }}</h2>
+                <div class="card-body" >
 
-            <div class="col-3 mr-5 p-4 ">
-
-                <div class="card" style="width: 18rem;">
-                                <img class="d-block img-fluid w-100" src="{{ asset('image/articles/' ~ article.uploads) }}" 
-
-                    <h5 class="card-title">{{ article.title }}</h5>
-
-                        <div class="card-body">
-                            <p class="card-text">{{ article.description}}</p>
-                        </div>
-                     <a href="{{ path('article_show', {id: article.id}) }}"
-                           id="button_detail" class="rounded h4"  
-                        style="text-decoration:none; background-color: #E8D525">+</a>
-                    </div>
-
+                    <p class="card_articles p-4">{{ article.description}}</p>
             </div>
-
-        </div> 
-
-        
-
+            <div class="">
+                <a href="{{ path('article_show', {id: article.id}) }}"
+                id="button_detail" class=" p-2 h4 float-right mr-2"style="text-decoration:none; background-color: #E8D525">+</a>
+            </div>
+    </div>
+</div> 
     {% endfor %}
+</div> 
 
 </div> 
-<div class="container col-3">
-   		 {{ knp_pagination_render(articles) }}
-	</div>
+<!-- pagination -->
+
+<div class="text-center">{{ knp_pagination_render(articles) }}</div>
+
 {% endblock %}
+
+

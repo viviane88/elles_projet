@@ -23,10 +23,9 @@ class SearchJobType extends AbstractType
         ->add('location', TextType::class, [
             'required'=> false,
             'attr' => [
-                'placeholder' => 'adresse de l\'entreprise'
+                'placeholder' => 'Adresse de l\'entreprise'
             ]
         ])
-   
         ;
 
     }

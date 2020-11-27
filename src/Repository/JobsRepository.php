@@ -20,6 +20,11 @@ class JobsRepository extends ServiceEntityRepository
         parent::__construct($registry, Jobs::class);
     }
 
+    /*
+    récupère les infos de la company/location
+    */
+
+
     // /**
     //  * @return Query
     //  */
@@ -33,6 +38,9 @@ class JobsRepository extends ServiceEntityRepository
         ->setParameter('company', $search->getCompany() );
     }
 
+    /*
+    récupère au minimum 3 infos 
+    */
     public function findThree()
     {
         return $this->createQueryBuilder('t')
@@ -45,15 +53,4 @@ class JobsRepository extends ServiceEntityRepository
     }
 
 
-    /*
-    public function findOneBySomeField($value): ?Jobs
-    {
-        return $this->createQueryBuilder('j')
-            ->andWhere('j.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }
