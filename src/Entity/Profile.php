@@ -27,10 +27,6 @@ class Profile
      */
     private $lastname;
 
-    /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $civility;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -53,7 +49,7 @@ class Profile
      */
     private $user;
 
-   
+    
 
     public function getId(): ?int
     {
@@ -80,18 +76,6 @@ class Profile
     public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    public function getCivility(): ?string
-    {
-        return $this->civility;
-    }
-
-    public function setCivility(string $civility): self
-    {
-        $this->civility = $civility;
 
         return $this;
     }

@@ -12,11 +12,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 
-
-
-
-
-
 class JobAdminController extends AbstractController
 {
     /**
@@ -25,8 +20,6 @@ class JobAdminController extends AbstractController
     public function index(JobsRepository $jobsRepository): Response
     {
         $jobs = $jobsRepository->findAll();
-
-
 
         return $this->render('Administrateur/jobAdmin.html.twig', [
             'jobs' => $jobs,

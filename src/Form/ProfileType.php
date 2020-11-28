@@ -4,11 +4,10 @@ namespace App\Form;
 
 use App\Entity\Profile;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\CallbackTransformer;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ProfileType extends AbstractType
@@ -16,13 +15,7 @@ class ProfileType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('civility', ChoiceType::class,[
-                'choices' => [
-                    'Madame' => 1,
-                    'Mademoiselle' => 2,
-                ],
-            ])
-
+            
             ->add('name', TextType::class,[
                 'required'=> true,
                 'label' => 'nom',
@@ -35,6 +28,13 @@ class ProfileType extends AbstractType
                 'label' => 'prenom',
                 'attr' => [
                     'placeholder' =>'Votre Prénom'
+                ]
+            ])
+            ->add('user_id', TextType::class,[
+                'required'=> true,
+                'label' => 'user_id',
+                'attr' => [
+                    'placeholder' =>'user_id'
                 ]
             ])
             ->add('address', TextType::class,[
@@ -57,9 +57,9 @@ class ProfileType extends AbstractType
                     'placeholder' =>'Présentez vous en quelques lignes'
                 ]
             ])
-            ->add('user')
-
-            ;
+            ->add('Sauvegarder', SubmitType::class, [
+                'label' => 'Valider'
+            ]);
            
         
                 

@@ -1,18 +1,19 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block title %}Utilisateur- Vos infos
 {% endblock %}
 
 {% block body %}
-
+{{parent()}}
 
 	<div class="col-6 p-5">
-		<h2>Création d'un nouvel emploi</h2>
-        <p>Merci de remplir le formulaire</p>	
+		<h2>Vos informations personnelles</h2>
 
         {{ form_start(form)}}
 		{{ form_end(form)}}
-
+   {#  <div class="col-12 mt-5 float-left p-0 m-0" >
+		<a href="" class=" p-3 py-3  rounded" style="text-decoration:none; background-color: #E8D525" >Ok</a>
+	</div> #}
     </div>
-
+    
 {% endblock %}

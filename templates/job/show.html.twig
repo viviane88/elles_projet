@@ -17,6 +17,37 @@
 
  	<div class="row mt-5 mx-auto ">
     	
+	<div class="container";>
+        <div id="about_card" class="card card  p-4" style="max-width: 1000px">
+			<a href="javascript:history.go(-1)" class="h2 m-1" id="arrow_left"></a>
+
+          <div class="row ">
+
+			<div class="col-md-6 col-sm-10 ml-3 mt-2  ">
+                <div class="">  
+					<img src="{{ asset('image/jobs/' ~ jobs.uploads) }}" alt="photo" width="100%" class="ml-4" > 
+				</div>         
+            </div> 
+				
+            <div class="col-md-5 mb-3 ml-4 mr-4">
+              <div class="card-block" id="">
+			  		<h4 class="h1 mt-5 col-sm-12  ">{{ jobs.title }}</h4>
+					<h4 class=" mt-5 col-sm-12  ">{{ jobs.url}}</h4>
+					<h5 class=" mt-5 col-sm-12  ">{{ jobs.location }}</h5>
+
+                	<p class="card-text text-justify p-2  mr-3 col-sm-12" >
+						{{ jobs.description }}
+                	</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+  </div>
+</div>
+</div>
+
+</div>
 	</div> 
 </div> 
 </div> 

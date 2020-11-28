@@ -14,31 +14,10 @@
 	</div>
 <!-- SearchBar -->
 
-	<div class="jumbotron mt-4">
-
-		<div class="container">
-			{{ form_start(form) }}
-			<div class="form-row align-items-end">
-				<div class="col">
-					{{ form_row(form.company) }}
-				</div>
-				<div class="col">
-					{{ form_row(form.location) }}
-				</div>
-		</div>
-		<div class="col-12 mt-4">
-					<div class="form-group  mt-3 text-center">
-	       				 <button  id="search_button" type="submit" class="">Ok</button>
-					</div>
-		</div>
-			{{ form_end(form) }}
-		</div>
+ 	
+    <div class="col-12 text-center m-0 p-0 " style=" background-color: #39485E">
+		<h1 class="text-white">Toutes nos offres</h1>
 	</div>
-		
- {# 	
-    <div class="col-12 text-center m-0 p-0 " >
-		<h1 class="">Toutes nos offres</h1>
-	</div> #}
 
 	{% for job in jobs %}
 <!-- Card Start -->

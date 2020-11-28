@@ -280,10 +280,9 @@ margin: 0 10px;
 }
 
 #button_detail{
-border-radius:80%;
-width:40px;
-height:40px;
-padding: auto;
+width:30px;
+height:30px;
+border-radius: 60%;
 }
 
 /* **************************************** Pagination **************************************** */
@@ -297,9 +296,7 @@ justify-content: center;
     color: black;
     border: 0px;
 }
-.pagination > li > span{
-    
-}
+.pagination > li > span
 .pagination > li > a:hover{
     background-color: #E8D525;
     color:black

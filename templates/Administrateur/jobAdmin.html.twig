@@ -8,9 +8,12 @@
  
 	<div class="col-10 p-5 mt-3">
 		<h2>Création d'un nouvel emploi</h2>
-        <p>Merci de remplir le formulaire</p>
 
-		<table class="table table-bordered table-hover table-sm text-center">
+		<div class="col-12 mt-5 p-0 m-0 ">
+			<a href="{{ path('job_create') }}" class=" p-3 rounded" style="text-decoration:none; background-color: #E8D525" >Créer votre annonce</a>
+		</div>
+
+		<table class="table table-bordered table-hover table-sm text-center mt-5">
 			<thead>
 				<tr>
 					<th scope="col">Titre du poste proposé</th>
@@ -23,9 +26,9 @@
 				</tr>
 			</thead>
 
-		
-
 			<tbody>
+			
+
 
 				{% for job in jobs %}
 					<tr>
@@ -58,7 +61,6 @@
 			{% endfor %}
 		</table>
         
-		<a href="{{ path('job_create') }}" class="btn btn-outline-dark float-right">Ajouter</a>
 	</div>
 	
 	{# fleche retour top #}
