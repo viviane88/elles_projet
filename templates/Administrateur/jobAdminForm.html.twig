@@ -12,6 +12,40 @@
         <p>Merci de remplir le formulaire</p>	
 
         {{ form_start(formulaireJobs)}}
+		 <div class="">
+            {{ form_row(formulaireJobs.Title) }}
+       </div>
+
+       <div class="">
+            {{ form_row(formulaireJobs.Company) }}
+       </div> 
+
+       <div class="">
+            {{ form_row(formulaireJobs.location) }}
+       </div>
+
+	   <div class="">
+            {{ form_row(formulaireJobs.description) }}
+       </div> 
+
+       <div class="">
+        {{ form_row(formulaireJobs.url) }}
+        </div>
+
+		<div class="">
+        {{ form_row(formulaireJobs.createdAt) }}
+        </div>
+		
+		<div class="">
+        {{ form_row(formulaireJobs.updated_at) }}
+        </div>
+		
+		<div class="">
+        {{ form_row(formulaireJobs.uploads) }}
+        </div>
+
+       
+        <button  id="search_button" type="submit" class="mt-2">Ok</button>
 		{{ form_end(formulaireJobs)}}
 
     </div>

@@ -12,8 +12,36 @@
         <p>Merci de remplir le formulaire</p>	
 
         {{ form_start(formulaireArticles)}}
+
+        <div class="">
+            {{ form_row(formulaireArticles.Title) }}
+       </div>
+
+       <div class="">
+            {{ form_row(formulaireArticles.description) }}
+       </div> 
+
+       <div class="">
+            {{ form_row(formulaireArticles.createdAt) }}
+       </div> 
+
+       <div class="">
+        {{ form_row(formulaireArticles.updated_at, {
+            label: 'Mot de passe'
+        }) }}
+        </div> 
+
+       <div class="">
+        {{ form_row(formulaireArticles.uploads) }}
+        </div>
+
+       
+        <button  id="search_button" type="submit" class="mt-2">Ok</button>
+        
 		{{ form_end(formulaireArticles)}}
 
+	
     </div>
+</div>
 
 {% endblock %}

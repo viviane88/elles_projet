@@ -25,6 +25,30 @@
 		<div class="col-4 offset-4">
 				{{ form_start(formulaireContact) }}
 
+			<div class="">
+			    {{ form_row(formulaireContact.nom) }}
+       </div>
+
+       <div class="">
+			    {{ form_row(formulaireContact.prenom) }}
+       </div> 
+
+       <div class="">
+			    {{ form_row(formulaireContact.email) }}
+       </div> 
+
+       <div class="">
+			{{ form_row(formulaireContact.objet, {
+			    label: 'Mot de passe'
+			}) }}
+			</div> 
+
+       <div class="">
+			{{ form_row(formulaireContact.message) }}
+			</div>
+
+		<button  id="search_button" type="submit" class="mt-2">Ok</button>
+				
 				{{ form_end(formulaireContact) }}
 		</div>
 	</div>

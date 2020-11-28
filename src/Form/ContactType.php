@@ -26,9 +26,7 @@ class ContactType extends AbstractType
             ]  
         ])
         ->add('message', TextareaType::class)
-        ->add('Sauvegarder', SubmitType::class, [
-            'label' => 'Valider'
-        ]);
+      ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

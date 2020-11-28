@@ -78,9 +78,7 @@ class JobType extends AbstractType
                     'placeholder' => 'ex: logo.jpg'
                 ]
             ])             
-        ->add('Sauvegarder', SubmitType::class, [
-                'label' => 'Valider'
-            ])
+       
         ;
     }
 

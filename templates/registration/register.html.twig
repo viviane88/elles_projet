@@ -12,27 +12,31 @@
 
     {{ form_start(registrationForm) }}
 
-        <div class="bg-danger">
+        <div class="">
             {{ form_row(registrationForm.name) }}
        </div>
 
-       <div class="bg-danger">
+       <div class="">
             {{ form_row(registrationForm.lastname) }}
        </div> 
 
-       <div class="bg-danger">
+       <div class="">
             {{ form_row(registrationForm.email) }}
        </div> 
 
-       <div class="bg-success">
+       <div class="">
         {{ form_row(registrationForm.plainPassword, {
             label: 'Mot de passe'
         }) }}
         </div> 
 
-       <div class="bg-warning">
+       <div class="">
         {{ form_row(registrationForm.agreeTerms) }}
-        </div> 
+        </div>
+
+        <div class="">
+        {{ form_row(registrationForm.Roles) }}
+        </div>  
 
         <button  id="search_button" type="submit" class="mt-2">Ok</button>
 
