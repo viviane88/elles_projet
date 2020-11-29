@@ -59,6 +59,11 @@ class User implements UserInterface
      */
     private $lastName;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Profile::class, mappedBy="user", cascade={"persist", "remove"})
+     */
+    private $profile;
+
    
 
     
@@ -231,6 +236,23 @@ class User implements UserInterface
     public function setLastName(?string $lastName): self
     {
         $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    public function getProfile(): ?Profile
+    {
+        return $this->profile;
+    }
+
+    public function setProfile(Profile $profile): self
+    {
+        $this->profile = $profile;
+
+        // set the owning side of the relation if necessary
+        if ($profile->getUser() !== $this) {
+            $profile->setUser($this);
+        }
 
         return $this;
     }

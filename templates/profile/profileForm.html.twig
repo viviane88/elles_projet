@@ -6,14 +6,40 @@
 {% block body %}
 {{parent()}}
 
-	<div class="col-6 p-5">
-		<h2>Vos informations personnelles</h2>
 
-        {{ form_start(form)}}
-		{{ form_end(form)}}
-   {#  <div class="col-12 mt-5 float-left p-0 m-0" >
-		<a href="" class=" p-3 py-3  rounded" style="text-decoration:none; background-color: #E8D525" >Ok</a>
-	</div> #}
-    </div>
+<div class="col-6 p-5">
+		<h2>Vos informations</h2>
+        <p>Merci de remplir le formulaire</p>
+		
+				{{ form_start(formulaireInfo) }}
+
+			<div class="">
+			    {{ form_row(formulaireInfo.name) }}
+       </div>
+
+       <div class="">
+			    {{ form_row(formulaireInfo.firstname) }}
+       </div> 
+
+       <div class="">
+			    {{ form_row(formulaireInfo.address) }}
+       </div> 
+
+       <div class="">
+			{{ form_row(formulaireInfo.job, {
+			    label: 'Mot de passe'
+			}) }}
+			</div> 
+
+       <div class="">
+			{{ form_row(formulaireInfo.description) }}
+			</div>
+
+		<button  id="search_button" type="submit" class="mt-2">Ok</button>
+				
+				{{ form_end(formulaireInfo) }}
+	
+</div>
     
 {% endblock %}
+
