@@ -38,7 +38,7 @@
 						<td>{{ job.location }}</td>
 						<td>{{ job.url }}</td>
 
-                        <td><img src="{{ asset('image/jobs/' ~ job.uploads) }}" alt="photo principale {{ job.uploads }}"></td>
+		                <td><img src="{{ asset('image/jobs/' ~ job.uploads) }}" alt="photo principale {{ job.uploads }}"></td>
 
 
 						<td>
@@ -49,10 +49,11 @@
 								</svg>
 							</a>
 							
-							<a href="{{ path('job_delete', {'id':job.id}) }}">
+							<a href="{{ path('job_delete', {'id':job.id}) }}"class="confirmation">
 								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
 								</svg>
+
 							</a>
 						</td>
 					</tr>
@@ -70,5 +71,17 @@
 			<a href="#top"><img src="{{ asset('./image/arrowTop.png') }}" alt="icone arrow Top" width="85%" id="arrowTop"></a>
 		</div>
 	</div>
+
+	{# modal de supprression#}
+
+	<script type="text/javascript">
+    	var elems = document.getElementsByClassName('confirmation');
+    	var confirmIt = function (e) {
+		if (!confirm('Etes vous sûr de supprimer définitivement cette annonce?')) e.preventDefault();
+			};
+			for (var i = 0, l = elems.length; i < l; i++) {
+		elems[i].addEventListener('click', confirmIt, false);
+			}
+	</script>
 
 {% endblock %}

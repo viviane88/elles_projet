@@ -146,7 +146,7 @@ class __TwigTemplate_b49f66a87ef553ed7e87bf72b95bec790c7062e8e1b44c737a2bf62fb1a
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 39), "html", null, true);
             echo "</td>
 
-                        <td><img src=\"";
+\t\t                <td><img src=\"";
             // line 41
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/jobs/" . twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 41))), "html", null, true);
             echo "\" alt=\"photo principale ";
@@ -168,10 +168,11 @@ class __TwigTemplate_b49f66a87ef553ed7e87bf72b95bec790c7062e8e1b44c737a2bf62fb1a
 \t\t\t\t\t\t\t<a href=\"";
             // line 52
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 52)]), "html", null, true);
-            echo "\">
+            echo "\"class=\"confirmation\">
 \t\t\t\t\t\t\t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-trash-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
 \t\t\t\t\t\t\t\t\t<path fill-rule=\"evenodd\" d=\"M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z\"/>
 \t\t\t\t\t\t\t\t</svg>
+
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</td>
 \t\t\t\t\t</tr>
@@ -182,22 +183,35 @@ class __TwigTemplate_b49f66a87ef553ed7e87bf72b95bec790c7062e8e1b44c737a2bf62fb1a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 62
+        // line 63
         echo "\t\t</table>
         
 \t</div>
 \t
 \t";
-        // line 67
+        // line 68
         echo "
 \t<div class=\"container-fluid mt-5\">
 \t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
 \t\t\t<a href=\"#top\"><img src=\"";
-        // line 70
+        // line 71
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
         echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
 \t\t</div>
 \t</div>
+
+\t";
+        // line 76
+        echo "
+\t<script type=\"text/javascript\">
+    \tvar elems = document.getElementsByClassName('confirmation');
+    \tvar confirmIt = function (e) {
+\t\tif (!confirm('Etes vous sûr de supprimer définitivement cette annonce?')) e.preventDefault();
+\t\t\t};
+\t\t\tfor (var i = 0, l = elems.length; i < l; i++) {
+\t\telems[i].addEventListener('click', confirmIt, false);
+\t\t\t}
+\t</script>
 
 ";
         
@@ -220,7 +234,7 @@ class __TwigTemplate_b49f66a87ef553ed7e87bf72b95bec790c7062e8e1b44c737a2bf62fb1a
 
     public function getDebugInfo()
     {
-        return array (  197 => 70,  192 => 67,  186 => 62,  170 => 52,  160 => 45,  151 => 41,  146 => 39,  142 => 38,  138 => 37,  134 => 36,  130 => 35,  127 => 34,  123 => 33,  100 => 13,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  205 => 76,  198 => 71,  193 => 68,  187 => 63,  170 => 52,  160 => 45,  151 => 41,  146 => 39,  142 => 38,  138 => 37,  134 => 36,  130 => 35,  127 => 34,  123 => 33,  100 => 13,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -265,7 +279,7 @@ class __TwigTemplate_b49f66a87ef553ed7e87bf72b95bec790c7062e8e1b44c737a2bf62fb1a
 \t\t\t\t\t\t<td>{{ job.location }}</td>
 \t\t\t\t\t\t<td>{{ job.url }}</td>
 
-                        <td><img src=\"{{ asset('image/jobs/' ~ job.uploads) }}\" alt=\"photo principale {{ job.uploads }}\"></td>
+\t\t                <td><img src=\"{{ asset('image/jobs/' ~ job.uploads) }}\" alt=\"photo principale {{ job.uploads }}\"></td>
 
 
 \t\t\t\t\t\t<td>
@@ -276,10 +290,11 @@ class __TwigTemplate_b49f66a87ef553ed7e87bf72b95bec790c7062e8e1b44c737a2bf62fb1a
 \t\t\t\t\t\t\t\t</svg>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<a href=\"{{ path('job_delete', {'id':job.id}) }}\">
+\t\t\t\t\t\t\t<a href=\"{{ path('job_delete', {'id':job.id}) }}\"class=\"confirmation\">
 \t\t\t\t\t\t\t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-trash-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
 \t\t\t\t\t\t\t\t\t<path fill-rule=\"evenodd\" d=\"M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z\"/>
 \t\t\t\t\t\t\t\t</svg>
+
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</td>
 \t\t\t\t\t</tr>
@@ -297,6 +312,18 @@ class __TwigTemplate_b49f66a87ef553ed7e87bf72b95bec790c7062e8e1b44c737a2bf62fb1a
 \t\t\t<a href=\"#top\"><img src=\"{{ asset('./image/arrowTop.png') }}\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
 \t\t</div>
 \t</div>
+
+\t{# modal de supprrsion#}
+
+\t<script type=\"text/javascript\">
+    \tvar elems = document.getElementsByClassName('confirmation');
+    \tvar confirmIt = function (e) {
+\t\tif (!confirm('Etes vous sûr de supprimer définitivement cette annonce?')) e.preventDefault();
+\t\t\t};
+\t\t\tfor (var i = 0, l = elems.length; i < l; i++) {
+\t\telems[i].addEventListener('click', confirmIt, false);
+\t\t\t}
+\t</script>
 
 {% endblock %}
 ", "Administrateur/jobAdmin.html.twig", "C:\\wamp64\\www\\elles\\templates\\Administrateur\\jobAdmin.html.twig");
