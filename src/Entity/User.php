@@ -60,18 +60,16 @@ class User implements UserInterface
     private $lastName;
 
     /**
-     * @ORM\OneToOne(targetEntity=Profile::class, mappedBy="user", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity=Profile::class, mappedBy="user", orphanRemoval=true)
      */
     private $profile;
 
-   
-
-    
 
     public function __construct()
     {
         $this->jobs = new ArrayCollection();
         $this->articles = new ArrayCollection();
+        $this->profile = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -240,23 +238,34 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getProfile(): ?Profile
+    /**
+     * @return Collection|Profile[]
+     */
+    public function getProfile(): Collection
     {
         return $this->profile;
     }
 
-    public function setProfile(Profile $profile): self
+    public function addProfile(Profile $profile): self
     {
-        $this->profile = $profile;
-
-        // set the owning side of the relation if necessary
-        if ($profile->getUser() !== $this) {
+        if (!$this->profile->contains($profile)) {
+            $this->profile[] = $profile;
             $profile->setUser($this);
         }
 
         return $this;
     }
 
+    public function removeProfile(Profile $profile): self
+    {
+        if ($this->profile->removeElement($profile)) {
+            // set the owning side to null (unless already changed)
+            if ($profile->getUser() === $this) {
+                $profile->setUser(null);
+            }
+        }
 
+        return $this;
+    }
     
 }

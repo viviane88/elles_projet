@@ -43,7 +43,7 @@ class Profile
     private $description;
 
     /**
-     * @ORM\OneToOne(targetEntity=User::class, inversedBy="profile", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="profile")
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
@@ -118,7 +118,7 @@ class Profile
         return $this->user;
     }
 
-    public function setUser(User $user): self
+    public function setUser(?User $user): self
     {
         $this->user = $user;
 

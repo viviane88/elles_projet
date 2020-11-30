@@ -295,6 +295,10 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CUser%23getLastName%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUser%23setLastName%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CUser%23setLastName%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUser%23getProfile%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUser%23getProfile%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUser%23setProfile%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CUser%23setProfile%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUser%24id%5D%5B1%5D' => 28,
 '%5B%5BC%5DApp%5CEntity%5CUser%24id%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUser%24email%5D%5B1%5D' => 37,
@@ -311,6 +315,8 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CUser%24name%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CUser%24lastName%5D%5B1%5D' => 32,
 '%5B%5BC%5DApp%5CEntity%5CUser%24lastName%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CUser%24profile%5D%5B1%5D' => 42,
+'%5B%5BC%5DApp%5CEntity%5CUser%24profile%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 1,
 '%5B%5BC%5DDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23setContainer%5D%5B1%5D' => 1,
@@ -854,7 +860,7 @@ return [[
 
 0 => 'N;',
 1 => [],
-2 => 1606595550,
+2 => 1606648513,
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1703,6 +1709,34 @@ return [[
                 ],
                 'targetEntity' => [
                     'App\\Entity\\Articles',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+42 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\OneToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\OneToOne')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'targetEntity' => [
+                    'App\\Entity\\Profile',
+                ],
+                'mappedBy' => [
+                    'user',
+                ],
+                'cascade' => [
+                    [
+                        'persist',
+                        'remove',
+                    ],
                 ],
             ],
         ],

@@ -313,7 +313,7 @@ class __TwigTemplate_b49f66a87ef553ed7e87bf72b95bec790c7062e8e1b44c737a2bf62fb1a
 \t\t</div>
 \t</div>
 
-\t{# modal de supprrsion#}
+\t{# modal de supprression#}
 
 \t<script type=\"text/javascript\">
     \tvar elems = document.getElementsByClassName('confirmation');

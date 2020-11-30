@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* Administrateur/articleAdmin.html.twig */
+/* Administrateur\articleAdmin.html.twig */
 class __TwigTemplate_6a204d72b34fc0a984a79c9fadefa5188fcd90bab3f6cc4c6f54383407602776 extends Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_6a204d72b34fc0a984a79c9fadefa5188fcd90bab3f6cc4c6f543834076
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Administrateur/articleAdmin.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Administrateur\\articleAdmin.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Administrateur/articleAdmin.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Administrateur\\articleAdmin.html.twig"));
 
-        $this->parent = $this->loadTemplate("baseAdmin.html.twig", "Administrateur/articleAdmin.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseAdmin.html.twig", "Administrateur\\articleAdmin.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -149,7 +149,7 @@ class __TwigTemplate_6a204d72b34fc0a984a79c9fadefa5188fcd90bab3f6cc4c6f543834076
 \t\t\t\t\t\t\t<a href=\"";
             // line 42
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 42)]), "html", null, true);
-            echo "\">
+            echo "\" class=\"confirmation_article\">
 \t\t\t\t\t\t\t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-trash-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
 \t\t\t\t\t\t\t\t\t<path fill-rule=\"evenodd\" d=\"M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z\"/>
 \t\t\t\t\t\t\t\t</svg>
@@ -180,6 +180,20 @@ class __TwigTemplate_6a204d72b34fc0a984a79c9fadefa5188fcd90bab3f6cc4c6f543834076
 \t\t
 \t</div>
 </div> 
+
+";
+        // line 66
+        echo "
+\t<script type=\"text/javascript\">
+    \tvar elems = document.getElementsByClassName('confirmation_article');
+    \tvar confirmIt = function (e) {
+\t\tif (!confirm('Etes vous sûr de supprimer définitivement cette annonce?')) e.preventDefault();
+\t\t\t};
+\t\t\tfor (var i = 0, l = elems.length; i < l; i++) {
+\t\telems[i].addEventListener('click', confirmIt, false);
+\t\t\t}
+\t</script>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -191,7 +205,7 @@ class __TwigTemplate_6a204d72b34fc0a984a79c9fadefa5188fcd90bab3f6cc4c6f543834076
 
     public function getTemplateName()
     {
-        return "Administrateur/articleAdmin.html.twig";
+        return "Administrateur\\articleAdmin.html.twig";
     }
 
     public function isTraitable()
@@ -201,7 +215,7 @@ class __TwigTemplate_6a204d72b34fc0a984a79c9fadefa5188fcd90bab3f6cc4c6f543834076
 
     public function getDebugInfo()
     {
-        return array (  177 => 59,  172 => 56,  167 => 52,  151 => 42,  141 => 35,  133 => 32,  129 => 31,  125 => 30,  122 => 29,  118 => 28,  100 => 13,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  186 => 66,  177 => 59,  172 => 56,  167 => 52,  151 => 42,  141 => 35,  133 => 32,  129 => 31,  125 => 30,  122 => 29,  118 => 28,  100 => 13,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -247,7 +261,7 @@ class __TwigTemplate_6a204d72b34fc0a984a79c9fadefa5188fcd90bab3f6cc4c6f543834076
 \t\t\t\t\t\t\t\t</svg>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t-
-\t\t\t\t\t\t\t<a href=\"{{ path('article_delete', {'id':article.id}) }}\">
+\t\t\t\t\t\t\t<a href=\"{{ path('article_delete', {'id':article.id}) }}\" class=\"confirmation_article\">
 \t\t\t\t\t\t\t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-trash-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
 \t\t\t\t\t\t\t\t\t<path fill-rule=\"evenodd\" d=\"M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z\"/>
 \t\t\t\t\t\t\t\t</svg>
@@ -269,7 +283,20 @@ class __TwigTemplate_6a204d72b34fc0a984a79c9fadefa5188fcd90bab3f6cc4c6f543834076
 \t\t
 \t</div>
 </div> 
+
+{# modal de suppression#}
+
+\t<script type=\"text/javascript\">
+    \tvar elems = document.getElementsByClassName('confirmation_article');
+    \tvar confirmIt = function (e) {
+\t\tif (!confirm('Etes vous sûr de supprimer définitivement cette annonce?')) e.preventDefault();
+\t\t\t};
+\t\t\tfor (var i = 0, l = elems.length; i < l; i++) {
+\t\telems[i].addEventListener('click', confirmIt, false);
+\t\t\t}
+\t</script>
+
 {% endblock %}
-", "Administrateur/articleAdmin.html.twig", "C:\\wamp64\\www\\elles\\templates\\Administrateur\\articleAdmin.html.twig");
+", "Administrateur\\articleAdmin.html.twig", "C:\\wamp64\\www\\elles\\templates\\Administrateur\\articleAdmin.html.twig");
     }
 }

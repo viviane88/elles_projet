@@ -30,8 +30,7 @@
 					<td>{{ user.lastname }}</td>
 					<td>{{ user.name }}</td>
 
-{# <td>{{ user.articles|length  }}</td> permet de savoir combien il a écrit d'articles#}
-{# <td>{{ user.annonces|length  }}</td> permet de savoir combien il a editer d'annonces#}
+
 					<td>{{ user.roles|join(' + ')|lower }}</td>
 					
 					<td><a href="{{ path('user_update', {'id':user.id}) }}">

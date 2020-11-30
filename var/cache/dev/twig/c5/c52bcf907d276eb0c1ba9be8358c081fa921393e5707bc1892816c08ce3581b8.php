@@ -145,10 +145,23 @@ class __TwigTemplate_fbef050ab997fb6a8d36980d901550fd521c11530b9de3bd60259bb670e
 </div> 
 <!-- pagination -->
 
-<div class=\"text-center\">";
-        // line 41
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 41, $this->source); })()));
-        echo "</div>
+<div class=\"text-center\">
+    ";
+        // line 42
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 42, $this->source); })()));
+        echo "
+</div>
+
+";
+        // line 46
+        echo "\t<div class=\"container-fluid mt-5\">
+\t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
+\t\t\t<a href=\"#top\"><img src=\"";
+        // line 48
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
+        echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
+\t\t</div>
+\t</div>
 
 ";
         
@@ -171,7 +184,7 @@ class __TwigTemplate_fbef050ab997fb6a8d36980d901550fd521c11530b9de3bd60259bb670e
 
     public function getDebugInfo()
     {
-        return array (  150 => 41,  143 => 36,  131 => 30,  125 => 27,  119 => 24,  115 => 23,  109 => 19,  105 => 18,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  161 => 48,  157 => 46,  151 => 42,  143 => 36,  131 => 30,  125 => 27,  119 => 24,  115 => 23,  109 => 19,  105 => 18,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -216,7 +229,16 @@ class __TwigTemplate_fbef050ab997fb6a8d36980d901550fd521c11530b9de3bd60259bb670e
 </div> 
 <!-- pagination -->
 
-<div class=\"text-center\">{{ knp_pagination_render(articles) }}</div>
+<div class=\"text-center\">
+    {{ knp_pagination_render(articles) }}
+</div>
+
+{# fleche retour top #}
+\t<div class=\"container-fluid mt-5\">
+\t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
+\t\t\t<a href=\"#top\"><img src=\"{{ asset('./image/arrowTop.png') }}\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
+\t\t</div>
+\t</div>
 
 {% endblock %}
 

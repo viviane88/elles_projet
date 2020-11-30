@@ -41,20 +41,20 @@ class ProfileController extends AbstractController
         $form=$this->createForm(ProfileType::class, $profile);
         $form->handleRequest($request);
 
+        $profile->setUser($user);
+
         if($form->isSubmitted()){
             if($form->isValid()){
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($profile);
-                $manager->flush();
-               
+                $manager->flush();      
             }
             
             return $this->redirectToRoute('profile');
         };
-
+        
         return $this->render('profile/profileForm.html.twig', [
-            'formulaireInfo' => $form->createView(),
-            
+            'formulaireInfo' => $form->createView(),      
         ]);
     }
 

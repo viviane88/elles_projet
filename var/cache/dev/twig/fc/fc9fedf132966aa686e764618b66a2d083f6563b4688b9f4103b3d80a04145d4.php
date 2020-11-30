@@ -72,16 +72,17 @@ class __TwigTemplate_a4769503c697179fa08ff60dd31eec4c53074cf2dc98f507e5cd66c2436
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/nav.css"), "html", null, true);
         echo "\"> 
 
+
 \t\t
 \t\t";
-        // line 19
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 20
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 21
         echo "\t</head>
 
 <body>
 ";
-        // line 24
+        // line 25
         echo "<style>
 html {
   scroll-behavior: smooth;
@@ -91,12 +92,12 @@ html {
 
 
         ";
-        // line 32
+        // line 33
         $this->displayBlock('body', $context, $blocks);
-        // line 37
+        // line 38
         echo "
  ";
-        // line 38
+        // line 39
         echo twig_include($this->env, $context, "footer.html.twig");
         echo "
 
@@ -104,7 +105,7 @@ html {
 <script src=\"https://code.jquery.com/jquery-3.5.1.js\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
 <script src=\"";
-        // line 43
+        // line 44
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/app.js"), "html", null, true);
         echo "\"></script>
 </body>
@@ -137,7 +138,7 @@ html {
 
     }
 
-    // line 19
+    // line 20
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -155,7 +156,7 @@ html {
 
     }
 
-    // line 32
+    // line 33
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -165,7 +166,7 @@ html {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 33
+        // line 34
         echo "\t\t
 \t\t
 \t\t
@@ -190,7 +191,7 @@ html {
 
     public function getDebugInfo()
     {
-        return array (  169 => 33,  159 => 32,  141 => 19,  122 => 10,  108 => 43,  100 => 38,  97 => 37,  95 => 32,  85 => 24,  80 => 20,  78 => 19,  72 => 16,  68 => 15,  64 => 14,  59 => 11,  57 => 10,  46 => 1,);
+        return array (  170 => 34,  160 => 33,  142 => 20,  123 => 10,  109 => 44,  101 => 39,  98 => 38,  96 => 33,  86 => 25,  81 => 21,  79 => 20,  72 => 16,  68 => 15,  64 => 14,  59 => 11,  57 => 10,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -211,6 +212,7 @@ html {
 \t\t<link rel=\"stylesheet\" href=\"{{ asset('css/base.css') }}\"> 
     \t<link rel=\"stylesheet\" href=\"{{ asset('css/footer.css') }}\">
     \t<link rel=\"stylesheet\" href=\"{{ asset('css/nav.css') }}\"> 
+
 
 \t\t
 \t\t{% block stylesheets %}{% endblock %}

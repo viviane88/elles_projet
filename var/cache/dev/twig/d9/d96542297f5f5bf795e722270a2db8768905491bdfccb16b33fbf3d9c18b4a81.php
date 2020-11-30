@@ -215,12 +215,23 @@ class __TwigTemplate_0d2a7b110f7ad8ccbf4ee88a517892fdafa7208acee5c342cddb5f181a6
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 92
         echo "\t
-<!-- pagination -->
+\t<!-- pagination -->
 
 \t<div class=\"text-center\">";
         // line 95
         echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 95, $this->source); })()));
         echo "</div>
+
+\t";
+        // line 98
+        echo "\t<div class=\"container-fluid mt-5\">
+\t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
+\t\t\t<a href=\"#top\"><img src=\"";
+        // line 100
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
+        echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
+\t\t</div>
+\t</div>
 
 ";
         
@@ -243,7 +254,7 @@ class __TwigTemplate_0d2a7b110f7ad8ccbf4ee88a517892fdafa7208acee5c342cddb5f181a6
 
     public function getDebugInfo()
     {
-        return array (  222 => 95,  217 => 92,  198 => 79,  186 => 70,  180 => 67,  173 => 63,  169 => 62,  156 => 54,  144 => 44,  140 => 43,  137 => 42,  130 => 34,  119 => 26,  113 => 23,  107 => 20,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  231 => 100,  227 => 98,  222 => 95,  217 => 92,  198 => 79,  186 => 70,  180 => 67,  173 => 63,  169 => 62,  156 => 54,  144 => 44,  140 => 43,  137 => 42,  130 => 34,  119 => 26,  113 => 23,  107 => 20,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -340,9 +351,16 @@ class __TwigTemplate_0d2a7b110f7ad8ccbf4ee88a517892fdafa7208acee5c342cddb5f181a6
 
 \t{% endfor %}
 \t
-<!-- pagination -->
+\t<!-- pagination -->
 
 \t<div class=\"text-center\">{{ knp_pagination_render(jobs) }}</div>
+
+\t{# fleche retour top #}
+\t<div class=\"container-fluid mt-5\">
+\t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
+\t\t\t<a href=\"#top\"><img src=\"{{ asset('./image/arrowTop.png') }}\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
+\t\t</div>
+\t</div>
 
 {% endblock %}
 ", "job/job.html.twig", "C:\\wamp64\\www\\elles\\templates\\job\\job.html.twig");
