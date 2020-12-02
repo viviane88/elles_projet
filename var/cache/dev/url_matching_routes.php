@@ -27,6 +27,7 @@ return [
         '/job' => [[['_route' => 'job', '_controller' => 'App\\Controller\\JobController::index'], null, null, null, false, false, null]],
         '/profile' => [[['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::index'], null, null, null, false, false, null]],
         '/profile/create/info' => [[['_route' => 'profile_create', '_controller' => 'App\\Controller\\ProfileController::createInfo'], null, null, null, false, false, null]],
+        '/profile/info' => [[['_route' => 'profile_info', '_controller' => 'App\\Controller\\ProfileController::show'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
@@ -67,6 +68,8 @@ return [
                     .'|rticle\\-([^/]++)(*:372)'
                 .')'
                 .'|/job\\-([^/]++)(*:395)'
+                .'|/([^/]++)/edit(*:417)'
+                .'|/profile/delete\\-([^/]++)(*:450)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -84,8 +87,10 @@ return [
         322 => [[['_route' => 'job_update', '_controller' => 'App\\Controller\\Administrateur\\JobAdminController::updateJob'], ['id'], null, null, false, true, null]],
         346 => [[['_route' => 'job_delete', '_controller' => 'App\\Controller\\Administrateur\\JobAdminController::deleteJob'], ['id'], null, null, false, true, null]],
         372 => [[['_route' => 'article_show', '_controller' => 'App\\Controller\\ArticleController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        395 => [
-            [['_route' => 'job_show', '_controller' => 'App\\Controller\\JobController::show'], ['id'], ['GET' => 0], null, false, true, null],
+        395 => [[['_route' => 'job_show', '_controller' => 'App\\Controller\\JobController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        417 => [[['_route' => 'profile_edit', '_controller' => 'App\\Controller\\ProfileController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        450 => [
+            [['_route' => 'profile_delete', '_controller' => 'App\\Controller\\ProfileController::deleteUser'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

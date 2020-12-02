@@ -102,35 +102,30 @@ class __TwigTemplate_31e10800461f4e39fcc345abfb745fce3ed0e4974462f73ffe06325912c
         <div id=\"about_card\" class=\"card card  p-4\" style=\"max-width: 1000px\">
 \t\t\t<a href=\"javascript:history.go(-1)\" class=\"h2 m-1\" id=\"arrow_left\"></a>
 
-          <div class=\"row \">
+      <div class=\"container\">
 
-\t\t\t<div class=\"col-md-6 col-sm-10 ml-3 mt-2  \">
-                <div class=\"\">  
-\t\t\t\t\t<img src=\"";
-        // line 24
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/articles/" . twig_get_attribute($this->env, $this->source, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 24, $this->source); })()), "uploads", [], "any", false, false, false, 24))), "html", null, true);
-        echo "\" alt=\"photo\" width=\"100%\" class=\"ml-4\" > 
-\t\t\t\t</div>         
-            </div> 
-\t\t\t\t
-            <div class=\"col-md-5 mb-3 ml-4 mr-4\">
-              <div class=\"card-block\" id=\"text_article\">
-\t\t\t  \t\t<h4 class=\"h1 mt-5 col-sm-12  \">";
-        // line 30
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 30, $this->source); })()), "title", [], "any", false, false, false, 30), "html", null, true);
-        echo "</h4>
-                \t<p class=\"card-text text-justify p-2  mr-3 col-sm-12\" >
-\t\t\t\t\t\t";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 32, $this->source); })()), "description", [], "any", false, false, false, 32), "html", null, true);
-        echo "
-                \t</p>
+        <article class=\"row single-post  no-gutters\">   
+            <div class=\"col-md-12\">
+              <div class=\"image-wrapper float-left pr-3\">         \t\t\t\t\t
+                  <img src=\"";
+        // line 25
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/articles/" . twig_get_attribute($this->env, $this->source, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 25, $this->source); })()), "uploads", [], "any", false, false, false, 25))), "html", null, true);
+        echo "\" alt=\"photo\"  > 
+              </div>
+              <div class=\"single-post-content-wrapper  \">
+\t\t\t  \t\t    <h1 >";
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 28, $this->source); })()), "title", [], "any", false, false, false, 28), "html", null, true);
+        echo "</h1>
+                <p>";
+        // line 29
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 29, $this->source); })()), "description", [], "any", false, false, false, 29), "html", null, true);
+        echo "</p>
               </div>
             </div>
             
-          </div>
-        </div>
-  </div>
+        </article>
+</div>
 
 
 
@@ -160,7 +155,7 @@ class __TwigTemplate_31e10800461f4e39fcc345abfb745fce3ed0e4974462f73ffe06325912c
 
     public function getDebugInfo()
     {
-        return array (  125 => 32,  120 => 30,  111 => 24,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  122 => 29,  118 => 28,  112 => 25,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -184,26 +179,21 @@ class __TwigTemplate_31e10800461f4e39fcc345abfb745fce3ed0e4974462f73ffe06325912c
         <div id=\"about_card\" class=\"card card  p-4\" style=\"max-width: 1000px\">
 \t\t\t<a href=\"javascript:history.go(-1)\" class=\"h2 m-1\" id=\"arrow_left\"></a>
 
-          <div class=\"row \">
+      <div class=\"container\">
 
-\t\t\t<div class=\"col-md-6 col-sm-10 ml-3 mt-2  \">
-                <div class=\"\">  
-\t\t\t\t\t<img src=\"{{ asset('image/articles/' ~ articles.uploads) }}\" alt=\"photo\" width=\"100%\" class=\"ml-4\" > 
-\t\t\t\t</div>         
-            </div> 
-\t\t\t\t
-            <div class=\"col-md-5 mb-3 ml-4 mr-4\">
-              <div class=\"card-block\" id=\"text_article\">
-\t\t\t  \t\t<h4 class=\"h1 mt-5 col-sm-12  \">{{ articles.title }}</h4>
-                \t<p class=\"card-text text-justify p-2  mr-3 col-sm-12\" >
-\t\t\t\t\t\t{{ articles.description }}
-                \t</p>
+        <article class=\"row single-post  no-gutters\">   
+            <div class=\"col-md-12\">
+              <div class=\"image-wrapper float-left pr-3\">         \t\t\t\t\t
+                  <img src=\"{{ asset('image/articles/' ~ articles.uploads) }}\" alt=\"photo\"  > 
+              </div>
+              <div class=\"single-post-content-wrapper  \">
+\t\t\t  \t\t    <h1 >{{ articles.title }}</h1>
+                <p>{{ articles.description }}</p>
               </div>
             </div>
             
-          </div>
-        </div>
-  </div>
+        </article>
+</div>
 
 
 

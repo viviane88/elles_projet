@@ -24,7 +24,8 @@
                     <h2 class="card-title text-center mt-2">{{ article.title }}</h2>
                 <div class="card-body" >
 
-                    <p class="card_articles p-4">{{ article.description}}</p>
+                    <p class="card_articles p-4" >{{ article.description |u.truncate(100, '...', false)}}</p>
+
             </div>
             <div class="">
                 <a href="{{ path('article_show', {id: article.id}) }}"

@@ -35,8 +35,9 @@
 					</div>
 					<div class="card-body">
                     <a href="{{ path('job_show', {id: job.id}) }}"
-                           id="button_detail"  ></a>
+                id="button_detail" class=" h4 float-right mr-2 text-center " style="text-decoration:none; background-color: #E8D525">+</a>
                     </div>
+                    
 				</div>
 			</div>
         {% endfor %} 
@@ -49,7 +50,7 @@
 		<hr style="height: 1px;  background-color: #707070; width: 100%; border: none;">
 			<div class="col-12 text-center py-3">
 				<h1>Pour vous</h1>
-				<p class="h4">Nos derniers articles</p>		
+				<h3 >Nos derniers articles</h3>		
 			</div>
 	</div>
  
@@ -147,7 +148,7 @@
                     <h4 class="">Nous</h4>
                         <p>Découvrir notre concept et ce que nous souhaitons vous apporter.</p>
                             <div class="mt-4 mx-auto" id="button_outset">
-                                <a href="{{ path('job') }}"class="" > Notre concept</a>
+                                <a href="{{ path('about') }}"class="" > Notre concept</a>
                             </div>
                     </div>
                  </div>
@@ -157,7 +158,7 @@
                     <h4 class="">Rechercher</h4>
                         <p class="">Trouver votre job de rêve par ville, secteurs ou entreprises</p>
                         <div class="mt-5 mx-auto" id="button_outset">
-                            <a href=""class="" > Nos jobs</a>
+                            <a href=""class="{{ path('job') }}" > Nos jobs</a>
                         </div>
                     </div>
                 </div>

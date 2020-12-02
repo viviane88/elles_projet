@@ -2,12 +2,17 @@
 margin: 0;
 padding: 0;
 text-decoration: none;
+color: black;
 list-style-type: none;
 font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1, p, a {
 color: black;
+}
+
+p{
+text-align: justify;
 }
 ul li{
 margin: 0;
@@ -18,7 +23,7 @@ background-color: #E8D525;
 border: 0;
 padding: auto;
 border-radius: 3px;
-width: 100px;
+width: 80px;
 height: 50px;
 cursor: pointer;
 font-size: 18px; 
@@ -294,7 +299,7 @@ color: black;
 border: 0px;
 }
 .pagination > li > span{
-color: green;
+color: #E8D525;
 }
 .pagination > li > a:hover{
 background-color: #E8D525;
@@ -310,7 +315,7 @@ color: white;
 .pagination > .active > a
 .pagination > .active > span{
 color: #E8D525;
+
 }
     
- 
 

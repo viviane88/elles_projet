@@ -58,24 +58,20 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
         $this->displayBlock('title', $context, $blocks);
         // line 12
         echo "\t\t</title>
-\t\t<link href=\"https://fonts.googleapis.com/css?family=Roboto|Varela+Round\" rel=\"stylesheet\">
-\t\t<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">
-\t\t<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">
-\t\t<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\t\t
 \t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">
 \t\t<link rel=\"stylesheet\" href=\"";
-        // line 18
+        // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/base.css"), "html", null, true);
         echo "\"> 
 \t\t";
-        // line 19
+        // line 15
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 20
+        // line 16
         echo "\t</head>
     <body>
 
 \t";
-        // line 24
+        // line 20
         echo "\t<style>
 \thtml {
   \tscroll-behavior: smooth;
@@ -83,27 +79,27 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 \t</style>
 
    ";
-        // line 31
+        // line 27
         echo "\t<header id=\"animation_admin\">
 
 \t\t";
-        // line 33
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "flashes", [0 => [0 => "success", 1 => "danger"]], "method", false, false, false, 33));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "flashes", [0 => [0 => "success", 1 => "danger"]], "method", false, false, false, 29));
         foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
-            // line 34
+            // line 30
             echo "\t\t\t";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 35
+                // line 31
                 echo "\t\t\t\t<div class=\"flash-";
                 echo twig_escape_filter($this->env, $context["label"], "html", null, true);
                 echo " p-3 fixed-top bg-";
                 echo twig_escape_filter($this->env, $context["label"], "html", null, true);
                 echo " text-white text-center\">
 \t\t\t\t";
-                // line 36
+                // line 32
                 echo twig_escape_filter($this->env, $context["message"], "html", null, true);
                 echo "
 \t\t\t\t</div>
@@ -112,17 +108,17 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 39
+            // line 35
             echo "\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['label'], $context['messages'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 36
         echo "
 \t<div class=\"row m-3\">
 \t\t<a href=\"";
-        // line 42
+        // line 38
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\"style=\"text-decoration: none\"><img id=\"main_logo\" class=\"m-3\" src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/logo.svg"), "html", null, true);
@@ -135,20 +131,20 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 
 
    ";
-        // line 51
+        // line 47
         echo "   
 \t<div class=\"row m-0 p-0 mt-2\">
 \t";
-        // line 53
+        // line 49
         $this->displayBlock('body', $context, $blocks);
-        // line 139
+        // line 138
         echo "\t\t</div>
 
 \t<footer>
 \t<div class=\" text-center p-2 mt-5\" style=\" background-color: #39485E\">
         <p class=\"text-white\">";
-        // line 143
-        echo (isset($context["copyright"]) || array_key_exists("copyright", $context) ? $context["copyright"] : (function () { throw new RuntimeError('Variable "copyright" does not exist.', 143, $this->source); })());
+        // line 142
+        echo (isset($context["copyright"]) || array_key_exists("copyright", $context) ? $context["copyright"] : (function () { throw new RuntimeError('Variable "copyright" does not exist.', 142, $this->source); })());
         echo "</p>
     </div>
 \t</footer>
@@ -188,7 +184,7 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 
     }
 
-    // line 19
+    // line 15
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -206,7 +202,7 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 
     }
 
-    // line 53
+    // line 49
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -216,13 +212,13 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 54
+        // line 50
         echo "
 \t<div class=\"col-12  text-center\">
 \t\t<h2>Bienvenue sur votre espace Administrateur</h2>
 \t\t <h3>Bonjour <b>";
-        // line 57
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 57, $this->source); })()), "user", [], "any", false, false, false, 57), "name", [], "any", false, false, false, 57), "html", null, true);
+        // line 53
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", [], "any", false, false, false, 53), "name", [], "any", false, false, false, 53), "html", null, true);
         echo "</b></h3> 
 
 \t</div>
@@ -232,7 +228,7 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 
 \t\t<li>
 \t<a href=\"";
-        // line 65
+        // line 61
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "#top\">
 \t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-house-door-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -242,14 +238,14 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 \t\t</li>
 
 \t\t";
-        // line 72
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
-            // line 73
+        // line 68
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 69
             echo "
 \t\t<div class=\"dropdown-divider\"></div>
 
 \t\t<a href=\"";
-            // line 76
+            // line 72
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_admin");
             echo "\">
 \t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-keyboard-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -257,11 +253,19 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 \t\t</svg>- Jobs</a>
 \t\t</li>
 \t\t<div class=\"dropdown-divider\"></div>
+\t\t";
+        }
+        // line 79
+        echo "
 
-
+\t\t";
+        // line 81
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
+            // line 82
+            echo "
 \t\t<li>
 \t<a href=\"";
-            // line 85
+            // line 84
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_admin");
             echo "\">
 \t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-receipt\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -276,7 +280,7 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 
 \t\t<li>
 \t<a href=\"";
-            // line 97
+            // line 96
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_list_user");
             echo "\">
 \t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-file-person-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -285,19 +289,19 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 \t\t</li>
 \t\t";
         }
-        // line 103
+        // line 102
         echo "
 \t\t<div class=\"dropdown-divider\"></div>
 
 \t\t";
-        // line 106
+        // line 105
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-            // line 107
+            // line 106
             echo "
 \t\t<li>
 \t <a href=\"";
-            // line 109
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile_create");
+            // line 108
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile");
             echo "\"> 
 \t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-info-circle\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
   \t\t\t<path fill-rule=\"evenodd\" d=\"M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
@@ -309,7 +313,7 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 
 \t\t<li>
 \t<a href=\"";
-            // line 119
+            // line 118
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
             echo "\">
 \t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-heart-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -319,13 +323,13 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 \t\t
 \t\t";
         }
-        // line 126
+        // line 125
         echo "\t\t
 \t\t<div class=\"dropdown-divider\"></div>
 
 \t\t<li>
 \t<a href=\"";
-        // line 130
+        // line 129
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\" id=\"#top\">
 \t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-person-x-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -356,7 +360,7 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 
     public function getDebugInfo()
     {
-        return array (  329 => 130,  323 => 126,  313 => 119,  300 => 109,  296 => 107,  294 => 106,  289 => 103,  280 => 97,  265 => 85,  253 => 76,  248 => 73,  246 => 72,  236 => 65,  225 => 57,  220 => 54,  210 => 53,  192 => 19,  173 => 11,  151 => 143,  145 => 139,  143 => 53,  139 => 51,  126 => 42,  122 => 40,  116 => 39,  107 => 36,  100 => 35,  95 => 34,  91 => 33,  87 => 31,  79 => 24,  74 => 20,  72 => 19,  68 => 18,  60 => 12,  58 => 11,  46 => 1,);
+        return array (  333 => 129,  327 => 125,  317 => 118,  304 => 108,  300 => 106,  298 => 105,  293 => 102,  284 => 96,  269 => 84,  265 => 82,  263 => 81,  259 => 79,  249 => 72,  244 => 69,  242 => 68,  232 => 61,  221 => 53,  216 => 50,  206 => 49,  188 => 15,  169 => 11,  147 => 142,  141 => 138,  139 => 49,  135 => 47,  122 => 38,  118 => 36,  112 => 35,  103 => 32,  96 => 31,  91 => 30,  87 => 29,  83 => 27,  75 => 20,  70 => 16,  68 => 15,  64 => 14,  60 => 12,  58 => 11,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -373,10 +377,6 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 \t\t\telles -
 \t\t\t{% block title %}Accueil - administrateur{% endblock %}
 \t\t</title>
-\t\t<link href=\"https://fonts.googleapis.com/css?family=Roboto|Varela+Round\" rel=\"stylesheet\">
-\t\t<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">
-\t\t<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">
-\t\t<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\t\t
 \t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">
 \t\t<link rel=\"stylesheet\" href=\"{{ asset('css/base.css') }}\"> 
 \t\t{% block stylesheets %}{% endblock %}
@@ -432,7 +432,7 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 \t\t</svg>- Retour au site</a>
 \t\t</li>
 
-\t\t{% if is_granted('ROLE_SUPER_ADMIN') %}
+\t\t{% if is_granted('ROLE_ADMIN') %}
 
 \t\t<div class=\"dropdown-divider\"></div>
 
@@ -442,7 +442,10 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 \t\t</svg>- Jobs</a>
 \t\t</li>
 \t\t<div class=\"dropdown-divider\"></div>
+\t\t{% endif %}
 
+
+\t\t{% if is_granted('ROLE_SUPER_ADMIN') %}
 
 \t\t<li>
 \t<a href=\"{{path('article_admin')}}\">
@@ -469,7 +472,7 @@ class __TwigTemplate_a827c77cc12859c66fa656d3ce375aed988d714462c2b233f75b961bec2
 \t\t{% if is_granted('ROLE_USER') %}
 
 \t\t<li>
-\t <a href=\"{{path('profile_create')}}\"> 
+\t <a href=\"{{path('profile')}}\"> 
 \t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-info-circle\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
   \t\t\t<path fill-rule=\"evenodd\" d=\"M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/>
   \t\t\t<path d=\"M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z\"/>

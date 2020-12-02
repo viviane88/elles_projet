@@ -110,7 +110,7 @@ class __TwigTemplate_0d2a7b110f7ad8ccbf4ee88a517892fdafa7208acee5c342cddb5f181a6
 \t\t\t\t<div class=\"col\">
 \t\t\t\t\t";
         // line 23
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), "company", [], "any", false, false, false, 23), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), "title", [], "any", false, false, false, 23), 'row');
         echo "
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col\">
@@ -281,7 +281,7 @@ class __TwigTemplate_0d2a7b110f7ad8ccbf4ee88a517892fdafa7208acee5c342cddb5f181a6
 \t\t\t{{ form_start(form) }}
 \t\t\t<div class=\"form-row align-items-end\">
 \t\t\t\t<div class=\"col\">
-\t\t\t\t\t{{ form_row(form.company) }}
+\t\t\t\t\t{{ form_row(form.title) }}
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col\">
 \t\t\t\t\t{{ form_row(form.location) }}

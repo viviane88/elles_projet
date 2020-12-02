@@ -4736,6 +4736,9 @@
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.string"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.webprofiler"/>
       </call>
       <call method="addExtension">
@@ -4987,6 +4990,9 @@
       <argument type="service" id="twig"/>
     </service>
     <service id="twig.missing_extension_suggestor" class="Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor" public="false"/>
+    <service id="twig.extension.string" class="Twig\Extra\String\StringExtension" public="false">
+      <tag name="twig.extension"/>
+    </service>
     <service id=".2_HtmlDumper~sz4kKKW" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
       <argument>null</argument>
       <argument>UTF-8</argument>
@@ -5921,6 +5927,18 @@
         <argument key="jobs" type="service" id=".errored..service_locator.17qL2MO.App\Entity\Jobs"/>
       </argument>
     </service>
+    <service id=".service_locator.kP.9Lot" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="profilerepository" type="service" id="App\Repository\ProfileRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.FmegLzH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="profile" type="service" id=".errored..service_locator.FmegLzH.App\Entity\Profile"/>
+      </argument>
+    </service>
     <service id=".service_locator.LChsuZj" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5935,7 +5953,7 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.yRTraoU" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.44cLbKl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Administrateur\AdminListUserController::createUser" type="service" id=".service_locator.j5_bHjD"/>
@@ -5954,6 +5972,10 @@
         <argument key="App\Controller\HomeController::jobs" type="service" id=".service_locator.zPKOpxx"/>
         <argument key="App\Controller\JobController::index" type="service" id=".service_locator.ElenWPs"/>
         <argument key="App\Controller\JobController::show" type="service" id=".service_locator.17qL2MO"/>
+        <argument key="App\Controller\ProfileController::deleteUser" type="service" id=".service_locator.kP.9Lot"/>
+        <argument key="App\Controller\ProfileController::edit" type="service" id=".service_locator.FmegLzH"/>
+        <argument key="App\Controller\ProfileController::index" type="service" id=".service_locator.kP.9Lot"/>
+        <argument key="App\Controller\ProfileController::show" type="service" id=".service_locator.kP.9Lot"/>
         <argument key="App\Controller\RegistrationController::register" type="service" id=".service_locator.LChsuZj"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.xA8Fw_."/>
         <argument key="App\Kernel::loadRoutes" type="service" id=".service_locator.C9JCBPC"/>
@@ -5978,6 +6000,10 @@
         <argument key="App\Controller\HomeController:jobs" type="service" id=".service_locator.zPKOpxx"/>
         <argument key="App\Controller\JobController:index" type="service" id=".service_locator.ElenWPs"/>
         <argument key="App\Controller\JobController:show" type="service" id=".service_locator.17qL2MO"/>
+        <argument key="App\Controller\ProfileController:deleteUser" type="service" id=".service_locator.kP.9Lot"/>
+        <argument key="App\Controller\ProfileController:edit" type="service" id=".service_locator.FmegLzH"/>
+        <argument key="App\Controller\ProfileController:index" type="service" id=".service_locator.kP.9Lot"/>
+        <argument key="App\Controller\ProfileController:show" type="service" id=".service_locator.kP.9Lot"/>
         <argument key="App\Controller\RegistrationController:register" type="service" id=".service_locator.LChsuZj"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.xA8Fw_."/>
         <argument key="kernel:loadRoutes" type="service" id=".service_locator.C9JCBPC"/>
@@ -6521,12 +6547,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.yRTraoU"/>
+      <argument type="service" id=".service_locator.44cLbKl"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.yRTraoU"/>
+      <argument type="service" id=".service_locator.44cLbKl"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6540,6 +6566,7 @@
     <service id=".errored..service_locator.C9JCBPC.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
     <service id=".errored..service_locator._LLvGt6.App\Entity\Articles" class="App\Entity\Articles"/>
     <service id=".errored..service_locator.17qL2MO.App\Entity\Jobs" class="App\Entity\Jobs"/>
+    <service id=".errored..service_locator.FmegLzH.App\Entity\Profile" class="App\Entity\Profile"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
       <argument type="service" id=".service_locator.jzMW0nd"/>
@@ -6950,7 +6977,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.WaGDpDt" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.yRTraoU"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.44cLbKl"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

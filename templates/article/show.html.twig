@@ -17,26 +17,21 @@
         <div id="about_card" class="card card  p-4" style="max-width: 1000px">
 			<a href="javascript:history.go(-1)" class="h2 m-1" id="arrow_left"></a>
 
-          <div class="row ">
+      <div class="container">
 
-			<div class="col-md-6 col-sm-10 ml-3 mt-2  ">
-                <div class="">  
-					<img src="{{ asset('image/articles/' ~ articles.uploads) }}" alt="photo" width="100%" class="ml-4" > 
-				</div>         
-            </div> 
-				
-            <div class="col-md-5 mb-3 ml-4 mr-4">
-              <div class="card-block" id="text_article">
-			  		<h4 class="h1 mt-5 col-sm-12  ">{{ articles.title }}</h4>
-                	<p class="card-text text-justify p-2  mr-3 col-sm-12" >
-						{{ articles.description }}
-                	</p>
+        <article class="row single-post  no-gutters">   
+            <div class="col-md-12">
+              <div class="image-wrapper float-left pr-3">         					
+                  <img src="{{ asset('image/articles/' ~ articles.uploads) }}" alt="photo"  > 
+              </div>
+              <div class="single-post-content-wrapper  ">
+			  		    <h1 >{{ articles.title }}</h1>
+                <p>{{ articles.description }}</p>
               </div>
             </div>
             
-          </div>
-        </div>
-  </div>
+        </article>
+</div>
 
 
 

@@ -21,7 +21,7 @@ class JobsRepository extends ServiceEntityRepository
     }
 
     /*
-    récupère les infos de la company/location
+    récupère les infos de la title/location
     */
 
 
@@ -34,8 +34,8 @@ class JobsRepository extends ServiceEntityRepository
         
         ->orwhere('s.location = :location')
         ->setParameter('location', $search->getLocation() )
-        ->orwhere('s.company = :company')
-        ->setParameter('company', $search->getCompany() );
+        ->orwhere('s.title = :title')
+        ->setParameter('title', $search->getTitle() );
     }
 
     /*
@@ -47,6 +47,7 @@ class JobsRepository extends ServiceEntityRepository
             ->andWhere('t.id > :val')
             ->setParameter('val', '0')
             ->setMaxResults(3)
+            ->orderBy('t.created_at', 'DESC')
             ->getQuery()
             ->getResult()
         ;

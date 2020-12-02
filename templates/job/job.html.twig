@@ -20,7 +20,7 @@
 			{{ form_start(form) }}
 			<div class="form-row align-items-end">
 				<div class="col">
-					{{ form_row(form.company) }}
+					{{ form_row(form.title) }}
 				</div>
 				<div class="col">
 					{{ form_row(form.location) }}
@@ -31,6 +31,7 @@
 	       				 <button  id="search_button" type="submit" class="">Ok</button>
 					</div>
 		</div>
+		
 			{{ form_end(form) }}
 		</div>
 	</div>
@@ -94,11 +95,6 @@
 
 	<div class="text-center">{{ knp_pagination_render(jobs) }}</div>
 
-	{# fleche retour top #}
-	<div class="container-fluid mt-5">
-		<div class="row justify-content-center mb3 pt-2 pr-3 ">
-			<a href="#top"><img src="{{ asset('./image/arrowTop.png') }}" alt="icone arrow Top" width="85%" id="arrowTop"></a>
-		</div>
-	</div>
+	
 
 {% endblock %}

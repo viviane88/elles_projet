@@ -10,10 +10,6 @@
 			elles -
 			{% block title %}Accueil - administrateur{% endblock %}
 		</title>
-		<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{{ asset('css/base.css') }}"> 
 		{% block stylesheets %}{% endblock %}
@@ -62,14 +58,14 @@
 	<ul>
 
 		<li>
-	<a href="{{path('home')}}#top">
+		<a href="{{path('home')}}#top">
 		<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   			<path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
   			<path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
 		</svg>- Retour au site</a>
 		</li>
 
-		{% if is_granted('ROLE_SUPER_ADMIN') %}
+		{% if is_granted('ROLE_ADMIN') %}
 
 		<div class="dropdown-divider"></div>
 
@@ -79,7 +75,10 @@
 		</svg>- Jobs</a>
 		</li>
 		<div class="dropdown-divider"></div>
+		{% endif %}
 
+
+		{% if is_granted('ROLE_SUPER_ADMIN') %}
 
 		<li>
 	<a href="{{path('article_admin')}}">
@@ -106,7 +105,7 @@
 		{% if is_granted('ROLE_USER') %}
 
 		<li>
-	 <a href="{{path('profile_create')}}"> 
+	 <a href="{{path('profile')}}"> 
 		<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   			<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
   			<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
@@ -139,8 +138,8 @@
 		</div>
 
 	<footer>
-	<div class=" text-center p-2 mt-5" style=" background-color: #39485E">
-        <p class="text-white">{{ copyright|raw }}</p>
+	<div class="  p-2 mt-5 " style=" background-color: #39485E">
+        <p class="text-white text-center" >{{ copyright|raw }}</p>
     </div>
 	</footer>
 

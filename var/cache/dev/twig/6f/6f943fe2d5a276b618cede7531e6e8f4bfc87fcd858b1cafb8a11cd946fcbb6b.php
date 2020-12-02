@@ -319,7 +319,7 @@ class __TwigTemplate_58e229e32b04327989f6cc1089702abbd1119f7f8a91fcf4b6df00dd6e8
                             <div class=\"mt-4 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
         // line 150
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about");
         echo "\"class=\"\" > Notre concept</a>
                             </div>
                     </div>
@@ -330,7 +330,10 @@ class __TwigTemplate_58e229e32b04327989f6cc1089702abbd1119f7f8a91fcf4b6df00dd6e8
                     <h4 class=\"\">Rechercher</h4>
                         <p class=\"\">Trouver votre job de rêve par ville, secteurs ou entreprises</p>
                         <div class=\"mt-5 mx-auto\" id=\"button_outset\">
-                            <a href=\"\"class=\"\" > Nos jobs</a>
+                            <a href=\"\"class=\"";
+        // line 160
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job");
+        echo "\" > Nos jobs</a>
                         </div>
                     </div>
                 </div>
@@ -372,7 +375,7 @@ class __TwigTemplate_58e229e32b04327989f6cc1089702abbd1119f7f8a91fcf4b6df00dd6e8
 
     public function getDebugInfo()
     {
-        return array (  347 => 171,  343 => 169,  322 => 150,  309 => 140,  296 => 130,  283 => 120,  248 => 87,  230 => 84,  225 => 82,  221 => 81,  216 => 80,  199 => 79,  184 => 67,  157 => 42,  145 => 37,  139 => 34,  135 => 33,  131 => 32,  124 => 30,  119 => 27,  115 => 26,  101 => 15,  93 => 10,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
+        return array (  350 => 171,  346 => 169,  335 => 160,  322 => 150,  309 => 140,  296 => 130,  283 => 120,  248 => 87,  230 => 84,  225 => 82,  221 => 81,  216 => 80,  199 => 79,  184 => 67,  157 => 42,  145 => 37,  139 => 34,  135 => 33,  131 => 32,  124 => 30,  119 => 27,  115 => 26,  101 => 15,  93 => 10,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -526,7 +529,7 @@ class __TwigTemplate_58e229e32b04327989f6cc1089702abbd1119f7f8a91fcf4b6df00dd6e8
                     <h4 class=\"\">Nous</h4>
                         <p>Découvrir notre concept et ce que nous souhaitons vous apporter.</p>
                             <div class=\"mt-4 mx-auto\" id=\"button_outset\">
-                                <a href=\"{{ path('job') }}\"class=\"\" > Notre concept</a>
+                                <a href=\"{{ path('about') }}\"class=\"\" > Notre concept</a>
                             </div>
                     </div>
                  </div>
@@ -536,7 +539,7 @@ class __TwigTemplate_58e229e32b04327989f6cc1089702abbd1119f7f8a91fcf4b6df00dd6e8
                     <h4 class=\"\">Rechercher</h4>
                         <p class=\"\">Trouver votre job de rêve par ville, secteurs ou entreprises</p>
                         <div class=\"mt-5 mx-auto\" id=\"button_outset\">
-                            <a href=\"\"class=\"\" > Nos jobs</a>
+                            <a href=\"\"class=\"{{ path('job') }}\" > Nos jobs</a>
                         </div>
                     </div>
                 </div>

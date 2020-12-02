@@ -38,6 +38,7 @@ class ComposerStaticInit1bc9019358608c2e300e7ce1a5b13160
         'T' => 
         array (
             'Twig\\Extra\\TwigExtraBundle\\' => 27,
+            'Twig\\Extra\\String\\' => 18,
             'Twig\\' => 5,
         ),
         'S' => 
@@ -189,6 +190,10 @@ class ComposerStaticInit1bc9019358608c2e300e7ce1a5b13160
         'Twig\\Extra\\TwigExtraBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/extra-bundle/src',
+        ),
+        'Twig\\Extra\\String\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/string-extra/src',
         ),
         'Twig\\' => 
         array (
@@ -610,22 +615,26 @@ class ComposerStaticInit1bc9019358608c2e300e7ce1a5b13160
         'App\\Controller\\ContactController' => __DIR__ . '/../..' . '/src/Controller/ContactController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
         'App\\Controller\\JobController' => __DIR__ . '/../..' . '/src/Controller/JobController.php',
+        'App\\Controller\\ProfileController' => __DIR__ . '/../..' . '/src/Controller/ProfileController.php',
         'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
         'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Controller\\SpaceController' => __DIR__ . '/../..' . '/src/Controller/SpaceController.php',
         'App\\DataFixtures\\AppFixturesArticles' => __DIR__ . '/../..' . '/src/DataFixtures/~AppFixtures.php',
         'App\\Entity\\Articles' => __DIR__ . '/../..' . '/src/Entity/Articles.php',
         'App\\Entity\\Jobs' => __DIR__ . '/../..' . '/src/Entity/Jobs.php',
+        'App\\Entity\\Profile' => __DIR__ . '/../..' . '/src/Entity/Profile.php',
         'App\\Entity\\SearchJob' => __DIR__ . '/../..' . '/src/Entity/SearchJob.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'App\\Form\\ArticleType' => __DIR__ . '/../..' . '/src/Form/ArticleType.php',
         'App\\Form\\ContactType' => __DIR__ . '/../..' . '/src/Form/ContactType.php',
         'App\\Form\\JobType' => __DIR__ . '/../..' . '/src/Form/JobType.php',
+        'App\\Form\\ProfileType' => __DIR__ . '/../..' . '/src/Form/ProfileType.php',
         'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Form\\SearchJobType' => __DIR__ . '/../..' . '/src/Form/SearchJobType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\ArticlesRepository' => __DIR__ . '/../..' . '/src/Repository/ArticlesRepository.php',
         'App\\Repository\\JobsRepository' => __DIR__ . '/../..' . '/src/Repository/JobsRepository.php',
+        'App\\Repository\\ProfileRepository' => __DIR__ . '/../..' . '/src/Repository/ProfileRepository.php',
         'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
         'App\\Security\\LoginFormAuthenticathorAuthenticator' => __DIR__ . '/../..' . '/src/Security/LoginFormAuthenticathorAuthenticator.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -5039,6 +5048,7 @@ class ComposerStaticInit1bc9019358608c2e300e7ce1a5b13160
         'Twig\\Extension\\SandboxExtension' => __DIR__ . '/..' . '/twig/twig/src/Extension/SandboxExtension.php',
         'Twig\\Extension\\StagingExtension' => __DIR__ . '/..' . '/twig/twig/src/Extension/StagingExtension.php',
         'Twig\\Extension\\StringLoaderExtension' => __DIR__ . '/..' . '/twig/twig/src/Extension/StringLoaderExtension.php',
+        'Twig\\Extra\\String\\StringExtension' => __DIR__ . '/..' . '/twig/string-extra/src/StringExtension.php',
         'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Compiler\\MissingExtensionSuggestorPass' => __DIR__ . '/..' . '/twig/extra-bundle/src/DependencyInjection/Compiler/MissingExtensionSuggestorPass.php',
         'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/twig/extra-bundle/src/DependencyInjection/Configuration.php',
         'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\TwigExtraExtension' => __DIR__ . '/..' . '/twig/extra-bundle/src/DependencyInjection/TwigExtraExtension.php',

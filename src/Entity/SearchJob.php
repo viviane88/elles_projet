@@ -7,21 +7,21 @@ class SearchJob {
      /**
      * @var string|null
      */
-    private $company;
+    private $title;
 
     /**
      * @var string|null
      */
     private $location;
     
-    public function getcompany(): ?string
+    public function gettitle(): ?string
     {
-        return $this->company;
+        return $this->title;
     }
 
-    public function setcompany(string $company): self
+    public function settitle(string $title): self
     {
-        $this->company = $company;
+        $this->title = $title;
 
         return $this;
     }

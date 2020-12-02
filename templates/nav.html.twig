@@ -15,8 +15,11 @@
 		  <li><a href="{{ path('home') }}">Accueil</a></li>
 		  <li><a href="{{ path('article') }}">Nos Articles</a></li>
 		  <li><a href="{{ path('job') }}">Nos Jobs</a></li>
-		  <li><a href="{{ path('contact') }}">Nous contactez</a></li>
+		  <li><a href="{{ path('contact') }}">Nous contacter</a></li>
 		  <li><a href="{{ path('about') }}">Qui sommes-nous?</a></li>
+
+{# inscription ou espace de l'utilisateur #}
+
       {% if app.user %}
         <li><a href="{{ path('space') }}"><b>Mon espace</b></a></li>
       {% else %}

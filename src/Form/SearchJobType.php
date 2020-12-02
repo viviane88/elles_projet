@@ -13,17 +13,19 @@ class SearchJobType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('company', TextType::class, [
+        ->add('title', TextType::class, [
             'required'=> false,
+            'label'=>'Emploi',
             'attr' => [
-                'placeholder' => 'Le nom de l\'entreprise'
+                'placeholder' => 'Le job de vos rêves'
             ]
 
         ])            
         ->add('location', TextType::class, [
             'required'=> false,
+            'label'=>'Ville',
             'attr' => [
-                'placeholder' => 'Adresse de l\'entreprise'
+                'placeholder' => 'Où?'
             ]
         ])
         ;

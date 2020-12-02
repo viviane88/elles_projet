@@ -20,7 +20,7 @@ class ArticlesRepository extends ServiceEntityRepository
     }
 
     /*
-    récupère au max 3 articles
+    récupère au max 3 articles par date de nouveautés
     */
 
     public function findThree()
@@ -29,6 +29,21 @@ class ArticlesRepository extends ServiceEntityRepository
             ->andWhere('t.id > :val')
             ->setParameter('val', '0')
             ->setMaxResults(3)
+            ->orderBy('t.created_at', 'DESC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    /*
+    trier par date de création    
+    */
+    public function findAllLatest()
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.id > :val')
+            ->setParameter('val', '0')
+            ->orderBy('t.created_at', 'DESC')
             ->getQuery()
             ->getResult()
         ;

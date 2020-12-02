@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Entity\Profile;
 use App\Form\ProfileType;
+use App\Repository\ProfileRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,10 +25,12 @@ class ProfileController extends AbstractController
     /**
      * @Route("/profile", name="profile")
      */
-    public function index(): Response
+    public function index(ProfileRepository $profilerepository): Response
     {
-        return $this->render('baseAdmin.html.twig', [
-            'controller_name' => 'ProfileController',
+        $profile = $profilerepository->findAll();
+
+        return $this->render('profile/profile.html.twig', [
+            'profile' => $profile,
         ]);
     }
     /**
@@ -47,9 +51,19 @@ class ProfileController extends AbstractController
             if($form->isValid()){
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($profile);
-                $manager->flush();      
+                $manager->flush(); 
+                $this->addFlash(
+                    'success',
+                    'Vos infos ont bien été enregistrées'
+                );
             }
-            
+            else{
+                $this->addFlash(
+                    'danger',
+                    'Une erreur est survenue'
+                );     
+            }
+    
             return $this->redirectToRoute('profile');
         };
         
@@ -57,5 +71,55 @@ class ProfileController extends AbstractController
             'formulaireInfo' => $form->createView(),      
         ]);
     }
+    /**
+     * @Route("/profile/info", name="profile_info", )
+     */
+    public function show(ProfileRepository $profilerepository): Response
+    {
+        $profile = new Profile();
+
+        return $this->render('profile/profileInfo.html.twig', [
+            'profile' => $profile,
+        ]);
+    }
+   /**
+     * @Route("/{id}/edit", name="profile_edit", methods={"GET","POST"})
+     */
+    public function edit(Request $request, Profile $profile): Response
+    {
+        $form = $this->createForm(ProfileType::class, $profile);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('profile');
+        }
+
+        return $this->render('profile/edit.html.twig', [
+            'profile' => $profile,
+            'formulaireInfo' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/profile/delete-{id}", name="profile_delete")
+     */
+    public function deleteUser(ProfileRepository $profilerepository, $id)
+    {
+        $profile = $profilerepository->find($id);
+
+        $manager =$this->getDoctrine()->getManager();
+        $manager->remove($profile);
+        $manager->flush();
+
+        $this->addFlash(
+            'danger',
+            'L\'utilisateur a bien été supprimé'
+        );
+        return $this->redirectToRoute('profile');
+    }
+   
+
+   
 
 }

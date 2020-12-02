@@ -157,6 +157,12 @@ class __TwigTemplate_2ffc3eb9fd07d3861e874cb4d6d329e8d88f9c78877df90e7e697fecd2a
         // line 43
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 43, $this->source); })()), 'form_end');
         echo "
+    <div class=\"p-0 m-0 mt-3 col-12\">
+\t    <a href=\"";
+        // line 45
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\"  class=\"\" ><b>Retour à l'accueil<b></a>
+    </div>
     
 </div>
 ";
@@ -180,7 +186,7 @@ class __TwigTemplate_2ffc3eb9fd07d3861e874cb4d6d329e8d88f9c78877df90e7e697fecd2a
 
     public function getDebugInfo()
     {
-        return array (  158 => 43,  150 => 38,  143 => 34,  137 => 30,  135 => 28,  128 => 24,  121 => 20,  114 => 16,  108 => 13,  102 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  163 => 45,  158 => 43,  150 => 38,  143 => 34,  137 => 30,  135 => 28,  128 => 24,  121 => 20,  114 => 16,  108 => 13,  102 => 9,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -228,6 +234,9 @@ class __TwigTemplate_2ffc3eb9fd07d3861e874cb4d6d329e8d88f9c78877df90e7e697fecd2a
         <button  id=\"search_button\" type=\"submit\" class=\"mt-2\">Ok</button>
 
     {{ form_end(registrationForm) }}
+    <div class=\"p-0 m-0 mt-3 col-12\">
+\t    <a href=\"{{path('home')}}\"  class=\"\" ><b>Retour à l'accueil<b></a>
+    </div>
     
 </div>
 {% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Utilisateur- Vos infos
+{% endblock %}
+
+{% block body %}
+{{parent()}}
+     	
+<div class="col-6 p-5">
+		<h2>Modifier  vos informations</h2>
+		
+				{{ form_start(formulaireInfo) }}
+
+		<div class="">
+			    {{ form_row(formulaireInfo.name) }}
+       </div>
+
+       <div class="">
+			    {{ form_row(formulaireInfo.firstname) }}
+       </div> 
+
+       <div class="">
+			    {{ form_row(formulaireInfo.address) }}
+       </div> 
+
+       <div class="">
+			{{ form_row(formulaireInfo.job, {
+			    label: 'Votre job actuel'
+			}) }}
+			</div> 
+
+       <div class="">
+			{{ form_row(formulaireInfo.description) }}
+			</div>
+
+		<button  id="search_button" type="submit" class="mt-2">Ok</button>
+				
+				{{ form_end(formulaireInfo) }}
+	
+</div>
+		
+	</div>
+</div> 
+
+    
+{% endblock %}

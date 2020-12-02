@@ -95,7 +95,7 @@ class __TwigTemplate_2f0da9e226f243aef84573cdb4ab94423acf44b83c740203a5b358f1ada
 \t\t  <li><a href=\"";
         // line 18
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
-        echo "\">Nous contactez</a></li>
+        echo "\">Nous contacter</a></li>
 \t\t  <li><a href=\"";
         // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about");
@@ -158,7 +158,7 @@ class __TwigTemplate_2f0da9e226f243aef84573cdb4ab94423acf44b83c740203a5b358f1ada
 \t\t  <li><a href=\"{{ path('home') }}\">Accueil</a></li>
 \t\t  <li><a href=\"{{ path('article') }}\">Nos Articles</a></li>
 \t\t  <li><a href=\"{{ path('job') }}\">Nos Jobs</a></li>
-\t\t  <li><a href=\"{{ path('contact') }}\">Nous contactez</a></li>
+\t\t  <li><a href=\"{{ path('contact') }}\">Nous contacter</a></li>
 \t\t  <li><a href=\"{{ path('about') }}\">Qui sommes-nous?</a></li>
       {% if app.user %}
         <li><a href=\"{{ path('space') }}\"><b>Mon espace</b></a></li>
