@@ -100,26 +100,27 @@ class __TwigTemplate_d2e83c886ced4eff08891e11d16cc727173d7816b102a8964d389bcb781
         // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about");
         echo "\">Qui sommes-nous?</a></li>
+\t\t  
 
 ";
-        // line 22
+        // line 23
         echo "
       ";
-        // line 23
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23)) {
-            // line 24
+        // line 24
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "user", [], "any", false, false, false, 24)) {
+            // line 25
             echo "        <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("space");
             echo "\"><b>Mon espace</b></a></li>
       ";
         } else {
-            // line 26
+            // line 27
             echo "      <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Se connecter/S'inscrire</a></li>
       ";
         }
-        // line 27
+        // line 28
         echo " 
 \t\t</ul>
   \t</nav>
@@ -140,7 +141,7 @@ class __TwigTemplate_d2e83c886ced4eff08891e11d16cc727173d7816b102a8964d389bcb781
 
     public function getDebugInfo()
     {
-        return array (  123 => 27,  117 => 26,  111 => 24,  109 => 23,  106 => 22,  101 => 19,  97 => 18,  93 => 17,  89 => 16,  85 => 15,  80 => 12,  71 => 7,  66 => 4,  63 => 2,  44 => 1,);
+        return array (  124 => 28,  118 => 27,  112 => 25,  110 => 24,  107 => 23,  101 => 19,  97 => 18,  93 => 17,  89 => 16,  85 => 15,  80 => 12,  71 => 7,  66 => 4,  63 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -164,6 +165,7 @@ class __TwigTemplate_d2e83c886ced4eff08891e11d16cc727173d7816b102a8964d389bcb781
 \t\t  <li><a href=\"{{ path('job') }}\">Nos Jobs</a></li>
 \t\t  <li><a href=\"{{ path('contact') }}\">Nous contacter</a></li>
 \t\t  <li><a href=\"{{ path('about') }}\">Qui sommes-nous?</a></li>
+\t\t  
 
 {# inscription ou espace de l'utilisateur #}
 

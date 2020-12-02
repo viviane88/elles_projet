@@ -58,31 +58,35 @@ class __TwigTemplate_49a1a47e00905b93e35b0c2ea0ff71467e75d66564d8037b7ae05d40849
         // line 11
         echo "\t\t</title>
 
-\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">
-\t\t<link rel=\"stylesheet\" href=\"";
+<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\">
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx\" crossorigin=\"anonymous\"></script>\t\t<link rel=\"stylesheet\" href=\"";
         // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/base.css"), "html", null, true);
         echo "\"> 
-    \t<link rel=\"stylesheet\" href=\"";
-        // line 15
+    <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>
+\t
+\t\t<link rel=\"stylesheet\" href=\"";
+        // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/footer.css"), "html", null, true);
         echo "\">
     \t<link rel=\"stylesheet\" href=\"";
-        // line 16
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/nav.css"), "html", null, true);
         echo "\"> 
 
 
 \t\t
 \t\t";
-        // line 20
+        // line 24
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 21
+        // line 25
         echo "\t</head>
 
 <body>
 ";
-        // line 25
+        // line 29
         echo "<style>
 html {
   scroll-behavior: smooth;
@@ -92,19 +96,18 @@ html {
 
 
         ";
-        // line 33
+        // line 37
         $this->displayBlock('body', $context, $blocks);
-        // line 38
+        // line 42
         echo "
  ";
-        // line 39
+        // line 43
         echo twig_include($this->env, $context, "footer.html.twig");
         echo "
 \t\t
-<script src=\"https://code.jquery.com/jquery-3.5.1.js\"></script>
-<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
+
 <script src=\"";
-        // line 43
+        // line 46
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/app.js"), "html", null, true);
         echo "\"></script>
 </body>
@@ -137,7 +140,7 @@ html {
 
     }
 
-    // line 20
+    // line 24
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -155,7 +158,7 @@ html {
 
     }
 
-    // line 33
+    // line 37
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -165,7 +168,7 @@ html {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 34
+        // line 38
         echo "\t\t
 \t\t
 \t\t
@@ -190,7 +193,7 @@ html {
 
     public function getDebugInfo()
     {
-        return array (  169 => 34,  159 => 33,  141 => 20,  122 => 10,  108 => 43,  101 => 39,  98 => 38,  96 => 33,  86 => 25,  81 => 21,  79 => 20,  72 => 16,  68 => 15,  64 => 14,  59 => 11,  57 => 10,  46 => 1,);
+        return array (  172 => 38,  162 => 37,  144 => 24,  125 => 10,  111 => 46,  105 => 43,  102 => 42,  100 => 37,  90 => 29,  85 => 25,  83 => 24,  76 => 20,  72 => 19,  64 => 14,  59 => 11,  57 => 10,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -207,9 +210,13 @@ html {
 \t\t\telles -{% block title %}Bienvenue sur Elles{% endblock %}
 \t\t</title>
 
-\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">
-\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/base.css') }}\"> 
-    \t<link rel=\"stylesheet\" href=\"{{ asset('css/footer.css') }}\">
+<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\">
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx\" crossorigin=\"anonymous\"></script>\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/base.css') }}\"> 
+    <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>
+\t
+\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/footer.css') }}\">
     \t<link rel=\"stylesheet\" href=\"{{ asset('css/nav.css') }}\"> 
 
 
@@ -235,8 +242,7 @@ html {
 
  {{ include ('footer.html.twig') }}
 \t\t
-<script src=\"https://code.jquery.com/jquery-3.5.1.js\"></script>
-<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
+
 <script src=\"{{ asset('js/app.js') }}\"></script>
 </body>
        

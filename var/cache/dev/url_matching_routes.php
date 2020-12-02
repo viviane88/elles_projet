@@ -25,6 +25,7 @@ return [
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::jobs'], null, null, null, false, false, null]],
         '/job' => [[['_route' => 'job', '_controller' => 'App\\Controller\\JobController::index'], null, null, null, false, false, null]],
+        '/all/job' => [[['_route' => 'all_job', '_controller' => 'App\\Controller\\JobController::allJob'], null, null, null, false, false, null]],
         '/profile' => [[['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::index'], null, null, null, false, false, null]],
         '/profile/create/info' => [[['_route' => 'profile_create', '_controller' => 'App\\Controller\\ProfileController::createInfo'], null, null, null, false, false, null]],
         '/profile/info' => [[['_route' => 'profile_info', '_controller' => 'App\\Controller\\ProfileController::show'], null, null, null, false, false, null]],

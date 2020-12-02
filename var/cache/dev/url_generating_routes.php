@@ -34,6 +34,7 @@ return [
     'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::jobs'], [], [['text', '/']], [], []],
     'job' => [[], ['_controller' => 'App\\Controller\\JobController::index'], [], [['text', '/job']], [], []],
+    'all_job' => [[], ['_controller' => 'App\\Controller\\JobController::allJob'], [], [['text', '/all/job']], [], []],
     'job_show' => [['id'], ['_controller' => 'App\\Controller\\JobController::show'], [], [['variable', '-', '[^/]++', 'id', true], ['text', '/job']], [], []],
     'profile' => [[], ['_controller' => 'App\\Controller\\ProfileController::index'], [], [['text', '/profile']], [], []],
     'profile_create' => [[], ['_controller' => 'App\\Controller\\ProfileController::createInfo'], [], [['text', '/profile/create/info']], [], []],

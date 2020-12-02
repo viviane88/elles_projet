@@ -52,6 +52,6 @@ class JobsRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
-
+   
 
 }

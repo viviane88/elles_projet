@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Jobs{% endblock %}
+
+{% block body %}
+               
+<!-- navBar -->
+  
+    {{ include ('nav.html.twig') }}
+
+
+    <div class="col-12 text-center m-0 p-0 " style=" background-color: #39485E">
+		<h1 class="text-white">Tous nos Emplois</h1>
+        
+	</div>
+
+	{% for job in allJob %}
+<!-- Card Start -->
+
+		<div class="container py-3">
+        	<div class="card">
+          		<div class="row ">
+            		<div class="col-md-5">
+								<div class="p-2">
+									<img class="d-block" width="95%" src="{{ asset('image/jobs/' ~ job.uploads) }}" alt="photo principale {{ job.uploads }} ">
+                  				</div> 
+            		</div>
+      
+            	<div class="col-md-7 px-3">
+              		<div class="card-block px-6 mt-5">
+                		<h4 class="card-title">{{ job.company }}</h4>
+                		<h5 class="card-title">{{ job.title }}</h5>
+
+                	<div class="row align-items-center mt-3"> 
+                  		<div class="col-4 ">
+                    		{{ job.url }}
+                  		</div>
+						<div class="col-2">
+                    		{{ job.location }}
+                  		</div>
+                  		<div class="col-3">
+                   			centre 3
+						</div>
+                	</div> 
+                <br>
+				
+					<div class="pb-5 float-right mr-5">
+                     	<a href="{{ path('job_show', {id: job.id}) }}"
+                        class="mt-3 mb-3 p-3 rounded" style="text-decoration:none; background-color: #E8D525">Découvrir</a>
+                    </div>  
+			</div>
+        </div>
+            
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+	
+<!-- pagination -->
+
+<div class="text-center">
+    {{ knp_pagination_render(allJob) }}
+</div>
+
+{# fleche retour top #}
+	<div class="container-fluid mt-5">
+		<div class="row justify-content-center mb3 pt-2 pr-3 ">
+			<a href="#top"><img src="{{ asset('./image/arrowTop.png') }}" alt="icone arrow Top" width="85%" id="arrowTop"></a>
+		</div>
+	</div>
+	
+
+{% endblock %}

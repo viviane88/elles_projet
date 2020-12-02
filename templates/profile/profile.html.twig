@@ -6,39 +6,42 @@
 
 	{{ parent() }}
  
-	<div class="col-10 p-5 mt-3">
-		<h2>Vos infos</h2>
+		<div class="col-10 p-5 mt-3">
 
-		
-	
+		{% if profile is empty %}
 		<div class="col-12 mt-5 p-0 m-0 ">
-			<a href="{{ path('profile_create') }}" class=" p-3 rounded" style="text-decoration:none; background-color: #E8D525" >Créer votre cv</a>
+			<h2>Vos infos</h2>
+				<div class=" mt-5 p-0 m-0  ">
+					<a href="{{ path('profile_create') }}" class=" p-3 rounded" style="text-decoration:none; background-color: #E8D525" >Créer votre cv</a>
+				</div>
+		 {% else %}
+		<div class="col-12 mt-5 p-0 m-0 ">
+			<h2>Vos infos</h2>
 		</div>
+		{% endif %} 
 
-
-	<div class=" mt-5 p-0 m-0 ">
+		<div class=" mt-5 p-0 m-0 ">
 
 			{% for profile in profile %}
-					<p><b>Nom:</b> {{ profile.name }}</p>
-					<p><b>Prénom:</b>{{ profile.firstname }}</p>
-					<p><b>Adresse:</b> {{ profile.address }}</p>
-					<p><b>Votre dernier job:</b> {{ profile.job }}</p>
-					<p><b>Votre description :</b>{{ profile.description }}</p>
+				<p><b>Nom:</b> {{ profile.name }}</p>
+				<p><b>Prénom:</b>{{ profile.firstname }}</p>
+				<p><b>Adresse:</b> {{ profile.address }}</p>
+				<p><b>Votre dernier job:</b> {{ profile.job }}</p>
+				<p><b>Votre description :</b>{{ profile.description }}</p>
 
-			
-
-<div class="row justify-content-between custom-line mt-5 p-0 m-0 col-8">
-				<button type="button" class="btn btn-outline-dark">
-					<a href="{{ path('profile_edit', {'id':profile.id}) }}" class="col-4">Modifier ses infos</a>
-				</button>
+		<div class="row justify-content-between custom-line mt-5 p-0 m-0 col-8">
 				
-				<button type="button" class="btn btn-outline-dark">
-					<a href="{{ path('profile_delete', {'id': profile.id}) }}"class="col-4">Supprimer ses infos</a>
-				</button>
+			<a href="{{ path('profile_edit', {'id':profile.id}) }}" class=" p-3 rounded" style="text-decoration:none; background-color: #E8D525">
+			Modifier ses infos</a>
+				
+			<a href="{{ path('profile_delete', {'id': profile.id}) }}"class=" p-3 rounded" style="text-decoration:none; background-color: #E8D525">
+			Supprimer ses infos</a>
 
 			{% endfor %}
-        	</div>
-        	</div>
+        </div>
+			
+    </div>
+		
 
 	</div>
 

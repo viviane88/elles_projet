@@ -217,18 +217,19 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
             echo "                            <div class=\"carousel-item ";
             echo ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 81)) ? ("active") : (""));
             echo "\"> 
+                            
                                 <img class=\"d-block img-fluid w-100\" src=\"";
-            // line 82
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/articles/" . twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 82))), "html", null, true);
+            // line 83
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/articles/" . twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 83))), "html", null, true);
             echo "\" 
                                 alt=\"first slide ";
-            // line 83
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 83), "html", null, true);
+            // line 84
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 84), "html", null, true);
             echo "\">
                                 <div class=\"carousel-caption\">
                                     <h2>";
-            // line 85
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 85), "html", null, true);
+            // line 86
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 86), "html", null, true);
             echo "</h2>
                                 </div>
                             </div>
@@ -245,7 +246,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 88
+        // line 89
         echo "  
 
                         </div> 
@@ -280,7 +281,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p class=\"\">Ne ratez plus rien, inscrivez vous à notre newsletters</p>
                             <div class=\"mt-5 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
-        // line 121
+        // line 122
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo "\"class=\"\" >Inscrivez-vous</a>
                             </div>
@@ -293,7 +294,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                     <p>Créer votre compte et garder vos favoris, postuler directement etc...</p>
                         <div class=\"mt-4 mx-auto\" id=\"button_outset\">
                             <a href=\"";
-        // line 131
+        // line 132
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\"class=\"\" >Connectez-vous</a>
                         </div>
@@ -306,7 +307,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p>Vous avez une question, une suggestion, n'hésitez pas!</p>
                             <div class=\"mt-5 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
-        // line 141
+        // line 142
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\"class=\"\" > Contact</a>
                             </div>
@@ -319,7 +320,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p>Découvrir notre concept et ce que nous souhaitons vous apporter.</p>
                             <div class=\"mt-4 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
-        // line 151
+        // line 152
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about");
         echo "\"class=\"\" > Notre concept</a>
                             </div>
@@ -332,7 +333,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p class=\"\">Trouver votre job de rêve par ville, secteurs ou entreprises</p>
                         <div class=\"mt-5 mx-auto\" id=\"button_outset\">
                             <a href=\"\"class=\"";
-        // line 161
+        // line 162
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job");
         echo "\" > Nos jobs</a>
                         </div>
@@ -343,11 +344,11 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
 
 
 \t";
-        // line 170
+        // line 171
         echo "\t<div class=\"container-fluid mt-5\">
 \t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
 \t\t\t<a href=\"#top\"><img src=\"";
-        // line 172
+        // line 173
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
         echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
 \t\t</div>
@@ -376,7 +377,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
 
     public function getDebugInfo()
     {
-        return array (  351 => 172,  347 => 170,  336 => 161,  323 => 151,  310 => 141,  297 => 131,  284 => 121,  249 => 88,  231 => 85,  226 => 83,  222 => 82,  217 => 81,  200 => 80,  185 => 68,  158 => 43,  145 => 37,  139 => 34,  135 => 33,  131 => 32,  124 => 30,  119 => 27,  115 => 26,  101 => 15,  93 => 10,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
+        return array (  352 => 173,  348 => 171,  337 => 162,  324 => 152,  311 => 142,  298 => 132,  285 => 122,  250 => 89,  232 => 86,  227 => 84,  223 => 83,  217 => 81,  200 => 80,  185 => 68,  158 => 43,  145 => 37,  139 => 34,  135 => 33,  131 => 32,  124 => 30,  119 => 27,  115 => 26,  101 => 15,  93 => 10,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -462,6 +463,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <div class=\"carousel-inner\" role=\"listbox\">
                             {% for article in articles %}
                             <div class=\"carousel-item {{ loop.first ? 'active': '' }}\"> 
+                            
                                 <img class=\"d-block img-fluid w-100\" src=\"{{ asset('image/articles/' ~ article.uploads) }}\" 
                                 alt=\"first slide {{ article.uploads }}\">
                                 <div class=\"carousel-caption\">

@@ -211,7 +211,7 @@ class __TwigTemplate_67f8c541deb32a46df8e4ad2c33fa8051d00e4a06642b1a94282259ce7e
   
     <!-- Copyright -->
     <div class=\" text-center py-3\">
-        <p class=\"text-white\">";
+        <p class=\"text-white text-center\">";
         // line 132
         echo (isset($context["copyright"]) || array_key_exists("copyright", $context) ? $context["copyright"] : (function () { throw new RuntimeError('Variable "copyright" does not exist.', 132, $this->source); })());
         echo "</p>
@@ -373,7 +373,7 @@ class __TwigTemplate_67f8c541deb32a46df8e4ad2c33fa8051d00e4a06642b1a94282259ce7e
   
     <!-- Copyright -->
     <div class=\" text-center py-3\">
-        <p class=\"text-white\">{{ copyright|raw }}</p>
+        <p class=\"text-white text-center\">{{ copyright|raw }}</p>
     </div>
     <!-- Copyright -->
     

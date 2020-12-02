@@ -79,6 +79,7 @@
                         <div class="carousel-inner" role="listbox">
                             {% for article in articles %}
                             <div class="carousel-item {{ loop.first ? 'active': '' }}"> 
+                            
                                 <img class="d-block img-fluid w-100" src="{{ asset('image/articles/' ~ article.uploads) }}" 
                                 alt="first slide {{ article.uploads }}">
                                 <div class="carousel-caption">

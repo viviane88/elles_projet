@@ -91,53 +91,58 @@ class __TwigTemplate_10ad51a0f744f6144bdddab4a437d8fa488f72e2998fd524518610381df
      \t
 <div class=\"col-6 p-5\">
 \t\t<h2>Modifier  vos informations</h2>
-\t\t
+\t\t\t<a href=\"javascript:history.go(-1)\" class=\"h2 m-1\" >
+            <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-arrow-left\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
+            <path fill-rule=\"evenodd\" d=\"M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z\"/>
+            </svg> 
+            </a>
+
 \t\t\t\t";
-        // line 12
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 12, $this->source); })()), 'form_start');
+        // line 17
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 17, $this->source); })()), 'form_start');
         echo "
 
 \t\t<div class=\"\">
 \t\t\t    ";
-        // line 15
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 15, $this->source); })()), "name", [], "any", false, false, false, 15), 'row');
+        // line 20
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 20, $this->source); })()), "name", [], "any", false, false, false, 20), 'row');
         echo "
        </div>
 
        <div class=\"\">
 \t\t\t    ";
-        // line 19
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 19, $this->source); })()), "firstname", [], "any", false, false, false, 19), 'row');
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 24, $this->source); })()), "firstname", [], "any", false, false, false, 24), 'row');
         echo "
        </div> 
 
        <div class=\"\">
 \t\t\t    ";
-        // line 23
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 23, $this->source); })()), "address", [], "any", false, false, false, 23), 'row');
+        // line 28
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 28, $this->source); })()), "address", [], "any", false, false, false, 28), 'row');
         echo "
        </div> 
 
        <div class=\"\">
 \t\t\t";
-        // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 27, $this->source); })()), "job", [], "any", false, false, false, 27), 'row', ["label" => "Votre job actuel"]);
-        // line 29
+        // line 32
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 32, $this->source); })()), "job", [], "any", false, false, false, 32), 'row', ["label" => "Votre job actuel"]);
+        // line 34
         echo "
 \t\t\t</div> 
 
        <div class=\"\">
 \t\t\t";
-        // line 33
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 33, $this->source); })()), "description", [], "any", false, false, false, 33), 'row');
+        // line 38
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 38, $this->source); })()), "description", [], "any", false, false, false, 38), 'row');
         echo "
 \t\t\t</div>
 
 \t\t<button  id=\"search_button\" type=\"submit\" class=\"mt-2\">Ok</button>
 \t\t\t\t
 \t\t\t\t";
-        // line 38
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 38, $this->source); })()), 'form_end');
+        // line 43
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formulaireInfo"]) || array_key_exists("formulaireInfo", $context) ? $context["formulaireInfo"] : (function () { throw new RuntimeError('Variable "formulaireInfo" does not exist.', 43, $this->source); })()), 'form_end');
         echo "
 \t
 </div>
@@ -167,7 +172,7 @@ class __TwigTemplate_10ad51a0f744f6144bdddab4a437d8fa488f72e2998fd524518610381df
 
     public function getDebugInfo()
     {
-        return array (  140 => 38,  132 => 33,  126 => 29,  124 => 27,  117 => 23,  110 => 19,  103 => 15,  97 => 12,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  145 => 43,  137 => 38,  131 => 34,  129 => 32,  122 => 28,  115 => 24,  108 => 20,  102 => 17,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -182,7 +187,12 @@ class __TwigTemplate_10ad51a0f744f6144bdddab4a437d8fa488f72e2998fd524518610381df
      \t
 <div class=\"col-6 p-5\">
 \t\t<h2>Modifier  vos informations</h2>
-\t\t
+\t\t\t<a href=\"javascript:history.go(-1)\" class=\"h2 m-1\" >
+            <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-arrow-left\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
+            <path fill-rule=\"evenodd\" d=\"M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z\"/>
+            </svg> 
+            </a>
+
 \t\t\t\t{{ form_start(formulaireInfo) }}
 
 \t\t<div class=\"\">
