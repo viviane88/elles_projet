@@ -94,58 +94,145 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
         echo "
 
 
-    <div class=\"col-12 text-center m-0 p-0 \" style=\" background-color: #39485E\">
+    <div class=\"col-12 text-center m-0 p-0 mb-4 \" style=\" background-color: #39485E\">
 \t\t<h1 class=\"text-white\">Nos Emplois</h1>
 \t</div>
 <!-- SearchBar -->
 
-\t<div class=\"jumbotron mt-4\">
 
-\t\t<div class=\"container\">
-\t\t\t";
-        // line 20
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), 'form_start');
+\t<div class=\"container mt-5 p-3\"style=\" background-color: #39485E\" >
+\t\t";
+        // line 19
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'form_start');
         echo "
-\t\t\t<div class=\"form-row align-items-end\">
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t";
-        // line 23
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), "title", [], "any", false, false, false, 23), 'row');
+\t\t<div class=\"form-row align-items-end \">
+\t\t\t<div class=\"col\">
+\t\t\t\t";
+        // line 22
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "title", [], "any", false, false, false, 22), 'row');
         echo "
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t";
-        // line 26
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), "location", [], "any", false, false, false, 26), 'row');
+\t\t\t</div>
+\t\t\t<div class=\"col\">
+\t\t\t\t";
+        // line 25
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 25, $this->source); })()), "location", [], "any", false, false, false, 25), 'row');
         echo "
-\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<div class=\"col-12 mt-4\">
+\t\t\t\t<div class=\"form-group  mt-3 text-center\">
+\t       \t\t<button  id=\"search_button\" type=\"submit\" class=\"\">Ok</button>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t</div>
 \t\t</div>
-\t\t<div class=\"col-12 mt-4\">
-\t\t\t\t\t<div class=\"form-group  mt-3 text-center\">
-\t       \t\t\t\t <button  id=\"search_button\" type=\"submit\" class=\"\">Ok</button>
-\t\t\t\t\t</div>
-\t\t</div>
-\t\t
-\t\t\t";
+\t\t\t\t";
         // line 35
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 35, $this->source); })()), 'form_end');
         echo "
-\t\t\t<div class=\"mt-5 text-center p-3 border border-dark col-8 mx-auto\">
-\t\t\t\t<a href=\"";
-        // line 37
+
+\t</div>
+
+
+ ";
+        // line 40
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 40, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["job"]) {
+            // line 41
+            echo "<!-- Card Start -->
+
+\t\t<div class=\"container py-3 p-5\">
+        \t<div class=\"card \">
+          \t\t<div class=\"row \">
+            \t\t<div class=\"col-md-4 p-5\">
+\t\t\t\t\t\t<div class=\"p-2\">
+\t\t\t\t\t\t\t<img class=\"d-block\" width=\"95%\" src=\"";
+            // line 48
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/jobs/" . twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 48))), "html", null, true);
+            echo "\" alt=\"photo principale ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 48), "html", null, true);
+            echo " \">
+                  \t\t</div> 
+            \t\t</div>
+      
+            \t<div class=\"col-md-7 px-3\">
+              \t\t<div class=\"card-block px-6 mt-5\">
+                \t\t<h4 class=\"card-title\">";
+            // line 54
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "company", [], "any", false, false, false, 54), "html", null, true);
+            echo "</h4>
+                \t\t<h5 class=\"card-title\">";
+            // line 55
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "title", [], "any", false, false, false, 55), "html", null, true);
+            echo "</h5>
+
+                \t<div class=\"row align-items-center mt-3\"> 
+                  \t\t<div class=\"col-6\">
+                    \t\t";
+            // line 59
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 59), "html", null, true);
+            echo "
+                  \t\t</div>
+\t\t\t\t\t\t<div class=\"col-2\">
+                    \t\t";
+            // line 62
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "location", [], "any", false, false, false, 62), "html", null, true);
+            echo "
+                  \t\t</div>
+                  \t
+                \t</div> 
+                <br>
+\t\t\t\t<div class=\" float-right mt-2 \">
+                     \t<a href=\"";
+            // line 68
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_show", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 68)]), "html", null, true);
+            echo "\"
+                        class=\" p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\">Découvrir</a>
+                </div> 
+\t\t\t\t\t
+\t\t\t</div>
+\t\t\t
+        </div>
+\t\t 
+            
+</div>
+
+</div>
+
+</div>
+
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 84
+        echo "
+\t <div class=\"mt-3 text-center\">
+\t\t<a href=\"";
+        // line 86
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("all_job");
         echo "\"
-\t\t\t\tclass=\"mt-3 mb-3 p-3 h4\" style=\"text-decoration:none\" >Toutes nos offres</a>
-            </div> 
-\t\t</div>
-\t</div>
-\t\t
- 
-\t\t\t\t\t
-
-
+\t\tclass=\"mt-3 mb-3 p-3 h4\" id=\"button_outset\" >Toutes nos offres</a>
+    </div> 
 
 \t
+";
+        // line 92
+        echo "\t<div class=\"container-fluid mt-5 text-center\">
+\t\t<div class=\"row justify-content-center pt-2 pr-3 \">
+\t\t\t<a href=\"#top\"><img src=\"";
+        // line 94
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
+        echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
+\t\t</div>
+\t</div> 
+
+</div>
+</div>
+
+
 
 ";
         
@@ -168,7 +255,7 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
 
     public function getDebugInfo()
     {
-        return array (  136 => 37,  131 => 35,  119 => 26,  113 => 23,  107 => 20,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  227 => 94,  223 => 92,  215 => 86,  211 => 84,  189 => 68,  180 => 62,  174 => 59,  167 => 55,  163 => 54,  152 => 48,  143 => 41,  139 => 40,  131 => 35,  118 => 25,  112 => 22,  106 => 19,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -184,45 +271,97 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
     {{ include ('nav.html.twig') }}
 
 
-    <div class=\"col-12 text-center m-0 p-0 \" style=\" background-color: #39485E\">
+    <div class=\"col-12 text-center m-0 p-0 mb-4 \" style=\" background-color: #39485E\">
 \t\t<h1 class=\"text-white\">Nos Emplois</h1>
 \t</div>
 <!-- SearchBar -->
 
-\t<div class=\"jumbotron mt-4\">
 
-\t\t<div class=\"container\">
-\t\t\t{{ form_start(form) }}
-\t\t\t<div class=\"form-row align-items-end\">
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t{{ form_row(form.title) }}
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t{{ form_row(form.location) }}
-\t\t\t\t</div>
+\t<div class=\"container mt-5 p-3\"style=\" background-color: #39485E\" >
+\t\t{{ form_start(form) }}
+\t\t<div class=\"form-row align-items-end \">
+\t\t\t<div class=\"col\">
+\t\t\t\t{{ form_row(form.title) }}
+\t\t\t</div>
+\t\t\t<div class=\"col\">
+\t\t\t\t{{ form_row(form.location) }}
+\t\t\t</div>
+
+\t\t\t<div class=\"col-12 mt-4\">
+\t\t\t\t<div class=\"form-group  mt-3 text-center\">
+\t       \t\t<button  id=\"search_button\" type=\"submit\" class=\"\">Ok</button>
+\t\t\t\t\t\t\t</div>
+
+\t\t\t</div>
 \t\t</div>
-\t\t<div class=\"col-12 mt-4\">
-\t\t\t\t\t<div class=\"form-group  mt-3 text-center\">
-\t       \t\t\t\t <button  id=\"search_button\" type=\"submit\" class=\"\">Ok</button>
-\t\t\t\t\t</div>
-\t\t</div>
-\t\t
-\t\t\t{{ form_end(form) }}
-\t\t\t<div class=\"mt-5 text-center p-3 border border-dark col-8 mx-auto\">
-\t\t\t\t<a href=\"{{path('all_job')}}\"
-\t\t\t\tclass=\"mt-3 mb-3 p-3 h4\" style=\"text-decoration:none\" >Toutes nos offres</a>
-            </div> 
-\t\t</div>
+\t\t\t\t{{ form_end(form) }}
+
 \t</div>
-\t\t
- 
+
+
+ {% for job in jobs %}
+<!-- Card Start -->
+
+\t\t<div class=\"container py-3 p-5\">
+        \t<div class=\"card \">
+          \t\t<div class=\"row \">
+            \t\t<div class=\"col-md-4 p-5\">
+\t\t\t\t\t\t<div class=\"p-2\">
+\t\t\t\t\t\t\t<img class=\"d-block\" width=\"95%\" src=\"{{ asset('image/jobs/' ~ job.uploads) }}\" alt=\"photo principale {{ job.uploads }} \">
+                  \t\t</div> 
+            \t\t</div>
+      
+            \t<div class=\"col-md-7 px-3\">
+              \t\t<div class=\"card-block px-6 mt-5\">
+                \t\t<h4 class=\"card-title\">{{ job.company }}</h4>
+                \t\t<h5 class=\"card-title\">{{ job.title }}</h5>
+
+                \t<div class=\"row align-items-center mt-3\"> 
+                  \t\t<div class=\"col-6\">
+                    \t\t{{ job.url }}
+                  \t\t</div>
+\t\t\t\t\t\t<div class=\"col-2\">
+                    \t\t{{ job.location }}
+                  \t\t</div>
+                  \t
+                \t</div> 
+                <br>
+\t\t\t\t<div class=\" float-right mt-2 \">
+                     \t<a href=\"{{ path('job_show', {id: job.id}) }}\"
+                        class=\" p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\">Découvrir</a>
+                </div> 
 \t\t\t\t\t
+\t\t\t</div>
+\t\t\t
+        </div>
+\t\t 
+            
+</div>
 
+</div>
 
+</div>
+
+{% endfor %}
+
+\t <div class=\"mt-3 text-center\">
+\t\t<a href=\"{{path('all_job')}}\"
+\t\tclass=\"mt-3 mb-3 p-3 h4\" id=\"button_outset\" >Toutes nos offres</a>
+    </div> 
 
 \t
+{# fleche retour top #}
+\t<div class=\"container-fluid mt-5 text-center\">
+\t\t<div class=\"row justify-content-center pt-2 pr-3 \">
+\t\t\t<a href=\"#top\"><img src=\"{{ asset('./image/arrowTop.png') }}\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
+\t\t</div>
+\t</div> 
 
-{% endblock %}
-", "job/job.html.twig", "C:\\wamp64\\www\\elles\\templates\\job\\job.html.twig");
+</div>
+</div>
+
+
+
+{% endblock %}", "job/job.html.twig", "C:\\wamp64\\www\\elles\\templates\\job\\job.html.twig");
     }
 }

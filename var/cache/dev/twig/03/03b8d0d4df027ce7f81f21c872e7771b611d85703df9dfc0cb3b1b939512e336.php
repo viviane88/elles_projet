@@ -182,23 +182,24 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                     <p class=\"my-4 text-white\">Restez informé sur le marché du travail en découvrant une sélection d'articles qui vous infome et qui vous inspire</p> 
 \t       \t\t\t<a href=\"";
         // line 68
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("last_article");
         echo "\"  class=\"mt-3 mb-3 p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\" >Découvrir</a>
                 </div>
 
-                <div class=\"p-0 col-md-6\">
-                    <div class=\"carousel slide\" data-ride=\"carousel\" id=\"carousel1\">
-                        <ol class=\"carousel-indicators\">
-                            <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>
+                <div class=\"p-0 col-md-6 \">
+                    <div class=\"carousel slide \" data-ride=\"carousel\" id=\"carousel1\">
+                        <ol class=\"carousel-indicators \">
+                            <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active \"></li>
                             <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>
                             <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>
                         </ol>
 
                         <div class=\"carousel-inner\" role=\"listbox\">
+
                             ";
-        // line 80
+        // line 81
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 80, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 81, $this->source); })()));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -213,23 +214,24 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 81
-            echo "                            <div class=\"carousel-item ";
-            echo ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 81)) ? ("active") : (""));
-            echo "\"> 
-                            
-                                <img class=\"d-block img-fluid w-100\" src=\"";
+            // line 82
+            echo "
+                            <div class=\"carousel-item ";
             // line 83
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/articles/" . twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 83))), "html", null, true);
+            echo ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 83)) ? ("active") : (""));
+            echo "\"> 
+                                <img class=\"d-block img-fluid w-100 \" src=\"";
+            // line 84
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/articles/" . twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 84))), "html", null, true);
             echo "\" 
                                 alt=\"first slide ";
-            // line 84
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 84), "html", null, true);
+            // line 85
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 85), "html", null, true);
             echo "\">
-                                <div class=\"carousel-caption\">
-                                    <h2>";
-            // line 86
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 86), "html", null, true);
+                                <div class=\"carousel-caption \">
+                                    <h2 class=\"text-secondary\">";
+            // line 87
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 87), "html", null, true);
             echo "</h2>
                                 </div>
                             </div>
@@ -246,12 +248,12 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 89
+        // line 90
         echo "  
 
                         </div> 
                             <a class=\"carousel-control-prev\" href=\"#carousel1\" role=\"button\" data-slide=\"prev\"> 
-                                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span> <span class=\"sr-only\">Previous</span> </a> 
+                                <span class=\"carousel-control-prev-icon \" aria-hidden=\"true\"></span> <span class=\"sr-only\">Previous</span> </a> 
                                     <a class=\"carousel-control-next\" href=\"#carousel1\" role=\"button\" data-slide=\"next\"> 
                                 <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span> <span class=\"sr-only\">Next</span> </a>
                         </div>
@@ -281,7 +283,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p class=\"\">Ne ratez plus rien, inscrivez vous à notre newsletters</p>
                             <div class=\"mt-5 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
-        // line 122
+        // line 123
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo "\"class=\"\" >Inscrivez-vous</a>
                             </div>
@@ -294,7 +296,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                     <p>Créer votre compte et garder vos favoris, postuler directement etc...</p>
                         <div class=\"mt-4 mx-auto\" id=\"button_outset\">
                             <a href=\"";
-        // line 132
+        // line 133
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\"class=\"\" >Connectez-vous</a>
                         </div>
@@ -307,7 +309,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p>Vous avez une question, une suggestion, n'hésitez pas!</p>
                             <div class=\"mt-5 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
-        // line 142
+        // line 143
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\"class=\"\" > Contact</a>
                             </div>
@@ -320,7 +322,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p>Découvrir notre concept et ce que nous souhaitons vous apporter.</p>
                             <div class=\"mt-4 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
-        // line 152
+        // line 153
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about");
         echo "\"class=\"\" > Notre concept</a>
                             </div>
@@ -332,10 +334,10 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                     <h4 class=\"\">Rechercher</h4>
                         <p class=\"\">Trouver votre job de rêve par ville, secteurs ou entreprises</p>
                         <div class=\"mt-5 mx-auto\" id=\"button_outset\">
-                            <a href=\"\"class=\"";
-        // line 162
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job");
-        echo "\" > Nos jobs</a>
+                            <a href=\"";
+        // line 163
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("all_job");
+        echo "\"class=\"\" > Notre jobs</a>
                         </div>
                     </div>
                 </div>
@@ -344,11 +346,11 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
 
 
 \t";
-        // line 171
+        // line 172
         echo "\t<div class=\"container-fluid mt-5\">
 \t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
 \t\t\t<a href=\"#top\"><img src=\"";
-        // line 173
+        // line 174
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
         echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
 \t\t</div>
@@ -377,7 +379,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
 
     public function getDebugInfo()
     {
-        return array (  352 => 173,  348 => 171,  337 => 162,  324 => 152,  311 => 142,  298 => 132,  285 => 122,  250 => 89,  232 => 86,  227 => 84,  223 => 83,  217 => 81,  200 => 80,  185 => 68,  158 => 43,  145 => 37,  139 => 34,  135 => 33,  131 => 32,  124 => 30,  119 => 27,  115 => 26,  101 => 15,  93 => 10,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
+        return array (  354 => 174,  350 => 172,  339 => 163,  326 => 153,  313 => 143,  300 => 133,  287 => 123,  252 => 90,  234 => 87,  229 => 85,  225 => 84,  221 => 83,  218 => 82,  201 => 81,  185 => 68,  158 => 43,  145 => 37,  139 => 34,  135 => 33,  131 => 32,  124 => 30,  119 => 27,  115 => 26,  101 => 15,  93 => 10,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -449,32 +451,33 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                 <div class=\"p-4 col-md-6 align-self-center\">
                     <h1 class=\" text-white\">Nos articles</h1>
                     <p class=\"my-4 text-white\">Restez informé sur le marché du travail en découvrant une sélection d'articles qui vous infome et qui vous inspire</p> 
-\t       \t\t\t<a href=\"{{path('article')}}\"  class=\"mt-3 mb-3 p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\" >Découvrir</a>
+\t       \t\t\t<a href=\"{{path('last_article')}}\"  class=\"mt-3 mb-3 p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\" >Découvrir</a>
                 </div>
 
-                <div class=\"p-0 col-md-6\">
-                    <div class=\"carousel slide\" data-ride=\"carousel\" id=\"carousel1\">
-                        <ol class=\"carousel-indicators\">
-                            <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>
+                <div class=\"p-0 col-md-6 \">
+                    <div class=\"carousel slide \" data-ride=\"carousel\" id=\"carousel1\">
+                        <ol class=\"carousel-indicators \">
+                            <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active \"></li>
                             <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>
                             <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>
                         </ol>
 
                         <div class=\"carousel-inner\" role=\"listbox\">
+
                             {% for article in articles %}
+
                             <div class=\"carousel-item {{ loop.first ? 'active': '' }}\"> 
-                            
-                                <img class=\"d-block img-fluid w-100\" src=\"{{ asset('image/articles/' ~ article.uploads) }}\" 
+                                <img class=\"d-block img-fluid w-100 \" src=\"{{ asset('image/articles/' ~ article.uploads) }}\" 
                                 alt=\"first slide {{ article.uploads }}\">
-                                <div class=\"carousel-caption\">
-                                    <h2>{{ article.title }}</h2>
+                                <div class=\"carousel-caption \">
+                                    <h2 class=\"text-secondary\">{{ article.title }}</h2>
                                 </div>
                             </div>
                              {% endfor %}  
 
                         </div> 
                             <a class=\"carousel-control-prev\" href=\"#carousel1\" role=\"button\" data-slide=\"prev\"> 
-                                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span> <span class=\"sr-only\">Previous</span> </a> 
+                                <span class=\"carousel-control-prev-icon \" aria-hidden=\"true\"></span> <span class=\"sr-only\">Previous</span> </a> 
                                     <a class=\"carousel-control-next\" href=\"#carousel1\" role=\"button\" data-slide=\"next\"> 
                                 <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span> <span class=\"sr-only\">Next</span> </a>
                         </div>
@@ -543,7 +546,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                     <h4 class=\"\">Rechercher</h4>
                         <p class=\"\">Trouver votre job de rêve par ville, secteurs ou entreprises</p>
                         <div class=\"mt-5 mx-auto\" id=\"button_outset\">
-                            <a href=\"\"class=\"{{ path('job') }}\" > Nos jobs</a>
+                            <a href=\"{{ path('all_job') }}\"class=\"\" > Notre jobs</a>
                         </div>
                     </div>
                 </div>

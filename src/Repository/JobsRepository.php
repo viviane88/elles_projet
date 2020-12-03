@@ -39,7 +39,7 @@ class JobsRepository extends ServiceEntityRepository
     }
 
     /*
-    récupère au minimum 3 infos 
+    récupère  3 infos par orde du plus récent
     */
     public function findThree()
     {
@@ -52,6 +52,6 @@ class JobsRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
-   
+    
 
 }

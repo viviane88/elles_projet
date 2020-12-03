@@ -22,6 +22,7 @@ return [
         '/job/admin' => [[['_route' => 'job_admin', '_controller' => 'App\\Controller\\Administrateur\\JobAdminController::index'], null, null, null, false, false, null]],
         '/job/admin/create' => [[['_route' => 'job_create', '_controller' => 'App\\Controller\\Administrateur\\JobAdminController::createJob'], null, null, null, false, false, null]],
         '/article' => [[['_route' => 'article', '_controller' => 'App\\Controller\\ArticleController::index'], null, null, null, false, false, null]],
+        '/last/articles' => [[['_route' => 'last_article', '_controller' => 'App\\Controller\\ArticleController::lastArticle'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::jobs'], null, null, null, false, false, null]],
         '/job' => [[['_route' => 'job', '_controller' => 'App\\Controller\\JobController::index'], null, null, null, false, false, null]],

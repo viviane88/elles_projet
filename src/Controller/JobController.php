@@ -18,11 +18,10 @@ class JobController extends AbstractController
     /**
      * @Route("/job", name="job")
      */
+    
     public function index(JobsRepository $jobsRepository, PaginatorInterface $paginator, Request $request): Response
     {
         $search = new SearchJob();
-
-
         $form = $this->createForm(SearchJobType::class, $search);
         $form->handleRequest($request);
 
@@ -34,9 +33,8 @@ class JobController extends AbstractController
         );
 
         return $this->render('job/job.html.twig', [
-            'form' => $form->createView(),
             'jobs' => $jobs,
-
+            'form' => $form->createView()
 
         ]);
     }
@@ -57,6 +55,7 @@ class JobController extends AbstractController
 
         ]);
     }
+
     /**
      * @Route("/job-{id}", name="job_show", methods={"GET"})
      */

@@ -31,6 +31,7 @@ return [
     'job_delete' => [['id'], ['_controller' => 'App\\Controller\\Administrateur\\JobAdminController::deleteJob'], [], [['variable', '-', '[^/]++', 'id', true], ['text', '/admin/job/delete']], [], []],
     'article' => [[], ['_controller' => 'App\\Controller\\ArticleController::index'], [], [['text', '/article']], [], []],
     'article_show' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::show'], [], [['variable', '-', '[^/]++', 'id', true], ['text', '/article']], [], []],
+    'last_article' => [[], ['_controller' => 'App\\Controller\\ArticleController::lastArticle'], [], [['text', '/last/articles']], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::jobs'], [], [['text', '/']], [], []],
     'job' => [[], ['_controller' => 'App\\Controller\\JobController::index'], [], [['text', '/job']], [], []],

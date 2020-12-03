@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Articles{% endblock %}
+
+{% block body %}
+               
+<!-- navBar -->
+  
+    {{ include ('nav.html.twig') }}
+
+<div class="col-12 text-center m-0 p-0 " style=" background-color: #39485E">
+		<h1 class="text-white" >Nos derniers Articles</h1>
+</div>
+<div class="container">
+    <div class="row mt-5 justify-content-center mx-auto">
+
+        {% for article in lastArticle %}
+
+            <div class="col-md-8 col-lg-6  p-5  ">
+
+                <div class="card" >
+                    <img class="d-block img-fluid w-100 " src="{{ asset('image/articles/' ~ article.uploads) }}" />
+                    <h2 class="card-title text-center mt-2">{{ article.title }}</h2>
+                <div class="card-body" >
+
+                    <p class="card_articles p-4" >{{ article.description |u.truncate(100, '...', false)}}</p>
+
+            </div>
+            <div class="">
+                <a href="{{ path('article_show', {id: article.id}) }}"
+                id="button_detail" class=" h4 float-right mr-2 text-center " style="text-decoration:none; background-color: #E8D525">+</a>
+            </div>
+    </div>
+</div> 
+    {% endfor %}
+</div> 
+
+</div> 
+</div> 
+</div> 
+
+{% endblock %}
+
+

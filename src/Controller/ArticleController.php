@@ -36,4 +36,15 @@ class ArticleController extends AbstractController
             'articles' => $articles,
         ]);
     }
+    /**
+     * @Route("/last/articles", name="last_article")
+     */
+    public function lastArticle(ArticlesRepository $articlesRepository): Response
+    {
+        $lastArticle = $articlesRepository->findThree();
+
+        return $this->render('article/articleLatest.html.twig', [
+            'lastArticle' => $lastArticle,
+        ]);
+    }
 }

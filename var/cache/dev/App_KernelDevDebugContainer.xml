@@ -5953,7 +5953,7 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.6oLj3Fq" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.xMeL5NM" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Administrateur\AdminListUserController::createUser" type="service" id=".service_locator.j5_bHjD"/>
@@ -5967,6 +5967,7 @@
         <argument key="App\Controller\Administrateur\JobAdminController::index" type="service" id=".service_locator.GCQaGOL"/>
         <argument key="App\Controller\Administrateur\JobAdminController::updateJob" type="service" id=".service_locator.GCQaGOL"/>
         <argument key="App\Controller\ArticleController::index" type="service" id=".service_locator.XM4iuYb"/>
+        <argument key="App\Controller\ArticleController::lastArticle" type="service" id=".service_locator.9HdXBLx"/>
         <argument key="App\Controller\ArticleController::show" type="service" id=".service_locator._LLvGt6"/>
         <argument key="App\Controller\ContactController::index" type="service" id=".service_locator.g8Ohtqp"/>
         <argument key="App\Controller\HomeController::jobs" type="service" id=".service_locator.zPKOpxx"/>
@@ -5996,6 +5997,7 @@
         <argument key="App\Controller\Administrateur\JobAdminController:index" type="service" id=".service_locator.GCQaGOL"/>
         <argument key="App\Controller\Administrateur\JobAdminController:updateJob" type="service" id=".service_locator.GCQaGOL"/>
         <argument key="App\Controller\ArticleController:index" type="service" id=".service_locator.XM4iuYb"/>
+        <argument key="App\Controller\ArticleController:lastArticle" type="service" id=".service_locator.9HdXBLx"/>
         <argument key="App\Controller\ArticleController:show" type="service" id=".service_locator._LLvGt6"/>
         <argument key="App\Controller\ContactController:index" type="service" id=".service_locator.g8Ohtqp"/>
         <argument key="App\Controller\HomeController:jobs" type="service" id=".service_locator.zPKOpxx"/>
@@ -6549,12 +6551,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.6oLj3Fq"/>
+      <argument type="service" id=".service_locator.xMeL5NM"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.6oLj3Fq"/>
+      <argument type="service" id=".service_locator.xMeL5NM"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6979,7 +6981,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.WaGDpDt" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.6oLj3Fq"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.xMeL5NM"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

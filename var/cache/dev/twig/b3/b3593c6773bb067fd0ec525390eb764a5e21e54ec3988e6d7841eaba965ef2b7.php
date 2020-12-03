@@ -113,7 +113,7 @@ class __TwigTemplate_fcacb017b4acd7890317e2c5c050db54c36d8f7839ce12204bdbca74a31
 \t\t\t\t\t<img src=\"";
         // line 28
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/jobs/" . twig_get_attribute($this->env, $this->source, (isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 28, $this->source); })()), "uploads", [], "any", false, false, false, 28))), "html", null, true);
-        echo "\" alt=\"photo\" width=\"100%\" class=\"ml-4\" > 
+        echo "\" alt=\"photo\" width=\"80%\" class=\"ml-4\" > 
 \t\t\t\t</div>         
             </div> 
 \t\t\t\t
@@ -204,7 +204,7 @@ class __TwigTemplate_fcacb017b4acd7890317e2c5c050db54c36d8f7839ce12204bdbca74a31
 
 \t\t\t<div class=\"col-md-6 col-sm-10 ml-3 mt-2  \">
                 <div class=\"\">  
-\t\t\t\t\t<img src=\"{{ asset('image/jobs/' ~ jobs.uploads) }}\" alt=\"photo\" width=\"100%\" class=\"ml-4\" > 
+\t\t\t\t\t<img src=\"{{ asset('image/jobs/' ~ jobs.uploads) }}\" alt=\"photo\" width=\"80%\" class=\"ml-4\" > 
 \t\t\t\t</div>         
             </div> 
 \t\t\t\t
@@ -230,7 +230,6 @@ class __TwigTemplate_fcacb017b4acd7890317e2c5c050db54c36d8f7839ce12204bdbca74a31
 \t</div> 
 </div> 
 </div> 
-{% endblock %}
-", "job/show.html.twig", "C:\\wamp64\\www\\elles\\templates\\job\\show.html.twig");
+{% endblock %}", "job/show.html.twig", "C:\\wamp64\\www\\elles\\templates\\job\\show.html.twig");
     }
 }
