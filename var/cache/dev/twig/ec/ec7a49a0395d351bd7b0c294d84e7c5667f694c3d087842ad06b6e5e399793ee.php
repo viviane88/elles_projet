@@ -123,9 +123,8 @@ class __TwigTemplate_2170fb1ae2a02d07d09d2313ba06b2628779bd9a49ede78cb96fce44855
         echo "</p>
               </div>
             </div>
-            
         </article>
-</div>
+  </div>
 
 
 
@@ -191,9 +190,8 @@ class __TwigTemplate_2170fb1ae2a02d07d09d2313ba06b2628779bd9a49ede78cb96fce44855
                 <p>{{ articles.description }}</p>
               </div>
             </div>
-            
         </article>
-</div>
+  </div>
 
 
 

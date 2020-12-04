@@ -115,58 +115,53 @@ class __TwigTemplate_08965f5824879ff2e48b27e5fd5e3988a85e1292c7f3f22376f4469fa2b
             // line 23
             echo "<!-- Card Start -->
 
-\t\t<div class=\"container py-3 p-5\">
-        \t<div class=\"card \">
-          \t\t<div class=\"row \">
-            \t\t<div class=\"col-md-4 p-5\">
-\t\t\t\t\t\t<div class=\"p-2\">
-\t\t\t\t\t\t\t<img class=\"d-block\" width=\"95%\" src=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/jobs/" . twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 30))), "html", null, true);
-            echo "\" alt=\"photo principale ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 30), "html", null, true);
-            echo " \">
-                  \t\t</div> 
-            \t\t</div>
-      
-            \t<div class=\"col-md-7 px-3\">
-              \t\t<div class=\"card-block px-6 mt-5\">
-                \t\t<h4 class=\"card-title\">";
-            // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "company", [], "any", false, false, false, 36), "html", null, true);
-            echo "</h4>
-                \t\t<h5 class=\"card-title\">";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "title", [], "any", false, false, false, 37), "html", null, true);
-            echo "</h5>
+\t\t<div class=\"container\";>
+   <div id=\"about_card\" class=\"card card  p-4\" style=\"max-width: 1000px\">
 
-                \t<div class=\"row align-items-center mt-3\"> 
-                  \t\t<div class=\"col-6\">
-                    \t\t";
-            // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 41), "html", null, true);
-            echo "
-                  \t\t</div>
-\t\t\t\t\t\t<div class=\"col-2\">
-                    \t\t";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "location", [], "any", false, false, false, 44), "html", null, true);
-            echo "
-                  \t\t</div>
-                  \t
-                \t</div> 
-                <br>
-\t\t\t\t<div class=\" float-right mt-2 \">
-                     \t<a href=\"";
-            // line 50
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_show", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 50)]), "html", null, true);
-            echo "\"
-                        class=\" p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\">Découvrir</a>
-                </div> 
-\t\t\t\t\t
+ \t<div class=\"container\">
+
+\t<article class=\"row single-post no-gutters\">\t
+\t\t <div class=\"col-md-12\">
+\t\t\t<div class=\"image-wrapper float-left pr-3\">\t\t\t\t\t\t\t\t
+\t\t\t\t <img src=\"";
+            // line 33
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/jobs/" . twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 33))), "html", null, true);
+            echo "\" alt=\"photo principale ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 33), "html", null, true);
+            echo " \" > 
 \t\t\t</div>
-\t\t\t
-        </div>
+\t\t\t<div class=\"single-post-content-wrapper \">
+\t\t\t\t\t <div class=\"col-md-12\">
+
+\t\t\t  <h2 class=\"\" >";
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "title", [], "any", false, false, false, 38), "html", null, true);
+            echo "</h2>
+\t\t\t  <h4 class=\"col-0\"><b>";
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "company", [], "any", false, false, false, 39), "html", null, true);
+            echo "</b></h4>
+\t\t\t  <p>";
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 40), "html", null, true);
+            echo "</p>
+\t\t\t  <p>";
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "location", [], "any", false, false, false, 41), "html", null, true);
+            echo "</p>
+\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t<div class=\" float-right mt-2 \">
+\t\t\t\t<a href=\"";
+            // line 46
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_show", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 46)]), "html", null, true);
+            echo "\"
+\t\t\t\tclass=\" p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\">Découvrir</a>
+\t \t\t</div> 
+\t\t </div>
+   </article>
+</div>
 \t\t 
             
 </div>
@@ -180,23 +175,23 @@ class __TwigTemplate_08965f5824879ff2e48b27e5fd5e3988a85e1292c7f3f22376f4469fa2b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 66
+        // line 61
         echo "\t
 <!-- pagination -->
 
 <div class=\"text-center\">
     ";
-        // line 70
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["allJob"]) || array_key_exists("allJob", $context) ? $context["allJob"] : (function () { throw new RuntimeError('Variable "allJob" does not exist.', 70, $this->source); })()));
+        // line 65
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["allJob"]) || array_key_exists("allJob", $context) ? $context["allJob"] : (function () { throw new RuntimeError('Variable "allJob" does not exist.', 65, $this->source); })()));
         echo "
 </div>
 
 ";
-        // line 74
+        // line 69
         echo "\t<div class=\"container-fluid mt-5\">
 \t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
 \t\t\t<a href=\"#top\"><img src=\"";
-        // line 76
+        // line 71
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
         echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
 \t\t</div>
@@ -224,7 +219,7 @@ class __TwigTemplate_08965f5824879ff2e48b27e5fd5e3988a85e1292c7f3f22376f4469fa2b
 
     public function getDebugInfo()
     {
-        return array (  200 => 76,  196 => 74,  190 => 70,  184 => 66,  162 => 50,  153 => 44,  147 => 41,  140 => 37,  136 => 36,  125 => 30,  116 => 23,  112 => 22,  105 => 18,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  195 => 71,  191 => 69,  185 => 65,  179 => 61,  158 => 46,  150 => 41,  146 => 40,  142 => 39,  138 => 38,  128 => 33,  116 => 23,  112 => 22,  105 => 18,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -253,38 +248,33 @@ class __TwigTemplate_08965f5824879ff2e48b27e5fd5e3988a85e1292c7f3f22376f4469fa2b
 \t{% for job in allJob %}
 <!-- Card Start -->
 
-\t\t<div class=\"container py-3 p-5\">
-        \t<div class=\"card \">
-          \t\t<div class=\"row \">
-            \t\t<div class=\"col-md-4 p-5\">
-\t\t\t\t\t\t<div class=\"p-2\">
-\t\t\t\t\t\t\t<img class=\"d-block\" width=\"95%\" src=\"{{ asset('image/jobs/' ~ job.uploads) }}\" alt=\"photo principale {{ job.uploads }} \">
-                  \t\t</div> 
-            \t\t</div>
-      
-            \t<div class=\"col-md-7 px-3\">
-              \t\t<div class=\"card-block px-6 mt-5\">
-                \t\t<h4 class=\"card-title\">{{ job.company }}</h4>
-                \t\t<h5 class=\"card-title\">{{ job.title }}</h5>
+\t\t<div class=\"container\";>
+   <div id=\"about_card\" class=\"card card  p-4\" style=\"max-width: 1000px\">
 
-                \t<div class=\"row align-items-center mt-3\"> 
-                  \t\t<div class=\"col-6\">
-                    \t\t{{ job.url }}
-                  \t\t</div>
-\t\t\t\t\t\t<div class=\"col-2\">
-                    \t\t{{ job.location }}
-                  \t\t</div>
-                  \t
-                \t</div> 
-                <br>
-\t\t\t\t<div class=\" float-right mt-2 \">
-                     \t<a href=\"{{ path('job_show', {id: job.id}) }}\"
-                        class=\" p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\">Découvrir</a>
-                </div> 
-\t\t\t\t\t
+ \t<div class=\"container\">
+
+\t<article class=\"row single-post no-gutters\">\t
+\t\t <div class=\"col-md-12\">
+\t\t\t<div class=\"image-wrapper float-left pr-3\">\t\t\t\t\t\t\t\t
+\t\t\t\t <img src=\"{{ asset('image/jobs/' ~ job.uploads) }}\" alt=\"photo principale {{ job.uploads }} \" > 
 \t\t\t</div>
-\t\t\t
-        </div>
+\t\t\t<div class=\"single-post-content-wrapper \">
+\t\t\t\t\t <div class=\"col-md-12\">
+
+\t\t\t  <h2 class=\"\" >{{ job.title }}</h2>
+\t\t\t  <h4 class=\"col-0\"><b>{{ job.company }}</b></h4>
+\t\t\t  <p>{{ job.url }}</p>
+\t\t\t  <p>{{ job.location }}</p>
+\t\t\t</div>
+\t\t\t\t\t\t</div>
+
+\t\t\t<div class=\" float-right mt-2 \">
+\t\t\t\t<a href=\"{{ path('job_show', {id: job.id}) }}\"
+\t\t\t\tclass=\" p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\">Découvrir</a>
+\t \t\t</div> 
+\t\t </div>
+   </article>
+</div>
 \t\t 
             
 </div>

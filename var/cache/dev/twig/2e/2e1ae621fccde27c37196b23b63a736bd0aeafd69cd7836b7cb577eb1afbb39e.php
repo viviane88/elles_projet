@@ -77,54 +77,55 @@ class __TwigTemplate_d2e83c886ced4eff08891e11d16cc727173d7816b102a8964d389bcb781
 
 ";
         // line 12
-        echo "
-\t<nav class=\"fill\"  >
+        echo "\t<nav class=\"fill\"  >
+\t<div class=\"container col-md-12\">
+
 \t\t<ul>
-\t\t  <li><a href=\"";
-        // line 15
+\t\t  <li class=\"col-12 col-md-1\"><a href=\"";
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Accueil</a></li>
-\t\t  <li><a href=\"";
-        // line 16
+\t\t  <li class=\"col-12 col-md-2\"><a href=\"";
+        // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article");
         echo "\">Nos Articles</a></li>
-\t\t  <li><a href=\"";
-        // line 17
+\t\t  <li class=\"col-12 col-md-2\"><a href=\"";
+        // line 18
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job");
         echo "\">Nos Jobs</a></li>
-\t\t  <li><a href=\"";
-        // line 18
+\t\t  <li class=\"col-12 col-md-2\"><a href=\"";
+        // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\">Nous contacter</a></li>
-\t\t  <li><a href=\"";
-        // line 19
+\t\t  <li class=\"col-12 col-md-1\"><a href=\"";
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about");
-        echo "\">Qui sommes-nous?</a></li>
+        echo "\">Nous</a></li>
 \t\t  
 
 ";
-        // line 23
+        // line 24
         echo "
       ";
-        // line 24
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "user", [], "any", false, false, false, 24)) {
-            // line 25
-            echo "        <li><a href=\"";
+        // line 25
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", [], "any", false, false, false, 25)) {
+            // line 26
+            echo "        <li class=\"col-12 col-md-2\"><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("space");
             echo "\"><b>Mon espace</b></a></li>
       ";
         } else {
-            // line 27
-            echo "      <li><a href=\"";
+            // line 28
+            echo "      <li class=\"col-12 col-md-2\"><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\">Se connecter/S'inscrire</a></li>
+            echo "\">Connexion</a></li>
       ";
         }
-        // line 28
+        // line 29
         echo " 
 \t\t</ul>
   \t</nav>
-
+</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -141,7 +142,7 @@ class __TwigTemplate_d2e83c886ced4eff08891e11d16cc727173d7816b102a8964d389bcb781
 
     public function getDebugInfo()
     {
-        return array (  124 => 28,  118 => 27,  112 => 25,  110 => 24,  107 => 23,  101 => 19,  97 => 18,  93 => 17,  89 => 16,  85 => 15,  80 => 12,  71 => 7,  66 => 4,  63 => 2,  44 => 1,);
+        return array (  125 => 29,  119 => 28,  113 => 26,  111 => 25,  108 => 24,  102 => 20,  98 => 19,  94 => 18,  90 => 17,  86 => 16,  80 => 12,  71 => 7,  66 => 4,  63 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -157,26 +158,27 @@ class __TwigTemplate_d2e83c886ced4eff08891e11d16cc727173d7816b102a8964d389bcb781
 \t</div>
 
 {# navigation #}
-
 \t<nav class=\"fill\"  >
+\t<div class=\"container col-md-12\">
+
 \t\t<ul>
-\t\t  <li><a href=\"{{ path('home') }}\">Accueil</a></li>
-\t\t  <li><a href=\"{{ path('article') }}\">Nos Articles</a></li>
-\t\t  <li><a href=\"{{ path('job') }}\">Nos Jobs</a></li>
-\t\t  <li><a href=\"{{ path('contact') }}\">Nous contacter</a></li>
-\t\t  <li><a href=\"{{ path('about') }}\">Qui sommes-nous?</a></li>
+\t\t  <li class=\"col-12 col-md-1\"><a href=\"{{ path('home') }}\">Accueil</a></li>
+\t\t  <li class=\"col-12 col-md-2\"><a href=\"{{ path('article') }}\">Nos Articles</a></li>
+\t\t  <li class=\"col-12 col-md-2\"><a href=\"{{ path('job') }}\">Nos Jobs</a></li>
+\t\t  <li class=\"col-12 col-md-2\"><a href=\"{{ path('contact') }}\">Nous contacter</a></li>
+\t\t  <li class=\"col-12 col-md-1\"><a href=\"{{ path('about') }}\">Nous</a></li>
 \t\t  
 
 {# inscription ou espace de l'utilisateur #}
 
       {% if app.user %}
-        <li><a href=\"{{ path('space') }}\"><b>Mon espace</b></a></li>
+        <li class=\"col-12 col-md-2\"><a href=\"{{ path('space') }}\"><b>Mon espace</b></a></li>
       {% else %}
-      <li><a href=\"{{ path('app_login') }}\">Se connecter/S'inscrire</a></li>
+      <li class=\"col-12 col-md-2\"><a href=\"{{ path('app_login') }}\">Connexion</a></li>
       {% endif %} 
 \t\t</ul>
   \t</nav>
-
+</div>
 {% endblock %}
 ", "nav.html.twig", "C:\\wamp64\\www\\elles\\templates\\nav.html.twig");
     }

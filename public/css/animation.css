@@ -53,10 +53,10 @@ section img{
 }
 
 #text {
-    position: relative;
-    margin-top:150px;
-    color: dark;
-    font-size: 3em;
+    margin: auto;
+    margin-top: 500px;
+    color: black;
+    font-size: 2em;
     z-index: 1;
     justify-content: center;
 }

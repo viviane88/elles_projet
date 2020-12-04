@@ -110,7 +110,7 @@ class __TwigTemplate_151b214258303d7d6e3210046d5f2ec15b79ad98f9cf3b2e1ced0100389
 \t\t</div>
 \t</div>
 \t<div class=\"row mt-5\">
-\t\t<div class=\"col-4 offset-4\">
+\t\t<div class=\"col-md-4 mx-auto\">
 \t\t\t\t";
         // line 26
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formulaireContact"]) || array_key_exists("formulaireContact", $context) ? $context["formulaireContact"] : (function () { throw new RuntimeError('Variable "formulaireContact" does not exist.', 26, $this->source); })()), 'form_start');
@@ -214,7 +214,7 @@ class __TwigTemplate_151b214258303d7d6e3210046d5f2ec15b79ad98f9cf3b2e1ced0100389
 \t\t</div>
 \t</div>
 \t<div class=\"row mt-5\">
-\t\t<div class=\"col-4 offset-4\">
+\t\t<div class=\"col-md-4 mx-auto\">
 \t\t\t\t{{ form_start(formulaireContact) }}
 
 \t\t\t<div class=\"\">

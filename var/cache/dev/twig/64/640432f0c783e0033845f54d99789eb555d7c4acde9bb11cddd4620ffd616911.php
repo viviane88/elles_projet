@@ -77,14 +77,14 @@ class __TwigTemplate_67f8c541deb32a46df8e4ad2c33fa8051d00e4a06642b1a94282259ce7e
       <div class=\"row\">
   
         <!-- Grid column -->
-        <div class=\"col-md-4 mx-auto\">
+        <div class=\"col-md-4 \">
   
           <!-- Content -->
-          <img class=\"mt-3 mb-4\" src=\"";
+          <img class=\"mt-3\" src=\"";
         // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/logo white.svg"), "html", null, true);
         echo "\" alt=\"logo\" width=\"70%\">
-          <p class=\"text-white\">Envolez vous vers votre avenir...</p>
+          <p class=\"text-white text-center\">Envolez vous vers votre avenir...</p>
   
         </div>
   
@@ -254,11 +254,11 @@ class __TwigTemplate_67f8c541deb32a46df8e4ad2c33fa8051d00e4a06642b1a94282259ce7e
       <div class=\"row\">
   
         <!-- Grid column -->
-        <div class=\"col-md-4 mx-auto\">
+        <div class=\"col-md-4 \">
   
           <!-- Content -->
-          <img class=\"mt-3 mb-4\" src=\"{{ asset('./image/logo white.svg') }}\" alt=\"logo\" width=\"70%\">
-          <p class=\"text-white\">Envolez vous vers votre avenir...</p>
+          <img class=\"mt-3\" src=\"{{ asset('./image/logo white.svg') }}\" alt=\"logo\" width=\"70%\">
+          <p class=\"text-white text-center\">Envolez vous vers votre avenir...</p>
   
         </div>
   

@@ -9,24 +9,25 @@
 	</div>
 
 {# navigation #}
-
 	<nav class="fill"  >
+	<div class="container col-md-12">
+
 		<ul>
-		  <li><a href="{{ path('home') }}">Accueil</a></li>
-		  <li><a href="{{ path('article') }}">Nos Articles</a></li>
-		  <li><a href="{{ path('job') }}">Nos Jobs</a></li>
-		  <li><a href="{{ path('contact') }}">Nous contacter</a></li>
-		  <li><a href="{{ path('about') }}">Qui sommes-nous?</a></li>
+		  <li class="col-12 col-md-1"><a href="{{ path('home') }}">Accueil</a></li>
+		  <li class="col-12 col-md-2"><a href="{{ path('article') }}">Nos Articles</a></li>
+		  <li class="col-12 col-md-2"><a href="{{ path('job') }}">Nos Jobs</a></li>
+		  <li class="col-12 col-md-2"><a href="{{ path('contact') }}">Nous contacter</a></li>
+		  <li class="col-12 col-md-1"><a href="{{ path('about') }}">Nous</a></li>
 		  
 
 {# inscription ou espace de l'utilisateur #}
 
       {% if app.user %}
-        <li><a href="{{ path('space') }}"><b>Mon espace</b></a></li>
+        <li class="col-12 col-md-2"><a href="{{ path('space') }}"><b>Mon espace</b></a></li>
       {% else %}
-      <li><a href="{{ path('app_login') }}">Se connecter/S'inscrire</a></li>
+      <li class="col-12 col-md-2"><a href="{{ path('app_login') }}">Connexion</a></li>
       {% endif %} 
 		</ul>
   	</nav>
-
+</div>
 {% endblock %}

@@ -22,38 +22,33 @@
 	{% for job in allJob %}
 <!-- Card Start -->
 
-		<div class="container py-3 p-5">
-        	<div class="card ">
-          		<div class="row ">
-            		<div class="col-md-4 p-5">
-						<div class="p-2">
-							<img class="d-block" width="95%" src="{{ asset('image/jobs/' ~ job.uploads) }}" alt="photo principale {{ job.uploads }} ">
-                  		</div> 
-            		</div>
-      
-            	<div class="col-md-7 px-3">
-              		<div class="card-block px-6 mt-5">
-                		<h4 class="card-title">{{ job.company }}</h4>
-                		<h5 class="card-title">{{ job.title }}</h5>
+		<div class="container";>
+   <div id="about_card" class="card card  p-4" style="max-width: 1000px">
 
-                	<div class="row align-items-center mt-3"> 
-                  		<div class="col-6">
-                    		{{ job.url }}
-                  		</div>
-						<div class="col-2">
-                    		{{ job.location }}
-                  		</div>
-                  	
-                	</div> 
-                <br>
-				<div class=" float-right mt-2 ">
-                     	<a href="{{ path('job_show', {id: job.id}) }}"
-                        class=" p-3 rounded" style="text-decoration:none; background-color: #E8D525">Découvrir</a>
-                </div> 
-					
+ 	<div class="container">
+
+	<article class="row single-post no-gutters">	
+		 <div class="col-md-12">
+			<div class="image-wrapper float-left pr-3">								
+				 <img src="{{ asset('image/jobs/' ~ job.uploads) }}" alt="photo principale {{ job.uploads }} " > 
 			</div>
-			
-        </div>
+			<div class="single-post-content-wrapper ">
+					 <div class="col-md-12">
+
+			  <h2 class="" >{{ job.title }}</h2>
+			  <h4 class="col-0"><b>{{ job.company }}</b></h4>
+			  <p>{{ job.url }}</p>
+			  <p>{{ job.location }}</p>
+			</div>
+						</div>
+
+			<div class=" float-right mt-2 ">
+				<a href="{{ path('job_show', {id: job.id}) }}"
+				class=" p-3 rounded" style="text-decoration:none; background-color: #E8D525">Découvrir</a>
+	 		</div> 
+		 </div>
+   </article>
+</div>
 		 
             
 </div>
