@@ -52,6 +52,27 @@ class JobsRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
+
+    public function findbyUser($userId)
+    {
+        return $this->createQueryBuilder('u')
+            ->andWhere('u.user = :val')
+            ->setParameter('val', $userId)
+            ->orderBy('u.created_at', 'DESC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+    public function findAllLatest()
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.id > :val')
+            ->setParameter('val', '0')
+            ->orderBy('t.created_at', 'DESC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
     
 
 }

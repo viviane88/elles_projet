@@ -19,10 +19,13 @@ class JobAdminController extends AbstractController
      */
     public function index(JobsRepository $jobsRepository): Response
     {
-        $jobs = $jobsRepository->findAll();
+        $userId = $this->getUser();
+        $jobs = $jobsRepository->findByUser($userId);
+        $jobsDate = $jobsRepository->findAllLatest();
 
         return $this->render('Administrateur/jobAdmin.html.twig', [
             'jobs' => $jobs,
+            'jobsDate' => $jobsDate,
 
         ]);
     }
@@ -60,6 +63,9 @@ class JobAdminController extends AbstractController
         }
 
         $jobs->setUploads($newNomlogo); // nom pour la base de données
+
+        $userId = $this->getUser();
+        $jobs->setUser($userId);
 
 
             $manager = $this->getDoctrine()->getManager();
@@ -160,4 +166,6 @@ class JobAdminController extends AbstractController
 
         return $this->redirectToRoute('job_admin');
     }
+    
+
 }

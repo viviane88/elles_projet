@@ -61,8 +61,11 @@ class Jobs
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="jobs")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     private $user;
+
+    
 
     public function getId(): ?int
     {
@@ -145,6 +148,7 @@ class Jobs
 
         return $this;
     }
+    
 
     public function getUpdatedAt(): ?\DateTimeInterface
     {

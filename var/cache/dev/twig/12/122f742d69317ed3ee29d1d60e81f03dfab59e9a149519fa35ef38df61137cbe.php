@@ -109,6 +109,7 @@ class __TwigTemplate_d0f2c809ad445baea70bcebad985c8bec3f215aab6db15d2bb249215b3b
 \t\t\t\t\t<th scope=\"col\">Description</th>
 \t\t\t\t\t<th scope=\"col\">Adresse de l'entreprise</th>
 \t\t\t\t\t<th scope=\"col\">Url de l'entreprise</th>
+\t\t\t\t\t<th scope=\"col\">Date de création:</th>
 \t\t\t\t\t<th scope=\"col\">Logo</th>
 \t\t\t\t\t<th scope=\"col\">Actions</th>
 \t\t\t\t</tr>
@@ -116,45 +117,46 @@ class __TwigTemplate_d0f2c809ad445baea70bcebad985c8bec3f215aab6db15d2bb249215b3b
 
 \t\t\t<tbody>
 \t\t\t\t";
-        // line 30
+        // line 31
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 30, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 31, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["job"]) {
-            // line 31
+            // line 32
             echo "\t\t\t\t\t<tr>
 \t\t\t\t\t\t<td>";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "title", [], "any", false, false, false, 32), "html", null, true);
-            echo "</td>
-\t\t\t\t\t\t<td>";
             // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "company", [], "any", false, false, false, 33), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "title", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t<td>";
             // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "description", [], "any", false, false, false, 34), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "company", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t<td>";
             // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "location", [], "any", false, false, false, 35), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "description", [], "any", false, false, false, 35), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t<td>";
             // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 36), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "location", [], "any", false, false, false, 36), "html", null, true);
             echo "</td>
-
-\t\t                <td><img src=\"";
+\t\t\t\t\t\t<td>";
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 37), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t<td> ";
             // line 38
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/jobs/" . twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 38))), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "createdAt", [], "any", false, false, false, 38), "d/m/Y"), "html", null, true);
+            echo "</td>
+\t\t                <td><img src=\"";
+            // line 39
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/jobs/" . twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 39))), "html", null, true);
             echo "\" alt=\"photo principale ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 38), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "uploads", [], "any", false, false, false, 39), "html", null, true);
             echo "\"></td>
-
-
 \t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t<a href=\"";
-            // line 42
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_update", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 42)]), "html", null, true);
+            // line 41
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_update", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 41)]), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t<svg width=\"1em\" height=\"1em\" viewbox=\"0 0 16 16\" class=\"bi bi-pencil-square\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
 \t\t\t\t\t\t\t\t\t<path d=\"M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z\"/>
@@ -163,8 +165,8 @@ class __TwigTemplate_d0f2c809ad445baea70bcebad985c8bec3f215aab6db15d2bb249215b3b
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a href=\"";
-            // line 49
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 48)]), "html", null, true);
             echo "\"class=\"confirmation\">
 \t\t\t\t\t\t\t\t<svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-trash-fill\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
 \t\t\t\t\t\t\t\t\t<path fill-rule=\"evenodd\" d=\"M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z\"/>
@@ -180,25 +182,25 @@ class __TwigTemplate_d0f2c809ad445baea70bcebad985c8bec3f215aab6db15d2bb249215b3b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 60
+        // line 59
         echo "\t\t</table>
         
 \t</div>
 \t
 \t";
-        // line 65
+        // line 64
         echo "
 \t<div class=\"container-fluid mt-5\">
 \t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
 \t\t\t<a href=\"#top\"><img src=\"";
-        // line 68
+        // line 67
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
         echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
 \t\t</div>
 \t</div>
 
 \t";
-        // line 73
+        // line 72
         echo "
 \t<script type=\"text/javascript\">
     \tvar elems = document.getElementsByClassName('confirmation');
@@ -231,7 +233,7 @@ class __TwigTemplate_d0f2c809ad445baea70bcebad985c8bec3f215aab6db15d2bb249215b3b
 
     public function getDebugInfo()
     {
-        return array (  202 => 73,  195 => 68,  190 => 65,  184 => 60,  167 => 49,  157 => 42,  148 => 38,  143 => 36,  139 => 35,  135 => 34,  131 => 33,  127 => 32,  124 => 31,  120 => 30,  100 => 13,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  204 => 72,  197 => 67,  192 => 64,  186 => 59,  169 => 48,  159 => 41,  152 => 39,  148 => 38,  144 => 37,  140 => 36,  136 => 35,  132 => 34,  128 => 33,  125 => 32,  121 => 31,  100 => 13,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -259,6 +261,7 @@ class __TwigTemplate_d0f2c809ad445baea70bcebad985c8bec3f215aab6db15d2bb249215b3b
 \t\t\t\t\t<th scope=\"col\">Description</th>
 \t\t\t\t\t<th scope=\"col\">Adresse de l'entreprise</th>
 \t\t\t\t\t<th scope=\"col\">Url de l'entreprise</th>
+\t\t\t\t\t<th scope=\"col\">Date de création:</th>
 \t\t\t\t\t<th scope=\"col\">Logo</th>
 \t\t\t\t\t<th scope=\"col\">Actions</th>
 \t\t\t\t</tr>
@@ -272,10 +275,8 @@ class __TwigTemplate_d0f2c809ad445baea70bcebad985c8bec3f215aab6db15d2bb249215b3b
 \t\t\t\t\t\t<td>{{ job.description }}</td>
 \t\t\t\t\t\t<td>{{ job.location }}</td>
 \t\t\t\t\t\t<td>{{ job.url }}</td>
-
+\t\t\t\t\t\t<td> {{ job.createdAt|date('d/m/Y') }}</td>
 \t\t                <td><img src=\"{{ asset('image/jobs/' ~ job.uploads) }}\" alt=\"photo principale {{ job.uploads }}\"></td>
-
-
 \t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t<a href=\"{{ path('job_update', {'id':job.id}) }}\">
 \t\t\t\t\t\t\t\t<svg width=\"1em\" height=\"1em\" viewbox=\"0 0 16 16\" class=\"bi bi-pencil-square\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
