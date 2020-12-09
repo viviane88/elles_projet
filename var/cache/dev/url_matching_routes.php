@@ -32,6 +32,8 @@ return [
         '/profile/create/info' => [[['_route' => 'profile_create', '_controller' => 'App\\Controller\\ProfileController::createInfo'], null, null, null, false, false, null]],
         '/profile/info' => [[['_route' => 'profile_info', '_controller' => 'App\\Controller\\ProfileController::show'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
+        '/reset-password' => [[['_route' => 'app_forgot_password_request', '_controller' => 'App\\Controller\\ResetPasswordController::request'], null, null, null, false, false, null]],
+        '/reset-password/check-email' => [[['_route' => 'app_check_email', '_controller' => 'App\\Controller\\ResetPasswordController::checkEmail'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/space' => [[['_route' => 'space', '_controller' => 'App\\Controller\\SpaceController::index'], null, null, null, false, false, null]],
@@ -73,6 +75,7 @@ return [
                 .'|/job\\-([^/]++)(*:395)'
                 .'|/([^/]++)/edit(*:417)'
                 .'|/profile/delete\\-([^/]++)(*:450)'
+                .'|/reset\\-password/reset(?:/([^/]++))?(*:494)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -92,8 +95,9 @@ return [
         372 => [[['_route' => 'article_show', '_controller' => 'App\\Controller\\ArticleController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         395 => [[['_route' => 'job_show', '_controller' => 'App\\Controller\\JobController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         417 => [[['_route' => 'profile_edit', '_controller' => 'App\\Controller\\ProfileController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        450 => [
-            [['_route' => 'profile_delete', '_controller' => 'App\\Controller\\ProfileController::deleteUser'], ['id'], null, null, false, true, null],
+        450 => [[['_route' => 'profile_delete', '_controller' => 'App\\Controller\\ProfileController::deleteUser'], ['id'], null, null, false, true, null]],
+        494 => [
+            [['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

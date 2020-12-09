@@ -58,56 +58,66 @@ class __TwigTemplate_49a1a47e00905b93e35b0c2ea0ff71467e75d66564d8037b7ae05d40849
         // line 11
         echo "\t\t</title>
 
-<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\">
-<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx\" crossorigin=\"anonymous\"></script>\t\t<link rel=\"stylesheet\" href=\"";
+\t\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\">
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx\" crossorigin=\"anonymous\"></script>\t\t<link rel=\"stylesheet\" href=\"";
         // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/base.css"), "html", null, true);
         echo "\"> 
-    <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>
-\t
-\t\t<link rel=\"stylesheet\" href=\"";
+    \t<script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>\t
+\t\t<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/apple-icon-180x180.png"), "html", null, true);
+        echo "\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"";
         // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/android-icon-192x192.png"), "html", null, true);
+        echo "\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/favicon-96x96.png"), "html", null, true);
+        echo "\">
+\t\t<link rel=\"stylesheet\" href=\"";
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/footer.css"), "html", null, true);
         echo "\">
     \t<link rel=\"stylesheet\" href=\"";
-        // line 20
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/nav.css"), "html", null, true);
         echo "\"> 
 
 
 \t\t
 \t\t";
-        // line 24
+        // line 26
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 25
+        // line 27
         echo "\t</head>
 
-<body>
-";
-        // line 29
-        echo "<style>
-html {
-  scroll-behavior: smooth;
-}
-</style>
-<header></header>
+\t<body>
+\t";
+        // line 31
+        echo "\t<style>
+\t\thtml {
+  \t\tscroll-behavior: smooth;}
+\t</style>
+\t<header></header>
 
 
         ";
-        // line 37
+        // line 38
         $this->displayBlock('body', $context, $blocks);
-        // line 42
+        // line 43
         echo "
  ";
-        // line 43
+        // line 44
         echo twig_include($this->env, $context, "footer.html.twig");
         echo "
 \t\t
 
 <script src=\"";
-        // line 46
+        // line 47
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/app.js"), "html", null, true);
         echo "\"></script>
 </body>
@@ -140,7 +150,7 @@ html {
 
     }
 
-    // line 24
+    // line 26
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -158,7 +168,7 @@ html {
 
     }
 
-    // line 37
+    // line 38
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -168,7 +178,7 @@ html {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 38
+        // line 39
         echo "\t\t
 \t\t
 \t\t
@@ -193,7 +203,7 @@ html {
 
     public function getDebugInfo()
     {
-        return array (  172 => 38,  162 => 37,  144 => 24,  125 => 10,  111 => 46,  105 => 43,  102 => 42,  100 => 37,  90 => 29,  85 => 25,  83 => 24,  76 => 20,  72 => 19,  64 => 14,  59 => 11,  57 => 10,  46 => 1,);
+        return array (  182 => 39,  172 => 38,  154 => 26,  135 => 10,  121 => 47,  115 => 44,  112 => 43,  110 => 38,  101 => 31,  96 => 27,  94 => 26,  87 => 22,  83 => 21,  79 => 20,  75 => 19,  71 => 18,  64 => 14,  59 => 11,  57 => 10,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -210,12 +220,14 @@ html {
 \t\t\telles -{% block title %}Bienvenue sur Elles{% endblock %}
 \t\t</title>
 
-<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\">
-<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx\" crossorigin=\"anonymous\"></script>\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/base.css') }}\"> 
-    <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>
-\t
+\t\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\">
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx\" crossorigin=\"anonymous\"></script>\t\t<link rel=\"stylesheet\" href=\"{{ asset('css/base.css') }}\"> 
+    \t<script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>\t
+\t\t<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"{{ asset('image/apple-icon-180x180.png') }}\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"{{ asset('image/android-icon-192x192.png') }}\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"{{ asset('image/favicon-96x96.png') }}\">
 \t\t<link rel=\"stylesheet\" href=\"{{ asset('css/footer.css') }}\">
     \t<link rel=\"stylesheet\" href=\"{{ asset('css/nav.css') }}\"> 
 
@@ -224,14 +236,13 @@ html {
 \t\t{% block stylesheets %}{% endblock %}
 \t</head>
 
-<body>
-{# smooth scroll #}
-<style>
-html {
-  scroll-behavior: smooth;
-}
-</style>
-<header></header>
+\t<body>
+\t{# smooth scroll #}
+\t<style>
+\t\thtml {
+  \t\tscroll-behavior: smooth;}
+\t</style>
+\t<header></header>
 
 
         {% block body %}

@@ -1,0 +1,16 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Réinitialisation{% endblock %}
+
+{% block body %}
+<div class="container mt-5 col-6">
+
+    <h1>Réinitialisation</h1>
+
+    {{ form_start(resetForm) }}
+        {{ form_row(resetForm.plainPassword) }}
+        <button class="btn btn-primary">Réinitialiser</button>
+    {{ form_end(resetForm) }}
+</div>
+
+{% endblock %}

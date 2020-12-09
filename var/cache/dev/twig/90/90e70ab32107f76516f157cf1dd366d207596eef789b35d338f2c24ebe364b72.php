@@ -58,34 +58,41 @@ class __TwigTemplate_3f5a2fdd882bd28e8519abd008e0535044c19f40e1d21378b1c36f212ce
         // line 11
         echo "\t\t</title>
 
-
+\t\t<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/apple-icon-180x180.png"), "html", null, true);
+        echo "\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"";
+        // line 14
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/android-icon-192x192.png"), "html", null, true);
+        echo "\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/favicon-96x96.png"), "html", null, true);
+        echo "\">
 \t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">
 \t\t<link rel=\"stylesheet\" href=\"";
-        // line 15
+        // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/base.css"), "html", null, true);
         echo "\"> ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 16
+        // line 18
         echo "\t\t</head>
 
     <body>
         \t
      ";
-        // line 20
+        // line 22
         $this->displayBlock('body', $context, $blocks);
-        // line 21
+        // line 23
         echo "
 \t<footer>
-\t\t<div class=\"container col-12\">
-\t\t\t<div class=\"row mt-5 text-center mx-auto\">
-\t\t\t\t<div class=\"col-12 text-center\">
-\t\t\t\t\t<p>";
+\t<div class=\"  p-2 mt-5 \" style=\" background-color: #39485E\">
+        <p class=\"text-white text-center\" >";
         // line 26
         echo (isset($context["copyright"]) || array_key_exists("copyright", $context) ? $context["copyright"] : (function () { throw new RuntimeError('Variable "copyright" does not exist.', 26, $this->source); })());
         echo "</p>
-\t\t\t\t</div>
-\t\t\t</div> 
-\t\t</div>
+    </div>
 \t</footer>    
     
       
@@ -121,7 +128,7 @@ class __TwigTemplate_3f5a2fdd882bd28e8519abd008e0535044c19f40e1d21378b1c36f212ce
 
     }
 
-    // line 15
+    // line 17
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -139,7 +146,7 @@ class __TwigTemplate_3f5a2fdd882bd28e8519abd008e0535044c19f40e1d21378b1c36f212ce
 
     }
 
-    // line 20
+    // line 22
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -169,7 +176,7 @@ class __TwigTemplate_3f5a2fdd882bd28e8519abd008e0535044c19f40e1d21378b1c36f212ce
 
     public function getDebugInfo()
     {
-        return array (  143 => 20,  125 => 15,  107 => 10,  84 => 26,  77 => 21,  75 => 20,  69 => 16,  65 => 15,  59 => 11,  57 => 10,  46 => 1,);
+        return array (  150 => 22,  132 => 17,  114 => 10,  93 => 26,  88 => 23,  86 => 22,  80 => 18,  76 => 17,  71 => 15,  67 => 14,  63 => 13,  59 => 11,  57 => 10,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -186,7 +193,9 @@ class __TwigTemplate_3f5a2fdd882bd28e8519abd008e0535044c19f40e1d21378b1c36f212ce
 \t\t\telles -{% block title %}{% endblock %}
 \t\t</title>
 
-
+\t\t<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"{{ asset('image/apple-icon-180x180.png') }}\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"{{ asset('image/android-icon-192x192.png') }}\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"{{ asset('image/favicon-96x96.png') }}\">
 \t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\">
 \t\t<link rel=\"stylesheet\" href=\"{{ asset('css/base.css') }}\"> {% block stylesheets %}{% endblock %}
 \t\t</head>
@@ -196,13 +205,9 @@ class __TwigTemplate_3f5a2fdd882bd28e8519abd008e0535044c19f40e1d21378b1c36f212ce
      {% block body %}{% endblock %}
 
 \t<footer>
-\t\t<div class=\"container col-12\">
-\t\t\t<div class=\"row mt-5 text-center mx-auto\">
-\t\t\t\t<div class=\"col-12 text-center\">
-\t\t\t\t\t<p>{{ copyright|raw }}</p>
-\t\t\t\t</div>
-\t\t\t</div> 
-\t\t</div>
+\t<div class=\"  p-2 mt-5 \" style=\" background-color: #39485E\">
+        <p class=\"text-white text-center\" >{{ copyright|raw }}</p>
+    </div>
 \t</footer>    
     
       

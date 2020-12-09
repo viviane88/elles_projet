@@ -24,8 +24,11 @@
 <div class="container">
 
     {# Bloc Connexion #}
-
+        <a href="javascript:history.go(-1)" class="h2" ><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+        </svg></a>
     <h1 class="h3 mb-3 font-weight-normal">Merci de vous identifier</h1>
+    
     <label for="inputEmail">Email</label>
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
     <label for="inputPassword">Password</label>
@@ -39,7 +42,7 @@
 	    <a href="{{path('app_register')}}"  class="mb-3 p-3 rounded float-right" style="text-decoration:none; background-color: #E8D525" >Pas encore de compte</a>
     </div>
     <div class="p-0 m-0 mt-3 col-12">
-	    <a href="{{path('home')}}"  class="" ><b>Retour à l'accueil<b></a>
+	    <a href="{{path('app_forgot_password_request')}}"  class="" ><b>Mot de passe oublié<b></a>
     </div>
     </div>
 </div>               

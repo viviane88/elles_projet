@@ -131,7 +131,8 @@ class __TwigTemplate_77b75945ebcdb7ab365ff4e6fae609aaca3532a4127806c854201a57c85
             // line 31
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_show", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 31)]), "html", null, true);
             echo "\"
-                id=\"button_detail\" class=\" h4 float-right mr-2 text-center \" style=\"text-decoration:none; background-color: #E8D525\">+</a>
+                id=\"button_detail\" class=\" h4 float-right mr-2 text-center \" 
+                style=\"text-decoration:none; background-color: #E8D525\">+</a>
             </div>
     </div>
 </div> 
@@ -140,7 +141,7 @@ class __TwigTemplate_77b75945ebcdb7ab365ff4e6fae609aaca3532a4127806c854201a57c85
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 38
         echo "</div> 
 
 </div> 
@@ -148,17 +149,17 @@ class __TwigTemplate_77b75945ebcdb7ab365ff4e6fae609aaca3532a4127806c854201a57c85
 
 <div class=\"text-center\">
     ";
-        // line 43
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 43, $this->source); })()));
+        // line 44
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 44, $this->source); })()));
         echo "
 </div>
 
 ";
-        // line 47
+        // line 48
         echo "\t<div class=\"container-fluid mt-5\">
 \t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
 \t\t\t<a href=\"#top\"><img src=\"";
-        // line 49
+        // line 50
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
         echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
 \t\t</div>
@@ -185,7 +186,7 @@ class __TwigTemplate_77b75945ebcdb7ab365ff4e6fae609aaca3532a4127806c854201a57c85
 
     public function getDebugInfo()
     {
-        return array (  162 => 49,  158 => 47,  152 => 43,  144 => 37,  132 => 31,  125 => 27,  119 => 24,  115 => 23,  109 => 19,  105 => 18,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  163 => 50,  159 => 48,  153 => 44,  145 => 38,  132 => 31,  125 => 27,  119 => 24,  115 => 23,  109 => 19,  105 => 18,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -221,7 +222,8 @@ class __TwigTemplate_77b75945ebcdb7ab365ff4e6fae609aaca3532a4127806c854201a57c85
             </div>
             <div class=\"\">
                 <a href=\"{{ path('article_show', {id: article.id}) }}\"
-                id=\"button_detail\" class=\" h4 float-right mr-2 text-center \" style=\"text-decoration:none; background-color: #E8D525\">+</a>
+                id=\"button_detail\" class=\" h4 float-right mr-2 text-center \" 
+                style=\"text-decoration:none; background-color: #E8D525\">+</a>
             </div>
     </div>
 </div> 

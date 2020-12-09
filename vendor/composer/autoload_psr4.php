@@ -77,6 +77,7 @@ return array(
     'Symfony\\Bridge\\PhpUnit\\' => array($vendorDir . '/symfony/phpunit-bridge'),
     'Symfony\\Bridge\\Monolog\\' => array($vendorDir . '/symfony/monolog-bridge'),
     'Symfony\\Bridge\\Doctrine\\' => array($vendorDir . '/symfony/doctrine-bridge'),
+    'SymfonyCasts\\Bundle\\ResetPassword\\' => array($vendorDir . '/symfonycasts/reset-password-bundle/src'),
     'Sensio\\Bundle\\FrameworkExtraBundle\\' => array($vendorDir . '/sensio/framework-extra-bundle/src'),
     'Rollerworks\\Component\\PasswordStrength\\' => array($vendorDir . '/rollerworks/password-strength-validator/src'),
     'Rollerworks\\Bundle\\PasswordStrengthBundle\\' => array($vendorDir . '/rollerworks/password-strength-bundle/src'),

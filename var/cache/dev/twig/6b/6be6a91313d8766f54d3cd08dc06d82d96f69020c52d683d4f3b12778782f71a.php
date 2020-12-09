@@ -124,34 +124,37 @@ class __TwigTemplate_64708a5e920dc92b58d2d66256cd24cd2afc821bdee13d282b52b2bea02
 
     ";
         // line 27
-        echo "
+        echo "        <a href=\"javascript:history.go(-1)\" class=\"h2\" ><svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-arrow-left\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
+        <path fill-rule=\"evenodd\" d=\"M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z\"/>
+        </svg></a>
     <h1 class=\"h3 mb-3 font-weight-normal\">Merci de vous identifier</h1>
+    
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"";
-        // line 30
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 30, $this->source); })()), "html", null, true);
+        // line 33
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 33, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
     <label for=\"inputPassword\">Password</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
            value=\"";
-        // line 35
+        // line 38
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
 
     <div class=\"p-0 m-0 mt-3 col-12\">
         <button  id=\"search_button\" type=\"submit\" class=\"\">OK</button>
 \t    <a href=\"";
-        // line 39
+        // line 42
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo "\"  class=\"mb-3 p-3 rounded float-right\" style=\"text-decoration:none; background-color: #E8D525\" >Pas encore de compte</a>
     </div>
     <div class=\"p-0 m-0 mt-3 col-12\">
 \t    <a href=\"";
-        // line 42
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\"  class=\"\" ><b>Retour à l'accueil<b></a>
+        // line 45
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forgot_password_request");
+        echo "\"  class=\"\" ><b>Mot de passe oublié<b></a>
     </div>
     </div>
 </div>               
@@ -178,7 +181,7 @@ class __TwigTemplate_64708a5e920dc92b58d2d66256cd24cd2afc821bdee13d282b52b2bea02
 
     public function getDebugInfo()
     {
-        return array (  153 => 42,  147 => 39,  140 => 35,  132 => 30,  127 => 27,  122 => 23,  114 => 20,  111 => 19,  108 => 18,  102 => 16,  100 => 15,  95 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  156 => 45,  150 => 42,  143 => 38,  135 => 33,  127 => 27,  122 => 23,  114 => 20,  111 => 19,  108 => 18,  102 => 16,  100 => 15,  95 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -209,8 +212,11 @@ class __TwigTemplate_64708a5e920dc92b58d2d66256cd24cd2afc821bdee13d282b52b2bea02
 <div class=\"container\">
 
     {# Bloc Connexion #}
-
+        <a href=\"javascript:history.go(-1)\" class=\"h2\" ><svg width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-arrow-left\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">
+        <path fill-rule=\"evenodd\" d=\"M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z\"/>
+        </svg></a>
     <h1 class=\"h3 mb-3 font-weight-normal\">Merci de vous identifier</h1>
+    
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
     <label for=\"inputPassword\">Password</label>
@@ -224,7 +230,7 @@ class __TwigTemplate_64708a5e920dc92b58d2d66256cd24cd2afc821bdee13d282b52b2bea02
 \t    <a href=\"{{path('app_register')}}\"  class=\"mb-3 p-3 rounded float-right\" style=\"text-decoration:none; background-color: #E8D525\" >Pas encore de compte</a>
     </div>
     <div class=\"p-0 m-0 mt-3 col-12\">
-\t    <a href=\"{{path('home')}}\"  class=\"\" ><b>Retour à l'accueil<b></a>
+\t    <a href=\"{{path('app_forgot_password_request')}}\"  class=\"\" ><b>Mot de passe oublié<b></a>
     </div>
     </div>
 </div>               

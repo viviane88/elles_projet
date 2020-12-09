@@ -97,19 +97,16 @@ class __TwigTemplate_1cc2ffa1a12f936196996b622b3bb42e1f5313b398056e40701679b9605
         // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/erreur400.svg"), "html", null, true);
         echo "\" alt=\"logo\">
+\t\t
 \t\t</div>\t
-\t</div>
-
-\t<div class=\" mx-auto mt-5\">
-\t\t<div class=\"col-12 text-center\">
-\t\t\t<h2>Erreur 400</h2>
-\t\t\t<p>Une erreur est survenue lors du chargement de la page. Si le problème persiste, merci de contacter
-                l'administrateur du site</p>
-            <a href=\"";
-        // line 23
+\t\t\t<p class=\"col-md-12  mt-4 text-center mx-auto\">Une erreur est survenue lors du chargement de la page. Si le problème persiste, merci de contacter
+                l'administrateur du site</p>          
+\t  </div>
+    <div class=\"col-md-12 \"><a href=\"";
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\"> <p>Retour au site</p></a>
-\t</div>
+        echo "\"> <p class=\"h3 text-center mt-2\"><b>Retour au site</b></p></a></div>
+
 
 </div>
 </div>
@@ -138,7 +135,7 @@ class __TwigTemplate_1cc2ffa1a12f936196996b622b3bb42e1f5313b398056e40701679b9605
 
     public function getDebugInfo()
     {
-        return array (  110 => 23,  98 => 14,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  107 => 20,  98 => 14,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -157,16 +154,13 @@ class __TwigTemplate_1cc2ffa1a12f936196996b622b3bb42e1f5313b398056e40701679b9605
 \t\t</div>
 \t\t<div class=\"col-12 text-center mt-2\">
 \t\t\t<img class=\"\" src=\"{{ asset('./image/erreur400.svg') }}\" alt=\"logo\">
+\t\t
 \t\t</div>\t
-\t</div>
+\t\t\t<p class=\"col-md-12  mt-4 text-center mx-auto\">Une erreur est survenue lors du chargement de la page. Si le problème persiste, merci de contacter
+                l'administrateur du site</p>          
+\t  </div>
+    <div class=\"col-md-12 \"><a href=\"{{path('home')}}\"> <p class=\"h3 text-center mt-2\"><b>Retour au site</b></p></a></div>
 
-\t<div class=\" mx-auto mt-5\">
-\t\t<div class=\"col-12 text-center\">
-\t\t\t<h2>Erreur 400</h2>
-\t\t\t<p>Une erreur est survenue lors du chargement de la page. Si le problème persiste, merci de contacter
-                l'administrateur du site</p>
-            <a href=\"{{path('home')}}\"> <p>Retour au site</p></a>
-\t</div>
 
 </div>
 </div>
