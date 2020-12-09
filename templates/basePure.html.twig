@@ -10,7 +10,9 @@
 			elles -{% block title %}{% endblock %}
 		</title>
 
-
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('image/apple-icon-180x180.png') }}">
+		<link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('image/android-icon-192x192.png') }}">
+		<link rel="icon" type="image/png" sizes="96x96" href="{{ asset('image/favicon-96x96.png') }}">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{{ asset('css/base.css') }}"> {% block stylesheets %}{% endblock %}
 		</head>
@@ -20,13 +22,9 @@
      {% block body %}{% endblock %}
 
 	<footer>
-		<div class="container col-12">
-			<div class="row mt-5 text-center mx-auto">
-				<div class="col-12 text-center">
-					<p>{{ copyright|raw }}</p>
-				</div>
-			</div> 
-		</div>
+	<div class="  p-2 mt-5 " style=" background-color: #39485E">
+        <p class="text-white text-center" >{{ copyright|raw }}</p>
+    </div>
 	</footer>    
     
       

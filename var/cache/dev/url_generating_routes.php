@@ -33,6 +33,7 @@ return [
     'article_show' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::show'], [], [['variable', '-', '[^/]++', 'id', true], ['text', '/article']], [], []],
     'last_article' => [[], ['_controller' => 'App\\Controller\\ArticleController::lastArticle'], [], [['text', '/last/articles']], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], []],
+    'favorites' => [[], ['_controller' => 'App\\Controller\\FavoritesController::index'], [], [['text', '/favorites']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::jobs'], [], [['text', '/']], [], []],
     'job' => [[], ['_controller' => 'App\\Controller\\JobController::index'], [], [['text', '/job']], [], []],
     'all_job' => [[], ['_controller' => 'App\\Controller\\JobController::allJob'], [], [['text', '/all/job']], [], []],

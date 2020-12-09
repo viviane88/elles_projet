@@ -121,6 +121,11 @@ class __TwigTemplate_2170fb1ae2a02d07d09d2313ba06b2628779bd9a49ede78cb96fce44855
         // line 29
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 29, $this->source); })()), "description", [], "any", false, false, false, 29), "html", null, true);
         echo "</p>
+                <a class=\"float-right\"><img src=\"";
+        // line 30
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/favoris.svg"), "html", null, true);
+        echo "\" alt=\"logo heart\"></a>
+
               </div>
             </div>
         </article>
@@ -154,7 +159,7 @@ class __TwigTemplate_2170fb1ae2a02d07d09d2313ba06b2628779bd9a49ede78cb96fce44855
 
     public function getDebugInfo()
     {
-        return array (  122 => 29,  118 => 28,  112 => 25,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  126 => 30,  122 => 29,  118 => 28,  112 => 25,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -188,6 +193,8 @@ class __TwigTemplate_2170fb1ae2a02d07d09d2313ba06b2628779bd9a49ede78cb96fce44855
               <div class=\"single-post-content-wrapper  \">
 \t\t\t  \t\t    <h1 >{{ articles.title }}</h1>
                 <p>{{ articles.description }}</p>
+                <a class=\"float-right\"><img src=\"{{ asset('image/favoris.svg') }}\" alt=\"logo heart\"></a>
+
               </div>
             </div>
         </article>

@@ -134,15 +134,21 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
             // line 33
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "company", [], "any", false, false, false, 33), "html", null, true);
             echo "</h5>
-                        <p class=\"\">";
+                        <h5 class=\"card-title\">Crée le: ";
             // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 34), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "createdAt", [], "any", false, false, false, 34), "d/m/Y"), "html", null, true);
+            echo "</h5>
+
+                        <p class=\"\">";
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 36), "html", null, true);
             echo "</p>
+
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"card-body\">
                     <a href=\"";
-            // line 37
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_show", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 37)]), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_show", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 40)]), "html", null, true);
             echo "\"
                 id=\"button_detail\" class=\" h4 float-right mr-2 text-center \" style=\"text-decoration:none; background-color: #E8D525\">+</a>
                     </div>
@@ -154,7 +160,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
+        // line 46
         echo " 
 
     </div>
@@ -181,7 +187,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                     <h1 class=\" text-white\">Nos articles</h1>
                     <p class=\"my-4 text-white\">Restez informé sur le marché du travail en découvrant une sélection d'articles qui vous infome et qui vous inspire</p> 
 \t       \t\t\t<a href=\"";
-        // line 68
+        // line 71
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("last_article");
         echo "\"  class=\"mt-3 mb-3 p-3 rounded\" style=\"text-decoration:none; background-color: #E8D525\" >Découvrir</a>
                 </div>
@@ -197,9 +203,9 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <div class=\"carousel-inner\" role=\"listbox\">
 
                             ";
-        // line 81
+        // line 84
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 81, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 84, $this->source); })()));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -214,24 +220,24 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 82
+            // line 85
             echo "
                             <div class=\"carousel-item ";
-            // line 83
-            echo ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 83)) ? ("active") : (""));
+            // line 86
+            echo ((twig_get_attribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 86)) ? ("active") : (""));
             echo "\"> 
                                 <img class=\"d-block img-fluid w-100 \" src=\"";
-            // line 84
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/articles/" . twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 84))), "html", null, true);
+            // line 87
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("image/articles/" . twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 87))), "html", null, true);
             echo "\" 
                                 alt=\"first slide ";
-            // line 85
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 85), "html", null, true);
+            // line 88
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "uploads", [], "any", false, false, false, 88), "html", null, true);
             echo "\">
                                 <div class=\"carousel-caption \">
-                                    <h2 class=\"text-secondary\">";
-            // line 87
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 87), "html", null, true);
+                                    <h2 class=\"text-white\">";
+            // line 90
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "title", [], "any", false, false, false, 90), "html", null, true);
             echo "</h2>
                                 </div>
                             </div>
@@ -248,7 +254,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 90
+        // line 93
         echo "  
 
                         </div> 
@@ -283,7 +289,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p class=\"\">Ne ratez plus rien, inscrivez vous à notre newsletters</p>
                             <div class=\"mt-5 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
-        // line 123
+        // line 126
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo "\"class=\"\" >Inscrivez-vous</a>
                             </div>
@@ -296,7 +302,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                     <p>Créer votre compte et garder vos favoris, postuler directement etc...</p>
                         <div class=\"mt-4 mx-auto\" id=\"button_outset\">
                             <a href=\"";
-        // line 133
+        // line 136
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\"class=\"\" >Connectez-vous</a>
                         </div>
@@ -309,7 +315,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p>Vous avez une question, une suggestion, n'hésitez pas!</p>
                             <div class=\"mt-5 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
-        // line 143
+        // line 146
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\"class=\"\" > Contact</a>
                             </div>
@@ -322,7 +328,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p>Découvrir notre concept et ce que nous souhaitons vous apporter.</p>
                             <div class=\"mt-4 mx-auto\" id=\"button_outset\">
                                 <a href=\"";
-        // line 153
+        // line 156
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about");
         echo "\"class=\"\" > Notre concept</a>
                             </div>
@@ -335,7 +341,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                         <p class=\"\">Trouver votre job de rêve par ville, secteurs ou entreprises</p>
                         <div class=\"mt-5 mx-auto\" id=\"button_outset\">
                             <a href=\"";
-        // line 163
+        // line 166
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("all_job");
         echo "\"class=\"\" > Notre jobs</a>
                         </div>
@@ -346,11 +352,11 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
 
 
 \t";
-        // line 172
+        // line 175
         echo "\t<div class=\"container-fluid mt-5\">
 \t\t<div class=\"row justify-content-center mb3 pt-2 pr-3 \">
 \t\t\t<a href=\"#top\"><img src=\"";
-        // line 174
+        // line 177
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
         echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
 \t\t</div>
@@ -379,7 +385,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
 
     public function getDebugInfo()
     {
-        return array (  354 => 174,  350 => 172,  339 => 163,  326 => 153,  313 => 143,  300 => 133,  287 => 123,  252 => 90,  234 => 87,  229 => 85,  225 => 84,  221 => 83,  218 => 82,  201 => 81,  185 => 68,  158 => 43,  145 => 37,  139 => 34,  135 => 33,  131 => 32,  124 => 30,  119 => 27,  115 => 26,  101 => 15,  93 => 10,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
+        return array (  360 => 177,  356 => 175,  345 => 166,  332 => 156,  319 => 146,  306 => 136,  293 => 126,  258 => 93,  240 => 90,  235 => 88,  231 => 87,  227 => 86,  224 => 85,  207 => 84,  191 => 71,  164 => 46,  151 => 40,  144 => 36,  139 => 34,  135 => 33,  131 => 32,  124 => 30,  119 => 27,  115 => 26,  101 => 15,  93 => 10,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -417,7 +423,10 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
 \t\t\t\t\t<div class=\"card-body \">
 \t\t\t\t\t\t<h4 class=\"card-title\">{{ job.title }}</h4>
                         <h5 class=\"card-title\">{{ job.company}}</h5>
+                        <h5 class=\"card-title\">Crée le: {{ job.createdAt|date('d/m/Y') }}</h5>
+
                         <p class=\"\">{{ job.url }}</p>
+
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"card-body\">
                     <a href=\"{{ path('job_show', {id: job.id}) }}\"
@@ -470,7 +479,7 @@ class __TwigTemplate_a288748ddba4e1c27bea1ce8b2309af64925128de255d91d48a2f5f88cd
                                 <img class=\"d-block img-fluid w-100 \" src=\"{{ asset('image/articles/' ~ article.uploads) }}\" 
                                 alt=\"first slide {{ article.uploads }}\">
                                 <div class=\"carousel-caption \">
-                                    <h2 class=\"text-secondary\">{{ article.title }}</h2>
+                                    <h2 class=\"text-white\">{{ article.title }}</h2>
                                 </div>
                             </div>
                              {% endfor %}  

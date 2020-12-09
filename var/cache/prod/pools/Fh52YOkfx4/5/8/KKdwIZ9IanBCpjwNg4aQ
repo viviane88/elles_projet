@@ -1,0 +1,96 @@
+<?php //%255B11af77e2c7d13c682751cd09e21e5e67%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'val' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT j0_.id AS id_0, j0_.title AS title_1, j0_.company AS company_2, j0_.location AS location_3, j0_.description AS description_4, j0_.url AS url_5, j0_.created_at AS created_at_6, j0_.updated_at AS updated_at_7, j0_.uploads AS uploads_8, j0_.user_id AS user_id_9 FROM jobs j0_ WHERE j0_.id > ? ORDER BY j0_.created_at DESC LIMIT 3',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    't' => 'App\\Entity\\Jobs',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'title_1' => 'title',
+                    'company_2' => 'company',
+                    'location_3' => 'location',
+                    'description_4' => 'description',
+                    'url_5' => 'url',
+                    'created_at_6' => 'created_at',
+                    'updated_at_7' => 'updated_at',
+                    'uploads_8' => 'uploads',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'user_id_9' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    't' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'user_id_9' => 'user_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 't',
+                    'title_1' => 't',
+                    'company_2' => 't',
+                    'location_3' => 't',
+                    'description_4' => 't',
+                    'url_5' => 't',
+                    'created_at_6' => 't',
+                    'updated_at_7' => 't',
+                    'uploads_8' => 't',
+                    'user_id_9' => 't',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Jobs',
+                    'title_1' => 'App\\Entity\\Jobs',
+                    'company_2' => 'App\\Entity\\Jobs',
+                    'location_3' => 'App\\Entity\\Jobs',
+                    'description_4' => 'App\\Entity\\Jobs',
+                    'url_5' => 'App\\Entity\\Jobs',
+                    'created_at_6' => 'App\\Entity\\Jobs',
+                    'updated_at_7' => 'App\\Entity\\Jobs',
+                    'uploads_8' => 'App\\Entity\\Jobs',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

@@ -31,7 +31,10 @@
 					<div class="card-body ">
 						<h4 class="card-title">{{ job.title }}</h4>
                         <h5 class="card-title">{{ job.company}}</h5>
+                        <h5 class="card-title">Crée le: {{ job.createdAt|date('d/m/Y') }}</h5>
+
                         <p class="">{{ job.url }}</p>
+
 					</div>
 					<div class="card-body">
                     <a href="{{ path('job_show', {id: job.id}) }}"
@@ -84,7 +87,7 @@
                                 <img class="d-block img-fluid w-100 " src="{{ asset('image/articles/' ~ article.uploads) }}" 
                                 alt="first slide {{ article.uploads }}">
                                 <div class="carousel-caption ">
-                                    <h2 class="text-secondary">{{ article.title }}</h2>
+                                    <h2 class="text-white">{{ article.title }}</h2>
                                 </div>
                             </div>
                              {% endfor %}  

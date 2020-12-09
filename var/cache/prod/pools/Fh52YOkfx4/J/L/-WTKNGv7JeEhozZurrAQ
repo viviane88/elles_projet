@@ -1,0 +1,87 @@
+<?php //%255Ba3d6941b73517fb6eaa6abf219104f03%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'val' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT a0_.id AS id_0, a0_.title AS title_1, a0_.description AS description_2, a0_.created_at AS created_at_3, a0_.updated_at AS updated_at_4, a0_.uploads AS uploads_5, a0_.user_id AS user_id_6 FROM articles a0_ WHERE a0_.id > ? ORDER BY a0_.created_at DESC LIMIT 3',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    't' => 'App\\Entity\\Articles',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'title_1' => 'title',
+                    'description_2' => 'description',
+                    'created_at_3' => 'created_at',
+                    'updated_at_4' => 'updated_at',
+                    'uploads_5' => 'uploads',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'user_id_6' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    't' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'user_id_6' => 'user_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 't',
+                    'title_1' => 't',
+                    'description_2' => 't',
+                    'created_at_3' => 't',
+                    'updated_at_4' => 't',
+                    'uploads_5' => 't',
+                    'user_id_6' => 't',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Articles',
+                    'title_1' => 'App\\Entity\\Articles',
+                    'description_2' => 'App\\Entity\\Articles',
+                    'created_at_3' => 'App\\Entity\\Articles',
+                    'updated_at_4' => 'App\\Entity\\Articles',
+                    'uploads_5' => 'App\\Entity\\Articles',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

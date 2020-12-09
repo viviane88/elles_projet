@@ -119,25 +119,33 @@ class __TwigTemplate_fcacb017b4acd7890317e2c5c050db54c36d8f7839ce12204bdbca74a31
 \t\t\t\t
             <div class=\"col-md-5 mb-3 ml-4 mr-4\">
               <div class=\"card-block\" id=\"\">
-\t\t\t  \t\t<h4 class=\"h1 mt-5 col-sm-12  \">";
+\t\t\t  \t\t<h4 class=\"h1 mt-5 col-sm-12\">";
         // line 34
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 34, $this->source); })()), "title", [], "any", false, false, false, 34), "html", null, true);
         echo "</h4>
-\t\t\t\t\t<h4 class=\" mt-5 col-sm-12  \">";
+\t\t\t\t\t<h4 class=\"mt-5 col-sm-12\">";
         // line 35
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 35, $this->source); })()), "url", [], "any", false, false, false, 35), "html", null, true);
         echo "</h4>
-\t\t\t\t\t<h5 class=\" mt-5 col-sm-12  \">";
+\t\t\t\t\t<h5 class=\"mt-5 col-sm-12\">";
         // line 36
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 36, $this->source); })()), "location", [], "any", false, false, false, 36), "html", null, true);
+        echo "</h5>
+\t\t\t\t\t<h5 class=\"mt-5 col-sm-12\">Crée le: ";
+        // line 37
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 37, $this->source); })()), "createdAt", [], "any", false, false, false, 37), "d/m/Y"), "html", null, true);
         echo "</h5>
 
                 \t<p class=\"card-text text-justify p-2  mr-3 col-sm-12\" >
 \t\t\t\t\t\t";
-        // line 39
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 39, $this->source); })()), "description", [], "any", false, false, false, 39), "html", null, true);
+        // line 40
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["jobs"]) || array_key_exists("jobs", $context) ? $context["jobs"] : (function () { throw new RuntimeError('Variable "jobs" does not exist.', 40, $this->source); })()), "description", [], "any", false, false, false, 40), "html", null, true);
         echo "
                 \t</p>
+\t\t\t\t\t<a class=\"float-right\"><img src=\"";
+        // line 42
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/favoris.svg"), "html", null, true);
+        echo "\" alt=\"logo heart\"></a>
               </div>
             </div>
             
@@ -172,7 +180,7 @@ class __TwigTemplate_fcacb017b4acd7890317e2c5c050db54c36d8f7839ce12204bdbca74a31
 
     public function getDebugInfo()
     {
-        return array (  138 => 39,  132 => 36,  128 => 35,  124 => 34,  115 => 28,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  147 => 42,  142 => 40,  136 => 37,  132 => 36,  128 => 35,  124 => 34,  115 => 28,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -210,13 +218,15 @@ class __TwigTemplate_fcacb017b4acd7890317e2c5c050db54c36d8f7839ce12204bdbca74a31
 \t\t\t\t
             <div class=\"col-md-5 mb-3 ml-4 mr-4\">
               <div class=\"card-block\" id=\"\">
-\t\t\t  \t\t<h4 class=\"h1 mt-5 col-sm-12  \">{{ jobs.title }}</h4>
-\t\t\t\t\t<h4 class=\" mt-5 col-sm-12  \">{{ jobs.url}}</h4>
-\t\t\t\t\t<h5 class=\" mt-5 col-sm-12  \">{{ jobs.location }}</h5>
+\t\t\t  \t\t<h4 class=\"h1 mt-5 col-sm-12\">{{ jobs.title }}</h4>
+\t\t\t\t\t<h4 class=\"mt-5 col-sm-12\">{{ jobs.url}}</h4>
+\t\t\t\t\t<h5 class=\"mt-5 col-sm-12\">{{ jobs.location }}</h5>
+\t\t\t\t\t<h5 class=\"mt-5 col-sm-12\">Crée le: {{ jobs.createdAt|date('d/m/Y') }}</h5>
 
                 \t<p class=\"card-text text-justify p-2  mr-3 col-sm-12\" >
 \t\t\t\t\t\t{{ jobs.description }}
                 \t</p>
+\t\t\t\t\t<a class=\"float-right\"><img src=\"{{ asset('image/favoris.svg') }}\" alt=\"logo heart\"></a>
               </div>
             </div>
             

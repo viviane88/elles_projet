@@ -75,17 +75,31 @@ class __TwigTemplate_08f1a80b26eb16d337e0385ada7c1041e2ba563a4dca60859694a48f24a
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/animation.css"), "html", null, true);
         echo "\"> 
+\t\t<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/apple-icon-180x180.png"), "html", null, true);
+        echo "\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/android-icon-192x192.png"), "html", null, true);
+        echo "\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/favicon-96x96.png"), "html", null, true);
+        echo "\">
+
+
 
 \t\t
 \t\t";
-        // line 20
+        // line 25
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 21
+        // line 26
         echo "\t</head>
 
 <body>
 ";
-        // line 25
+        // line 30
         echo "<style>
 html {
   scroll-behavior: smooth;
@@ -95,12 +109,12 @@ html {
 
 
         ";
-        // line 33
-        $this->displayBlock('body', $context, $blocks);
         // line 38
+        $this->displayBlock('body', $context, $blocks);
+        // line 43
         echo "
  ";
-        // line 39
+        // line 44
         echo twig_include($this->env, $context, "footer.html.twig");
         echo "
 
@@ -108,7 +122,7 @@ html {
 <script src=\"https://code.jquery.com/jquery-3.5.1.js\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
 <script src=\"";
-        // line 44
+        // line 49
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/app.js"), "html", null, true);
         echo "\"></script>
 </body>
@@ -141,7 +155,7 @@ html {
 
     }
 
-    // line 20
+    // line 25
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -159,7 +173,7 @@ html {
 
     }
 
-    // line 33
+    // line 38
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -169,7 +183,7 @@ html {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 34
+        // line 39
         echo "\t\t
 \t\t
 \t\t
@@ -194,7 +208,7 @@ html {
 
     public function getDebugInfo()
     {
-        return array (  173 => 34,  163 => 33,  145 => 20,  126 => 10,  112 => 44,  104 => 39,  101 => 38,  99 => 33,  89 => 25,  84 => 21,  82 => 20,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  59 => 11,  57 => 10,  46 => 1,);
+        return array (  187 => 39,  177 => 38,  159 => 25,  140 => 10,  126 => 49,  118 => 44,  115 => 43,  113 => 38,  103 => 30,  98 => 26,  96 => 25,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  59 => 11,  57 => 10,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -216,6 +230,11 @@ html {
     \t<link rel=\"stylesheet\" href=\"{{ asset('css/footer.css') }}\">
     \t<link rel=\"stylesheet\" href=\"{{ asset('css/nav.css') }}\"> 
 \t\t<link rel=\"stylesheet\" href=\"{{ asset('css/animation.css') }}\"> 
+\t\t<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"{{ asset('image/apple-icon-180x180.png') }}\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"{{ asset('image/android-icon-192x192.png') }}\">
+\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"{{ asset('image/favicon-96x96.png') }}\">
+
+
 
 \t\t
 \t\t{% block stylesheets %}{% endblock %}

@@ -43,16 +43,19 @@
 		<div class="container py-3 p-5">
         	<div class="card ">
           		<div class="row ">
-            		<div class="col-md-3 p-5 bg-success">
+            		<div class="col-md-3 p-5">
 						<div class="p-2">
 							<img class="d-block" width="100%" src="{{ asset('image/jobs/' ~ job.uploads) }}" alt="photo principale {{ job.uploads }} ">
                   		</div> 
             		</div>
       
-            	<div class="col-md-9 px-3 bg-danger  ">
+            	<div class="col-md-9 px-3   ">
               		<div class="card-block px-6 mt-5 ml-3">
                 		<h4 class="card-title">{{ job.company }}</h4>
                 		<h5 class="card-title">{{ job.title }}</h5>
+						<h5 class="card-title">Crée le: {{ job.createdAt|date('d/m/Y') }}</h5>
+
+						
 
                 	<div class="row align-items-center mt-3"> 
                   		<div class="col-md-4">
@@ -61,6 +64,7 @@
 						<div class="col-md-2">
                     		{{ job.location }}
                   		</div>
+
                   	<div class=" float-right  ">
                      	<a href="{{ path('job_show', {id: job.id}) }}"
                         class=" p-3 rounded mt-5" style="text-decoration:none; background-color: #E8D525">Découvrir</a>

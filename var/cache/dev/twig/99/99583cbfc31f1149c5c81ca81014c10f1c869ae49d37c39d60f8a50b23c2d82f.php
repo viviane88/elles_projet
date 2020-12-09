@@ -145,7 +145,7 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
 \t\t<div class=\"container py-3 p-5\">
         \t<div class=\"card \">
           \t\t<div class=\"row \">
-            \t\t<div class=\"col-md-3 p-5 bg-success\">
+            \t\t<div class=\"col-md-3 p-5\">
 \t\t\t\t\t\t<div class=\"p-2\">
 \t\t\t\t\t\t\t<img class=\"d-block\" width=\"100%\" src=\"";
             // line 48
@@ -156,7 +156,7 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
                   \t\t</div> 
             \t\t</div>
       
-            \t<div class=\"col-md-9 px-3 bg-danger  \">
+            \t<div class=\"col-md-9 px-3   \">
               \t\t<div class=\"card-block px-6 mt-5 ml-3\">
                 \t\t<h4 class=\"card-title\">";
             // line 54
@@ -166,24 +166,31 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
             // line 55
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "title", [], "any", false, false, false, 55), "html", null, true);
             echo "</h5>
+\t\t\t\t\t\t<h5 class=\"card-title\">Crée le: ";
+            // line 56
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "createdAt", [], "any", false, false, false, 56), "d/m/Y"), "html", null, true);
+            echo "</h5>
+
+\t\t\t\t\t\t
 
                 \t<div class=\"row align-items-center mt-3\"> 
                   \t\t<div class=\"col-md-4\">
                     \t\t";
-            // line 59
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 59), "html", null, true);
+            // line 62
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "url", [], "any", false, false, false, 62), "html", null, true);
             echo "
                   \t\t</div>
 \t\t\t\t\t\t<div class=\"col-md-2\">
                     \t\t";
-            // line 62
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "location", [], "any", false, false, false, 62), "html", null, true);
+            // line 65
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "location", [], "any", false, false, false, 65), "html", null, true);
             echo "
                   \t\t</div>
+
                   \t<div class=\" float-right  \">
                      \t<a href=\"";
-            // line 65
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_show", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 65)]), "html", null, true);
+            // line 69
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("job_show", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 69)]), "html", null, true);
             echo "\"
                         class=\" p-3 rounded mt-5\" style=\"text-decoration:none; background-color: #E8D525\">Découvrir</a>
 \t\t\t\t\t</div>
@@ -206,11 +213,11 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 83
+        // line 87
         echo "
 \t <div class=\"mt-5 text-center\">
 \t\t<a href=\"";
-        // line 85
+        // line 89
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("all_job");
         echo "\"
 \t\tclass=\"mt-3 mb-3 p-3 h4\" id=\"button_outset\" >Toutes nos offres</a>
@@ -218,11 +225,11 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
 
 \t
 ";
-        // line 91
+        // line 95
         echo "\t<div class=\"container-fluid mt-5 text-center\">
 \t\t<div class=\"row justify-content-center pt-2 pr-3 \">
 \t\t\t<a href=\"#top\"><img src=\"";
-        // line 93
+        // line 97
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("./image/arrowTop.png"), "html", null, true);
         echo "\" alt=\"icone arrow Top\" width=\"85%\" id=\"arrowTop\"></a>
 \t\t</div>
@@ -254,7 +261,7 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
 
     public function getDebugInfo()
     {
-        return array (  226 => 93,  222 => 91,  214 => 85,  210 => 83,  186 => 65,  180 => 62,  174 => 59,  167 => 55,  163 => 54,  152 => 48,  143 => 41,  139 => 40,  131 => 35,  118 => 25,  112 => 22,  106 => 19,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  233 => 97,  229 => 95,  221 => 89,  217 => 87,  193 => 69,  186 => 65,  180 => 62,  171 => 56,  167 => 55,  163 => 54,  152 => 48,  143 => 41,  139 => 40,  131 => 35,  118 => 25,  112 => 22,  106 => 19,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -304,16 +311,19 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
 \t\t<div class=\"container py-3 p-5\">
         \t<div class=\"card \">
           \t\t<div class=\"row \">
-            \t\t<div class=\"col-md-3 p-5 bg-success\">
+            \t\t<div class=\"col-md-3 p-5\">
 \t\t\t\t\t\t<div class=\"p-2\">
 \t\t\t\t\t\t\t<img class=\"d-block\" width=\"100%\" src=\"{{ asset('image/jobs/' ~ job.uploads) }}\" alt=\"photo principale {{ job.uploads }} \">
                   \t\t</div> 
             \t\t</div>
       
-            \t<div class=\"col-md-9 px-3 bg-danger  \">
+            \t<div class=\"col-md-9 px-3   \">
               \t\t<div class=\"card-block px-6 mt-5 ml-3\">
                 \t\t<h4 class=\"card-title\">{{ job.company }}</h4>
                 \t\t<h5 class=\"card-title\">{{ job.title }}</h5>
+\t\t\t\t\t\t<h5 class=\"card-title\">Crée le: {{ job.createdAt|date('d/m/Y') }}</h5>
+
+\t\t\t\t\t\t
 
                 \t<div class=\"row align-items-center mt-3\"> 
                   \t\t<div class=\"col-md-4\">
@@ -322,6 +332,7 @@ class __TwigTemplate_7e423a48faffa92834c966fd7e9189f85f61574eea0e37ae6592590ac4a
 \t\t\t\t\t\t<div class=\"col-md-2\">
                     \t\t{{ job.location }}
                   \t\t</div>
+
                   \t<div class=\" float-right  \">
                      \t<a href=\"{{ path('job_show', {id: job.id}) }}\"
                         class=\" p-3 rounded mt-5\" style=\"text-decoration:none; background-color: #E8D525\">Découvrir</a>

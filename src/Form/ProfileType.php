@@ -46,9 +46,9 @@ class ProfileType extends AbstractType
         ])              
             ->add('description', TextareaType::class, [
                 'required'=> true,
-                'label' => 'Description de l\'annonce',
+                'label' => 'Une petite description',
                 'attr' => [
-                    'placeholder' => 'décrire le poste proposé'
+                    'placeholder' => 'Quelques mots sur vous'
                 ]
     
             ])        

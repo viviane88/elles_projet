@@ -31,6 +31,7 @@ class JobsRepository extends ServiceEntityRepository
     public function findAllVisibleQuery (SearchJob $search)
     {
         return $this->createQueryBuilder('s')
+
         
         ->orwhere('s.location = :location')
         ->setParameter('location', $search->getLocation() )

@@ -86,7 +86,7 @@ class __TwigTemplate_64708a5e920dc92b58d2d66256cd24cd2afc821bdee13d282b52b2bea02
 
         // line 6
         echo "
-    <div class=\"col-12 text-center m-0 p-0 \" style=\" background-color: #39485E\">
+    <div class=\"col-12 text-center m-0 p-0 \" id=\"connexion\" >
 \t\t<h1 class=\"text-white\" >Connexion/Inscription</h1>
 \t</div>
     
@@ -189,7 +189,7 @@ class __TwigTemplate_64708a5e920dc92b58d2d66256cd24cd2afc821bdee13d282b52b2bea02
 
 {% block body %}
 
-    <div class=\"col-12 text-center m-0 p-0 \" style=\" background-color: #39485E\">
+    <div class=\"col-12 text-center m-0 p-0 \" id=\"connexion\" >
 \t\t<h1 class=\"text-white\" >Connexion/Inscription</h1>
 \t</div>
     

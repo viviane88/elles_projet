@@ -35,7 +35,7 @@ background-color: rgb(255, 231, 22, 0.5);
 
 /* **************************************** HOME Service **************************************** */
 .msg{
-background:url(../image/iconeMsg.png);
+background:url(../image/iconeMsg.svg);
 width:100%;
 height: 150px;
 background-size: contain;
@@ -51,7 +51,7 @@ background-repeat: no-repeat;
 }
 
 .compt{
-background:url(../image/iconeCompt.png);
+background:url(../image/iconeCompt.svg);
 width:100%;
 height: 150px;
 background-size: contain;
@@ -61,7 +61,7 @@ margin-left: 10px;
 }
 
 .compt:hover{
-background:url(../image/iconeCompt2.png);
+background:url(../image/iconeCompt2.svg);
 width:100%;
 height: 150px;
 background-size: contain;
@@ -71,7 +71,7 @@ margin-left: 10px;
 }
 
 .phone{
-background:url(../image/iconePhone.png);
+background:url(../image/iconePhone.svg);
 width:100%;
 height: 150px;
 background-size: contain;
@@ -88,7 +88,7 @@ background-repeat: no-repeat;
 }
 
 .concept{
-background:url(../image/iconeConcept.png);
+background:url(../image/iconeConcept.svg);
 width:100%;
 height: 150px;
 background-size: contain;
@@ -98,7 +98,7 @@ margin-left: 10px;
 }
 
 .concept:hover{
-background:url(../image/iconeConcept2.png);
+background:url(../image/iconeConcept2.svg);
 width:100%;
 height: 150px;
 background-size: contain;
@@ -107,7 +107,7 @@ margin-left: 10px;
 }
 
 .job{
-background:url(../image/iconeWen.png);
+background:url(../image/iconeWen.svg);
 width:100%;
 height: 150px;
 background-size: contain;
@@ -115,7 +115,7 @@ background-repeat: no-repeat;
 }
 
 .job:hover{
-transform: rotate(80deg);
+background:url(../image/iconeWen2.svg);
 width:100%;
 height: 150px;
 background-size: contain;
@@ -160,8 +160,11 @@ width:100%;
 height: 400px;
 background-size:cover;
 background-position:center top; 
-color:#fff; 
 padding-top:100px; 
+}
+#connexion{
+background-color:#39485E;
+width: 100%;
 }
 
 

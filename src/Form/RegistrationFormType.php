@@ -24,14 +24,14 @@ class RegistrationFormType extends AbstractType
         $builder
         ->add('lastname', TextType::class,[
             'required'=> true,
-            'label' => 'nom',
+            'label' => 'Nom',
             'attr' => [
                 'placeholder' =>'Votre Nom'
             ]
         ])
         ->add('name', TextType::class,[
             'required'=> true,
-            'label' => 'prenom',
+            'label' => 'Prénom',
             'attr' => [
                 'placeholder' =>'Votre Prénom'
             ]
